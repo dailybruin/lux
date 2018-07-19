@@ -1,0 +1,24 @@
+{
+  "name": "lux",
+  "version": "1.0.0",
+  "description": "The Daily Bruin's component library.",
+  "main": "index.js",
+  "author": "Daily Bruin Online <online@dailybruin.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@types/react": "^16.4.6",
+    "@types/react-dom": "^16.0.6",
+    "emotion": "^9.2.6",
+    "react": "^16.4.1",
+    "react-docgen-typescript": "^1.6.2",
+    "react-dom": "^16.4.1",
+    "react-emotion": "^9.2.6",
+    "react-styleguidist": "^7.1.0",
+    "ts-loader": "^4.4.2",
+    "typescript": "^2.9.2",
+    "webpack": "^4.16.1"
+  },
+  "devDependencies": {
+    "docz": "^0.5.9"
+  }
+}
