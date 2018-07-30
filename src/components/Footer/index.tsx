@@ -1,11 +1,7 @@
 import * as React from 'react';
 import { css } from 'react-emotion';
 import Heart from './Heart';
-
-// interface Developers {
-//   name: string;
-//   link: string;
-// }
+import toSentence from '../../utils/toSentence';
 
 /**
  * Footer properties.
@@ -17,10 +13,8 @@ interface FooterProps {
   licence?: string;
   /** A list of the developers who created the site. */
   developers: Array<string>;
-}
-
-function toSentence(arr: Array<string>): string {
-  return arr.slice(0, arr.length - 1).join(', ') + ' and ' + arr.slice(-1);
+  /** The year that the story was published, e.g., 2018. */
+  copyrightYear: number;
 }
 
 /** A footer to go at the bottom of every page. */
@@ -36,10 +30,9 @@ export default function Footer(props: FooterProps) {
       `}
     >
       <div>
-        Content copyright © 2018 Daily Bruin. Site code{' '}
-        <a href={`https://github.com/dailybruin/${props.githubName}`}>
-          available on GitHub
-        </a>.
+        Content copyright © {props.copyrightYear} Daily Bruin. Site code
+        available on{' '}
+        <a href={`https://github.com/dailybruin/${props.githubName}`}>GitHub</a>.
       </div>
       <div>
         Built with Suzy’s <Heart /> in Kerckhoff 118 by{' '}

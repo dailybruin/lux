@@ -1,0 +1,1 @@
+{"version":3,"sources":["chatper-based.js"],"names":["console","log"],"mappings":";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAAA,QAAQC,GAAR,CAAY,aAAZ","file":"chatper-based.9467bc10.map","sourceRoot":"../src/layouts","sourcesContent":["console.log('hello world');\n"]}

@@ -5,10 +5,32 @@
   "main": "index.js",
   "author": "Daily Bruin Online <online@dailybruin.com>",
   "license": "MIT",
+  "scripts": {
+    "start": "parcel src/layouts/chapter-based.html --open",
+    "test": "jest"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ]
+  },
   "dependencies": {
     "@types/react": "^16.4.6",
     "@types/react-dom": "^16.0.6",
     "emotion": "^9.2.6",
+    "global": "^4.3.2",
+    "jest": "^23.4.2",
+    "parcel-bundler": "^1.9.7",
     "react": "^16.4.1",
     "react-docgen-typescript": "^1.6.2",
     "react-dom": "^16.4.1",
@@ -19,6 +41,8 @@
     "webpack": "^4.16.1"
   },
   "devDependencies": {
-    "docz": "^0.5.9"
+    "@types/jest": "^23.3.1",
+    "docz": "^0.5.9",
+    "ts-jest": "^23.0.1"
   }
 }
