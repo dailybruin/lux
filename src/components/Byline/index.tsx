@@ -12,5 +12,5 @@ interface BylineProps {
 
 /** A footer to go at the bottom of every page. */
 export default function Footer(props: BylineProps) {
-  return <div>By {toSentence(props.authors)}</div>;
+  return <div className="byline">By {toSentence(props.authors)}</div>;
 }

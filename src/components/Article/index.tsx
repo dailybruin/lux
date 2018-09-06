@@ -3,6 +3,7 @@ import { css } from 'react-emotion';
 
 enum ContentType {
   Text,
+  Photo,
 }
 
 interface Content {
@@ -16,10 +17,10 @@ interface Content {
 interface ArticleProps {
   /** The paragraphs of content for the story. */
   content: Array<Content>;
+  dropcap: boolean;
 }
 
 /** A footer to go at the bottom of every page. */
 export default function Footer(props: ArticleProps) {
-  const renderedContent;
   return <article>{}</article>;
 }
