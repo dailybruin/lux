@@ -11,6 +11,6 @@ const Hello = styled('span')`
 /**
  * Heart.
  */
-export default function Heart({}) {
+export default function Heart(props: {}) {
   return <Hello>♥</Hello>;
 }

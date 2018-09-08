@@ -32,7 +32,8 @@ export default function Footer(props: FooterProps) {
       <div>
         Content copyright © {props.copyrightYear} Daily Bruin. Site code
         available on{' '}
-        <a href={`https://github.com/dailybruin/${props.githubName}`}>GitHub</a>.
+        <a href={`https://github.com/dailybruin/${props.githubName}`}>GitHub</a>
+        .
       </div>
       <div>
         Built with Suzy’s <Heart /> in Kerckhoff 118 by{' '}
