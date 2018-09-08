@@ -73,4 +73,7 @@ typings/
 .serverless
 
 # Gatsby Build
-dist/
+dist
+
+# Docz
+.docz
