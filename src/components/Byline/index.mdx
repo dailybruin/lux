@@ -1,0 +1,18 @@
+---
+name: Byline
+route: /byline
+---
+
+import { Playground, PropsTable } from 'docz'
+import Byline from '.'
+
+# Byline
+
+Every story needs an author and a byline.
+
+<PropsTable of={Byline} />
+
+<Playground>
+  <Byline authors="Tanner Walters" />
+  <Byline authors={["Tanner Walters", "Mackenzie Possee", "Jacob Preal"]} />
+</Playground>
