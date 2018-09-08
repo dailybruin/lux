@@ -1,9 +1,9 @@
 import * as React from 'react';
 import { render } from 'react-dom';
 
-import Headline from '../components/Headline';
-import Byline from '../components/Byline';
-import Footer from '../components/Footer';
+import Headline from '../../components/Headline';
+import Byline from '../../components/Byline';
+import Footer from '../../components/Footer';
 
 function App() {
   return (

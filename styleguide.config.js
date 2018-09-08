@@ -1,11 +1,9 @@
-const path = require('path');
-const glob = require('glob');
-
 module.exports = {
-  title: 'React Style Guide Example',
-  components: 'src/**/*.tsx',
+  title: 'Lux',
+  serverPort: 1234,
+  components: 'src/components/**/*.tsx',
   resolver: require('react-docgen').resolver.findAllComponentDefinitions,
   propsParser: require('react-docgen-typescript').withDefaultConfig({
-    propFilter: { skipPropsWithoutDoc: true },
+    propFilter: { skipPropsWithoutDoc: false },
   }).parse,
 };
