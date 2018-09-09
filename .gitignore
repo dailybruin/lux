@@ -77,3 +77,6 @@ dist
 
 # Docz
 .docz
+
+# Rollup
+.rpt2_cache
