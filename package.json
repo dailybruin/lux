@@ -2,10 +2,9 @@
   "name": "lux",
   "version": "0.0.0-development",
   "description": "The Daily Bruin's component library.",
-  "main": "index.js",
+  "main": "dist/index.js",
   "author": "Daily Bruin Online <online@dailybruin.com>",
   "license": "MIT",
-  "main": "dist/index.js",
   "module": "dist/index.es.js",
   "files": [
     "dist"
@@ -53,6 +52,7 @@
   },
   "devDependencies": {
     "@types/jest": "23.3.1",
+    "gatsby": "^2.0.0-rc.15",
     "jest": "23.5.0",
     "rollup": "^0.65.2",
     "rollup-plugin-typescript2": "^0.17.0",
