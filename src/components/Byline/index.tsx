@@ -7,10 +7,17 @@ import toSentence from '../../utils/toSentence';
  */
 interface BylineProps {
   /** The authors of the story. */
-  authors: Array<string>;
+  authors: string | Array<string>;
 }
 
-/** A footer to go at the bottom of every page. */
-export default function Footer(props: BylineProps) {
-  return <div className="byline">By {toSentence(props.authors)}</div>;
+/** The byline of the story. */
+export default function Byline(props: BylineProps) {
+  return (
+    <div className="byline">
+      By{' '}
+      {typeof props.authors === 'string'
+        ? props.authors
+        : toSentence(props.authors)}
+    </div>
+  );
 }

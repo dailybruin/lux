@@ -9,7 +9,7 @@ interface HeadlineProps {
   children: string;
 }
 
-/** A story's headline. */
+/** The story's headline. */
 export default function Headline(props: HeadlineProps) {
   return <h1>{props.children}</h1>;
 }

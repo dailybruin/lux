@@ -6,7 +6,8 @@
   "author": "Daily Bruin Online <online@dailybruin.com>",
   "license": "MIT",
   "scripts": {
-    "start": "styleguidist server",
+    "start": "docz dev",
+    "build": "docz build",
     "dev:chapters": "parcel src/layouts/chapter-based.html --open",
     "dev:grid": "parcel src/layouts/chapter-based.html --open",
     "test": "jest"
