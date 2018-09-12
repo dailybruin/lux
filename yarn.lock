@@ -9662,7 +9662,7 @@ ripemd160@^2.0.0, ripemd160@^2.0.1:
     hash-base "^3.0.0"
     inherits "^2.0.1"
 
-rollup-plugin-typescript2@^0.17.0:
+rollup-plugin-typescript2@0.17.0:
   version "0.17.0"
   resolved "https://registry.yarnpkg.com/rollup-plugin-typescript2/-/rollup-plugin-typescript2-0.17.0.tgz#a540eecfe9ad8ff5e8e86eaf5069bb2a7f84f33a"
   dependencies:
@@ -9678,7 +9678,7 @@ rollup-pluginutils@2.3.1:
     estree-walker "^0.5.2"
     micromatch "^2.3.11"
 
-rollup@^0.65.2:
+rollup@0.65.2:
   version "0.65.2"
   resolved "https://registry.yarnpkg.com/rollup/-/rollup-0.65.2.tgz#e1532e3c1a2e102c89d99289a184fcbbc7cd4b4a"
   dependencies:
