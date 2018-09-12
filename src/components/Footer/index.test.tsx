@@ -11,7 +11,6 @@ describe('Footer', () => {
   afterEach(cleanup);
 
   it('Matches its snapshot', () => {
-    console.log(Footer);
     const { container } = render(
       <Footer
         githubName="lux"
