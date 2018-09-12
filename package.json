@@ -1,11 +1,11 @@
 {
   "name": "lux",
   "version": "0.0.0-development",
+  "author": "Daily Bruin Online <online@dailybruin.com>",
   "description": "The Daily Bruin's component library.",
   "main": "dist/index.js",
-  "author": "Daily Bruin Online <online@dailybruin.com>",
-  "license": "MIT",
   "module": "dist/index.es.js",
+  "types": "dist/index.d.ts",
   "files": [
     "dist"
   ],
@@ -13,7 +13,6 @@
     "type": "git",
     "url": "https://github.com/dailybruin/lux.git"
   },
-  "types": "dist/index.d.ts",
   "scripts": {
     "start": "docz dev",
     "build": "rollup -c",
@@ -23,20 +22,6 @@
     "dev:grid": "parcel src/layouts/chapter-based.html --open",
     "test": "jest",
     "semantic-release": "semantic-release"
-  },
-  "jest": {
-    "transform": {
-      ".+\\.tsx?$": "ts-jest"
-    },
-    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
-    "moduleFileExtensions": [
-      "ts",
-      "tsx",
-      "js",
-      "jsx",
-      "json",
-      "node"
-    ]
   },
   "dependencies": {
     "@types/react": "16.4.13",
