@@ -4,7 +4,9 @@
     "declarationDir": "./dist",
     "module": "es6",
     "target": "es5",
+    "baseUrl": "src",
     "noImplicitAny": true,
+    "moduleResolution": "node",
     "sourceMap": true,
     "outDir": "dist",
     "jsx": "react"

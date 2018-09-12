@@ -2,10 +2,9 @@
   "name": "lux",
   "version": "0.0.0-development",
   "description": "The Daily Bruin's component library.",
-  "main": "index.js",
+  "main": "dist/index.js",
   "author": "Daily Bruin Online <online@dailybruin.com>",
   "license": "MIT",
-  "main": "dist/index.js",
   "module": "dist/index.es.js",
   "files": [
     "dist"
@@ -26,7 +25,6 @@
     "semantic-release": "semantic-release"
   },
   "jest": {
-    "testEnvironment": "node",
     "transform": {
       ".+\\.tsx?$": "ts-jest"
     },
@@ -48,12 +46,14 @@
     "parcel-bundler": "1.9.7",
     "react": "16.5.0",
     "react-dom": "16.5.0",
-    "react-emotion": "9.2.8",
+    "react-emotion": "^9.2.8",
     "typescript": "3.0.3"
   },
   "devDependencies": {
     "@types/jest": "23.3.2",
     "jest": "23.5.0",
+    "jest-emotion": "^9.2.7",
+    "react-testing-library": "^5.0.1",
     "rollup": "^0.65.2",
     "rollup-plugin-typescript2": "^0.17.0",
     "semantic-release": "15.9.14",

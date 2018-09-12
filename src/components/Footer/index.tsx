@@ -18,7 +18,7 @@ interface FooterProps {
   /** The name of the license of the project. */
   license: License;
   /** A list of the developers who created the site. */
-  developers: Array<string>;
+  developers: string | Array<string>;
   /** The year that the story was published, e.g., 2018. */
   copyrightYear: number;
 }
@@ -52,7 +52,10 @@ class Footer extends React.Component<FooterProps> {
         </div>
         <div>
           Built with Suzy’s <Heart /> in Kerckhoff 118 by{' '}
-          {toSentence(this.props.developers)}.
+          {typeof this.props.developers === 'string'
+            ? this.props.developers
+            : toSentence(this.props.developers)}
+          .
         </div>
       </footer>
     );
