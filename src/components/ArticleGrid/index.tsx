@@ -1,23 +1,13 @@
 import * as React from 'react'
+import slugify from 'slugify'
 import { css } from 'react-emotion'
+import ArticleCard from './ArticleCard'
 // import Img from 'gatsby-image';
 // import Header from './Header';
 
-// const style = css`
-//   z-index: -1;
-// `
-
-interface Article {
-  headline: string
-  authors: string | Array<String>
-  description?: string
-  link: string
-  image: string
-  imageAlt: string
-  imageCredit: string
-}
-
 interface ArticleGridProps {
+  heading?: string
+  descriptionText?: string
   articles: Array<Article>
   maxColumns: number
   minColumns: number
@@ -30,12 +20,18 @@ export default class ArticleGrid extends React.Component<ArticleGridProps> {
   }
 
   render() {
+    const articles = this.props.articles.map(article => (
+      <ArticleCard headline={article.headline} />
+    ))
+
     return (
-      <div
-        className={css`
-          display: grid;
-        `}
-      />
+      <section
+        id={!!this.props.heading ? slugify(this.props.heading) : undefined}
+      >
+        {!!this.props.heading && <h2>{this.props.heading}</h2>}
+        {!!this.props.descriptionText && <p>{this.props.descriptionText}</p>}
+        {articles}
+      </section>
     )
   }
 }
