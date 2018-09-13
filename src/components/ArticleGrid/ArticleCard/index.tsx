@@ -3,16 +3,6 @@ import Headline from '../../Headline'
 import Byline from '../../Byline'
 import { render } from 'react-dom'
 
-// interface Article {
-//   headline: string
-//   authors: string | Array<String>
-//   description?: string
-//   link: string
-//   image: string
-//   imageAlt: string
-//   imageCredit: string
-// }
-
 interface ArticleCardProps {
   headline: string
   italicize: boolean
