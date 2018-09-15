@@ -2,6 +2,7 @@ import React from 'react'
 import { Link, graphql } from 'gatsby'
 
 import Layout from '../components/layout'
+import 'normalize.css'
 
 import { Footer, ArticleGrid } from '../../../../dist'
 

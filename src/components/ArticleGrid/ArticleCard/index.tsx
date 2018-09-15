@@ -1,7 +1,6 @@
 import * as React from 'react'
-import Headline from '../../Headline'
 import Byline from '../../Byline'
-import { render } from 'react-dom'
+import { css } from 'react-emotion'
 
 interface ArticleCardProps {
   headline: string
@@ -19,9 +18,26 @@ class ArticleCard extends React.Component<ArticleCardProps> {
   render() {
     return (
       <article>
-        <a href={this.props.link}>
-          <img src="https://via.placeholder.com/500x500" />
-          <h2>{this.props.headline}</h2>
+        <a
+          href={this.props.link}
+          className={css`
+            text-decoration: none;
+            color: inherit;
+          `}
+        >
+          <img
+            src="https://via.placeholder.com/500x500"
+            className={css`
+              max-width: 100%;
+            `}
+          />
+          <h2
+            className={css`
+              margin: 0;
+            `}
+          >
+            {this.props.headline}
+          </h2>
           <Byline authors={this.props.authors} />
           {!!this.props.description && <p>{this.props.description}</p>}
         </a>
