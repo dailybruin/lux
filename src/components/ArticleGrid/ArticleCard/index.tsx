@@ -1,6 +1,6 @@
 import * as React from 'react'
-import Byline from '../../Byline'
 import { css } from 'react-emotion'
+import Byline from '../../Byline'
 
 interface ArticleCardProps {
   headline: string

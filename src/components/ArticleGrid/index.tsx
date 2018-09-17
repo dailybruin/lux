@@ -50,7 +50,7 @@ export default class ArticleGrid extends React.Component<ArticleGridProps> {
         <div
           className={css`
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-columns: repeat(${this.props.maxColumns}, 1fr);
             grid-gap: 16px;
           `}
         >

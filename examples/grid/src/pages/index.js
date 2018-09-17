@@ -37,6 +37,7 @@ const IndexPage = ({ data }) =>
       <ArticleGrid
         heading="News"
         articles={data.allGridJson.edges[0].node.rows}
+        maxColumns={4}
       />
       <Footer developers="Nathan Smith" />
     </Layout>

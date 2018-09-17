@@ -11,13 +11,13 @@ export default function toSentence(
   ampersand: boolean = false
 ): string {
   if (arr.length === 0) {
-    return '';
+    return ''
   } else if (arr.length === 1) {
-    return arr[0];
+    return arr[0]
   }
 
-  const conjoiner = ampersand ? '&' : 'and';
+  const conjoiner = ampersand ? '&' : 'and'
   return (
     arr.slice(0, arr.length - 1).join(', ') + ` ${conjoiner} ` + arr.slice(-1)
-  );
+  )
 }
