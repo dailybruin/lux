@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { css } from 'react-emotion'
-import toSentence from 'utils/toSentence'
+import toSentence from '../../utils/toSentence'
 
 /**
  * Byline properties.
