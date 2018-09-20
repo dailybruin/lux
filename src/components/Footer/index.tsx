@@ -1,7 +1,7 @@
-import * as React from 'react';
-import { css } from 'react-emotion';
-import Heart from './Heart';
-import toSentence from '../../utils/toSentence';
+import * as React from 'react'
+import { css } from 'react-emotion'
+import Heart from './Heart'
+import toSentence from '../../utils/toSentence'
 
 enum License {
   MIT = 'MIT License',
@@ -14,20 +14,20 @@ enum License {
  */
 interface FooterProps {
   /** The name of the github project. The `https://github.com/dailybruin/` part is already given. */
-  githubName: string;
+  githubName: string
   /** The name of the license of the project. */
-  license: License;
+  license: License
   /** A list of the developers who created the site. */
-  developers: string | Array<string>;
+  developers: string | Array<string>
   /** The year that the story was published, e.g., 2018. */
-  copyrightYear: number;
+  copyrightYear: number
 }
 
 /** A footer to go at the bottom of every page. */
 class Footer extends React.Component<FooterProps> {
   static defaultProps = {
     license: License.Copyright,
-  };
+  }
 
   render() {
     return (
@@ -58,8 +58,8 @@ class Footer extends React.Component<FooterProps> {
           .
         </div>
       </footer>
-    );
+    )
   }
 }
 
-export default Footer;
+export default Footer
