@@ -45,7 +45,15 @@ export default class ArticleGrid extends React.Component<ArticleGridProps> {
       <section
         id={!!this.props.heading ? slugify(this.props.heading) : undefined}
       >
-        {!!this.props.heading && <h2>{this.props.heading}</h2>}
+        {!!this.props.heading && (
+          <h2
+            className={css`
+              text-align: center;
+            `}
+          >
+            {this.props.heading}
+          </h2>
+        )}
         {!!this.props.descriptionText && <p>{this.props.descriptionText}</p>}
         <div
           className={css`
