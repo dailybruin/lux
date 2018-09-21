@@ -2,7 +2,7 @@ import * as React from 'react'
 import { graphql } from 'gatsby'
 import { Head, ArticleGrid, Footer } from '../../../../dist'
 import CoverAnimation from '../components/CoverAnimation'
-// import * as uniq from 'lodash.uniq'
+import * as uniq from 'lodash.uniq'
 
 import 'normalize.css'
 
@@ -26,17 +26,16 @@ export const query = graphql`
 `
 
 export default function IndexPage({ data }) {
-  const sections: Array<string> = data.allGoogleSheetRow.edges.map(
-    edge => edge.node.section
+  const sections = uniq(
+    data.allGoogleSheetRow.edges.map(edge => edge.node.section)
   )
 
   const articleGrids = sections.map((section, i) => {
     const articles = data.allGoogleSheetRow.edges.filter(
       edge => edge.node.section === section
     )
-    return 'hello'
 
-    // return <ArticleGrid key={i} heading={section} articles={articles} />
+    return <ArticleGrid key={i} heading={section} articles={articles} />
   })
 
   return (
@@ -49,7 +48,7 @@ export default function IndexPage({ data }) {
       />
       <CoverAnimation />
       {articleGrids}
-      <Footer />
+      <Footer developers="Nathan Smith" />
     </>
   )
 }
