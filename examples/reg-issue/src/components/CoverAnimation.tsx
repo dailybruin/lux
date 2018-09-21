@@ -1,8 +1,17 @@
 import * as React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
-import { css } from 'react-emotion'
+import { css, keyframes } from 'react-emotion'
 import Photo from './Photo'
 import Masthead from './Masthead'
+
+const darken = keyframes`
+  from {
+    background-color: rgba(0, 0, 0, 0);
+  }
+  to {
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+`
 
 interface CoverAnimationProps {
   photos?: any
@@ -56,18 +65,17 @@ class CoverAnimation extends React.Component<CoverAnimationProps> {
   render() {
     const photos = this.props.photos.map((photo, i) => {
       return (
-        <Photo key={i} timeOffset={1.4 * i} image={photo} {...positions[i]} />
+        <Photo key={i} timeOffset={i * 0.6} image={photo} {...positions[i]} />
       )
     })
     return (
       <div
         className={css`
           height: 100vh;
-          display: grid;
         `}
       >
         {photos}
-        <Masthead timeOffset={1.4 * this.props.photos.length} />
+        <Masthead timeOffset={this.props.photos.length * 0.6} />
       </div>
     )
   }

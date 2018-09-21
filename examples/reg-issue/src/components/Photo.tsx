@@ -34,7 +34,7 @@ export default function Photo(props: PhotoProps) {
         width: ${props.width};
 
         opacity: 0;
-        animation: ${fadeIn} 1s ease-in-out forwards;
+        animation: ${fadeIn} 0.8s ease-in-out forwards;
         animation-delay: ${props.timeOffset}s;
       `}
     >
