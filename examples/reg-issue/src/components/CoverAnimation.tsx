@@ -2,6 +2,7 @@ import * as React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import { css } from 'react-emotion'
 import Photo from './Photo'
+import Masthead from './Masthead'
 
 interface CoverAnimationProps {
   photos?: any
@@ -9,15 +10,15 @@ interface CoverAnimationProps {
 
 const positions = [
   { top: '40px', left: '60px', width: '30%' },
-  { bottom: '40px', right: '160px', width: '20%' },
+  { bottom: '40px', right: '160px', width: '34%' },
   { top: '60px', right: '70px', width: '36%' },
-  { bottom: '80px', left: '120px', right: 'auto', width: '28%' },
-  { bottom: '120px', right: '65px', width: '26%' },
-  { top: '60px', left: 'auto', right: 'auto', width: '34%' },
+  { bottom: '80px', left: '120px', width: '28%' },
+  { bottom: '10px', right: '65px', width: '26%' },
+  { bottom: '60px', left: '20px', width: '34%' },
   {
     top: '50%',
     left: '50%',
-    width: '10%',
+    width: '16%',
   },
   {
     bottom: '20%',
@@ -53,24 +54,20 @@ const positions = [
 
 class CoverAnimation extends React.Component<CoverAnimationProps> {
   render() {
-    const x = this.props.photos.map((photo, i) => {
+    const photos = this.props.photos.map((photo, i) => {
       return (
-        <Photo
-          key={i}
-          caption="hello test"
-          timeOffset={2 * (i + 1)}
-          image={photo}
-          {...positions[i]}
-        />
+        <Photo key={i} timeOffset={1.4 * i} image={photo} {...positions[i]} />
       )
     })
     return (
       <div
         className={css`
           height: 100vh;
+          display: grid;
         `}
       >
-        {x}
+        {photos}
+        <Masthead timeOffset={1.4 * this.props.photos.length} />
       </div>
     )
   }
