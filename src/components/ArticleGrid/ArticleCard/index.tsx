@@ -24,6 +24,7 @@ class ArticleCard extends React.Component<ArticleCardProps> {
               width: 100%;
               height: 250px;
               object-fit: cover;
+              margin-bottom: 0.2rem;
             `}
             alt={this.props.article.imageAlt}
           />

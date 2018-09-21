@@ -12,12 +12,10 @@ interface BylineProps {
 
 /** The byline of the story. */
 export default function Byline(props: BylineProps) {
-  return (
-    <div className="byline">
-      By{' '}
-      {typeof props.authors === 'string'
-        ? props.authors
-        : toSentence(props.authors)}
-    </div>
-  )
+  const authorString =
+    typeof props.authors === 'string'
+      ? props.authors.toUpperCase()
+      : toSentence(props.authors.map(author => author.toUpperCase()))
+
+  return <div className="byline">By {authorString}</div>
 }
