@@ -35,11 +35,15 @@ export default class ArticleGrid extends React.Component<ArticleGridProps> {
     return (
       <section
         id={!!this.props.heading ? slugify(this.props.heading) : undefined}
+        className={css`
+          margin-top: 20px;
+        `}
       >
         {!!this.props.heading && (
           <h2
             className={css`
               text-align: center;
+              font: bold 4rem Garamond, Georgia, sans-serif;
             `}
           >
             {this.props.heading}

@@ -9,7 +9,7 @@ const typography = new Typography({
     {
       name: 'Inconsolata',
       styles: ['400'],
-    },
+    }
   ],
   headerFontFamily: ['Buenard', 'Helvetica Neue', 'Helvetica', 'sans-serif'],
   bodyFontFamily: ['Inconsolata', 'Helvetica', 'sans-serif'],
