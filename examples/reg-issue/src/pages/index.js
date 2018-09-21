@@ -79,7 +79,12 @@ export default function IndexPage({ data }) {
         </p>
         {articleGrids}
       </div>
-      <Footer developers="Nathan Smith, Dustin Newman" />
+      <Footer 
+      githubLink = {'https://dailybruin.com/'}
+      githubName = "lux"
+      developers = {['Nathan Smith', 'Dustin Newman', 'Henna Dialani']}
+      license =  "Content copyright © Daily Bruin"
+      copyrightYear = 2018/>
     </>
   )
 }
