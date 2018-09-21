@@ -32,6 +32,7 @@ class ArticleCard extends React.Component<ArticleCardProps> {
             className={css`
               margin: 0;
               font-style: ${this.props.article.isColumn ? 'italic' : 'normal'};
+              font-size: 1.6rem;
             `}
           >
             {this.props.article.headline}

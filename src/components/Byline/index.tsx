@@ -17,5 +17,8 @@ export default function Byline(props: BylineProps) {
       ? props.authors.toUpperCase()
       : toSentence(props.authors.map(author => author.toUpperCase()))
 
-  return <div className="byline">By {authorString}</div>
+  return <div 
+            className={css`
+              padding-top: 5px;
+            `}>By {authorString}</div>
 }
