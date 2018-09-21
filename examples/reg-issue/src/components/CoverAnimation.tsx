@@ -16,6 +16,7 @@ class CoverAnimation extends React.Component<CoverAnimationProps> {
   render() {
     const x = this.props.photos.map((photo, i) => (
       <Photo
+        key={i}
         caption="hello test"
         timeOffset={2 * (i + 1)}
         captionPosition={CaptionPosition.LEFT}

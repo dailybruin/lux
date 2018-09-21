@@ -8,16 +8,23 @@ import toSentence from '../../utils/toSentence'
 interface BylineProps {
   /** The authors of the story. */
   authors: string | Array<string>
+  isColumn: boolean
 }
 
 /** The byline of the story. */
-export default function Byline(props: BylineProps) {
-  return (
-    <div className="byline">
-      By{' '}
-      {typeof props.authors === 'string'
-        ? props.authors
-        : toSentence(props.authors)}
-    </div>
-  )
+export default class Byline extends React.Component<BylineProps> {
+  static defaultProps = {
+    isColumn: false,
+  }
+
+  render() {
+    return (
+      <div className="byline">
+        By{' '}
+        {typeof this.props.authors === 'string'
+          ? this.props.authors
+          : toSentence(this.props.authors)}
+      </div>
+    )
+  }
 }

@@ -2,17 +2,7 @@ import * as React from 'react'
 import slugify from 'slugify'
 import { css } from 'react-emotion'
 import ArticleCard from './ArticleCard'
-
-interface Article {
-  section: string
-  headline: string
-  authors: string
-  description?: string
-  link: string
-  image: string
-  imageAlt: string
-  imageCredit: string
-}
+import { Article } from '../../utils/convertEdgesToArticles'
 
 interface ArticleGridProps {
   heading?: string
@@ -30,11 +20,11 @@ export default class ArticleGrid extends React.Component<ArticleGridProps> {
 
   render() {
     const articles = this.props.articles.map((article, i) => {
-      // TODO: move the author split into a data section
+      // TODO: move the byline split into a data section
       return (
         <ArticleCard
           headline={article.headline}
-          authors={article.authors ? article.authors.split(',') : ''}
+          authors={article.byline ? article.byline.split(',') : article.byline}
           link={article.link}
           key={i}
         />

@@ -1,6 +1,11 @@
 import * as React from 'react'
 import { graphql } from 'gatsby'
-import { Head, ArticleGrid, Footer } from '../../../../dist'
+import {
+  Head,
+  ArticleGrid,
+  Footer,
+  convertEdgesToArticles,
+} from '../../../../dist'
 import CoverAnimation from '../components/CoverAnimation'
 import * as uniq from 'lodash.uniq'
 
@@ -31,9 +36,9 @@ export default function IndexPage({ data }) {
   )
 
   const articleGrids = sections.map((section, i) => {
-    const articles = data.allGoogleSheetRow.edges.filter(
-      edge => edge.node.section === section
-    )
+    const articles = convertEdgesToArticles(
+      data.allGoogleSheetRow.edges
+    ).filter(article => article.section === section)
 
     return <ArticleGrid key={i} heading={section} articles={articles} />
   })
@@ -43,7 +48,7 @@ export default function IndexPage({ data }) {
       <Head
         title="test"
         description="test2"
-        url="features.dailybruin.com"
+        url="features.dailybruin.com/2018/registration-issue"
         twitter="yup"
       />
       <div

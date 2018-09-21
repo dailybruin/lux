@@ -6,3 +6,7 @@ export { default as Head } from './components/Head'
 // Utils
 export { default as styles } from 'utils/styles'
 export { default as toSentence } from 'utils/toSentence'
+export {
+  default as convertEdgesToArticles,
+  Article,
+} from 'utils/convertEdgesToArticles'
