@@ -27,6 +27,7 @@ export default class ArticleGrid extends React.Component<ArticleGridProps> {
           authors={article.byline ? article.byline.split(',') : article.byline}
           link={article.link}
           key={i}
+          italicize={article.isColumn}
         />
       )
     })
