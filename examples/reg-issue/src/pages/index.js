@@ -54,7 +54,7 @@ export default function IndexPage({ data }) {
       <div
         style={{
           margin: '0 auto',
-          maxWidth: 960,
+          maxWidth: 1080,
           padding: '0px 1.0875rem 1.45rem',
           paddingTop: 0,
         }}
@@ -62,7 +62,7 @@ export default function IndexPage({ data }) {
         <CoverAnimation />
         {articleGrids}
       </div>
-      <Footer developers="Nathan Smith" />
+      <Footer developers="Nathan Smith, Dustin Newman" />
     </>
   )
 }

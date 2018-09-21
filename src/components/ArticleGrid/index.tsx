@@ -24,6 +24,12 @@ export default class ArticleGrid extends React.Component<ArticleGridProps> {
       return <ArticleCard article={article} key={i} />
     })
 
+    const gridStyles = this.props.articles.length > 1 ? `
+    display: grid;
+    grid-template-columns: repeat(${this.props.maxColumns}, 1fr);
+    grid-gap: 16px;
+  ` : '';
+
     return (
       <section
         id={!!this.props.heading ? slugify(this.props.heading) : undefined}
@@ -39,11 +45,7 @@ export default class ArticleGrid extends React.Component<ArticleGridProps> {
         )}
         {!!this.props.descriptionText && <p>{this.props.descriptionText}</p>}
         <div
-          className={css`
-            display: grid;
-            grid-template-columns: repeat(${this.props.maxColumns}, 1fr);
-            grid-gap: 16px;
-          `}
+          className={css`${gridStyles}`}
         >
           {articles}
         </div>
