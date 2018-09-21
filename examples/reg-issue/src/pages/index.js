@@ -43,6 +43,8 @@ export default function IndexPage({ data }) {
     return <ArticleGrid key={i} heading={section} articles={articles} />
   })
 
+
+  
   return (
     <>
       <Head
@@ -51,6 +53,7 @@ export default function IndexPage({ data }) {
         url="features.dailybruin.com/2018/registration-issue"
         twitter="yup"
       />
+      <CoverAnimation />
       <div
         style={{
           margin: '0 auto',
@@ -59,7 +62,6 @@ export default function IndexPage({ data }) {
           paddingTop: 0,
         }}
       >
-        <CoverAnimation />
         {articleGrids}
       </div>
       <Footer developers="Nathan Smith, Dustin Newman" />
