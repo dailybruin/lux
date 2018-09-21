@@ -21,15 +21,7 @@ export default class ArticleGrid extends React.Component<ArticleGridProps> {
   render() {
     const articles = this.props.articles.map((article, i) => {
       // TODO: move the byline split into a data section
-      return (
-        <ArticleCard
-          headline={article.headline}
-          authors={article.byline ? article.byline.split(',') : article.byline}
-          link={article.link}
-          key={i}
-          italicize={article.isColumn}
-        />
-      )
+      return <ArticleCard article={article} key={i} />
     })
 
     return (
