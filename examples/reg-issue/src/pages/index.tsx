@@ -1,5 +1,8 @@
 import * as React from 'react'
 import { Head } from '../../../../dist'
+import CoverAnimation from '../components/CoverAnimation'
+
+import 'normalize.css'
 
 export default function IndexPage() {
   return (
@@ -10,7 +13,7 @@ export default function IndexPage() {
         url="features.dailybruin.com"
         twitter="yup"
       />
-      <h1>hi</h1>
+      <CoverAnimation />
     </>
   )
 }
