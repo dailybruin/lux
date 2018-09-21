@@ -1,9 +1,6 @@
 import * as React from 'react'
 import { Helmet } from 'react-helmet'
 
-import favicon32 from './favicons/favicon-32x32.png'
-import favicon16 from './favicons/favicon-16x16.png'
-
 interface HeadProps {
   title: string
   pageTitle?: string
