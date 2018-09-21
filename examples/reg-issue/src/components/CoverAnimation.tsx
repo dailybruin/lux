@@ -1,12 +1,7 @@
 import * as React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import { css } from 'react-emotion'
-import Img from 'gatsby-image'
 import Photo, { CaptionPosition } from './Photo'
-
-const placeholderPhotos = Array.from(
-  'https://via.placeholder.com/350x150'.repeat(10)
-)
 
 interface CoverAnimationProps {
   photos?: any
@@ -41,17 +36,19 @@ export default () => (
   <StaticQuery
     query={graphql`
       query CoverAnimationQuery {
-        allImageSharp {
+        allFile(filter: { relativePath: { regex: "/coverphoto/" } }) {
           edges {
             node {
-              fixed(width: 200, height: 200, cropFocus: CENTER) {
-                ...GatsbyImageSharpFixed
+              childImageSharp {
+                fixed(width: 200, height: 200, cropFocus: CENTER) {
+                  ...GatsbyImageSharpFixed
+                }
               }
             }
           }
         }
       }
     `}
-    render={data => <CoverAnimation photos={data.allImageSharp.edges} />}
+    render={data => <CoverAnimation photos={data.allFile.edges} />}
   />
 )

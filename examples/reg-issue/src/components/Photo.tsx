@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { css } from 'react-emotion'
+import { css, keyframes } from 'react-emotion'
 import Img from 'gatsby-image'
 
 export enum CaptionPosition {
@@ -7,6 +7,15 @@ export enum CaptionPosition {
   LEFT = 'row-reverse',
   BOTTOM = 'column',
 }
+
+const fadeIn = keyframes`
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+`
 
 interface PhotoProps {
   captionPosition: CaptionPosition
@@ -27,21 +36,13 @@ export default function Photo(props: PhotoProps) {
         top: ${props.top}px;
         right: ${props.right}px;
 
-        @keyframes fadein {
-          from {
-            opacity: 0;
-          }
-          to {
-            opacity: 1;
-          }
-        }
-        animation: fadein ${props.timeOffset}s;
+        animation: ${fadeIn} ${props.timeOffset}s;
 
         display: flex;
         flex-direction: ${props.captionPosition};
       `}
     >
-      <Img fixed={props.image.node.fixed} />
+      <Img fixed={props.image.node.childImageSharp.fixed} />
       {!!props.caption && <figcaption>{props.caption}</figcaption>}
     </figure>
   )
