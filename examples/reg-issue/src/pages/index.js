@@ -43,6 +43,8 @@ export default function IndexPage({ data }) {
     return <ArticleGrid key={i} heading={section} articles={articles} />
   })
 
+
+  
   return (
     <>
       <Head

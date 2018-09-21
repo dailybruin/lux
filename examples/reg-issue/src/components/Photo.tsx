@@ -2,12 +2,6 @@ import * as React from 'react'
 import { css, keyframes } from 'react-emotion'
 import Img from 'gatsby-image'
 
-export enum CaptionPosition {
-  RIGHT = 'row',
-  LEFT = 'row-reverse',
-  BOTTOM = 'column',
-}
-
 const fadeIn = keyframes`
   from {
     opacity: 0;
@@ -18,14 +12,14 @@ const fadeIn = keyframes`
 `
 
 interface PhotoProps {
-  captionPosition: CaptionPosition
   timeOffset: number
   caption?: string
-  top?: number
-  bottom?: number
-  left?: number
-  right?: number
+  top?: string
+  bottom?: string
+  left?: string
+  right?: string
   image: any
+  width: number
 }
 
 export default function Photo(props: PhotoProps) {
@@ -33,16 +27,19 @@ export default function Photo(props: PhotoProps) {
     <figure
       className={css`
         position: absolute;
-        top: ${props.top}px;
-        right: ${props.right}px;
+        top: ${props.top ? props.top : 'initial'};
+        right: ${props.right ? props.right : 'initial'};
+        left: ${props.left ? props.left : 'initial'};
+        bottom: ${props.bottom ? props.bottom : 'initial'};
+        width: ${props.width};
 
-        animation: ${fadeIn} ${props.timeOffset}s;
+        animation-delay: ${props.timeOffset};
+        animation: ${fadeIn} 1s;
 
-        display: flex;
-        flex-direction: ${props.captionPosition};
+        /* flex-direction: ${props.captionPosition}; */
       `}
     >
-      <Img fixed={props.image.node.childImageSharp.fixed} />
+      <Img fluid={props.image.node.childImageSharp.fluid} />
       {!!props.caption && <figcaption>{props.caption}</figcaption>}
     </figure>
   )
