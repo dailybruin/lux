@@ -50,10 +50,10 @@ export default function IndexPage({ data }) {
   return (
     <>
       <Head
-        title="test"
-        description="test2"
+        title="Registration Issue 2018 | The Daily Bruin"
+        description=""
         url="features.dailybruin.com/2018/registration-issue"
-        twitter="yup"
+        twitter="@dailybruin"
       />
       <CoverAnimation />
       <div
