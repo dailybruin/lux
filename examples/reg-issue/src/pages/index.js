@@ -7,8 +7,8 @@ import {
   convertEdgesToArticles,
 } from '../../../../dist'
 import CoverAnimation from '../components/CoverAnimation'
-import * as uniq from 'lodash.uniq';
-import capitalizeSection from '../utils/capitalizeSection';
+import * as uniq from 'lodash.uniq'
+import capitalizeSection from '../utils/capitalizeSection'
 import { css } from 'react-emotion'
 
 import 'normalize.css'
@@ -34,7 +34,9 @@ export const query = graphql`
 
 export default function IndexPage({ data }) {
   const sections = uniq(
-    data.allGoogleSheetRow.edges.map(edge => capitalizeSection(edge.node.section))
+    data.allGoogleSheetRow.edges.map(edge =>
+      capitalizeSection(edge.node.section)
+    )
   )
 
   const articleGrids = sections.map((section, i) => {
@@ -65,8 +67,10 @@ export default function IndexPage({ data }) {
         <p
           className={css`
             text-align: center;
-            margin: 1rem 0;
+            margin: 1rem 8rem;
+            font-size: 1.2rem;
           `}
+          id="explainer"
         >
           The Registration Issue is the Daily Bruin’s first issue of the new
           school year. These images combine protest and demonstration documented
