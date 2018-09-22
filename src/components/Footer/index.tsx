@@ -14,7 +14,7 @@ enum License {
  */
 interface FooterProps {
   /** The name of the github project. The `https://github.com/dailybruin/` part is already given. */
-  githubName: string
+  githubName?: string
   /** The name of the license of the project. */
   license: License
   /** A list of the developers who created the site. */
@@ -33,22 +33,42 @@ class Footer extends React.Component<FooterProps> {
     return (
       <footer
         className={css`
-          display: flex;
-          flex-direction: column;
+          display: grid;
+          grid-template-columns: 1fr;
+          grid-template-rows: auto auto;
           justify-content: center;
-          margin-bottom: 1rem;
+          margin: 1rem 0;
+          padding: 0 0.4rem;
           text-align: center;
+
+          @media (max-width: 600px) {
+            font-size: 0.8rem;
+          }
         `}
       >
         <div>
-          Content copyright © {this.props.copyrightYear} Daily Bruin. Site code
-          available on{' '}
-          <a href={`https://github.com/dailybruin/${this.props.githubName}`}>
-            GitHub
-          </a>
-          {this.props.license === License.Copyright
-            ? '.'
-            : ` and available under the ${this.props.license}.`}
+          <span>
+            Content copyright © {this.props.copyrightYear} Daily Bruin.
+          </span>{' '}
+          {!!this.props.githubName && (
+            <span
+              className={css`
+                @media (max-width: 600px) {
+                  display: none;
+                }
+              `}
+            >
+              Site code available on{' '}
+              <a
+                href={`https://github.com/dailybruin/${this.props.githubName}`}
+              >
+                GitHub
+              </a>
+              {this.props.license === License.Copyright
+                ? '.'
+                : ` and available under the ${this.props.license}.`}
+            </span>
+          )}
         </div>
         <div>
           Built with Suzy’s <Heart /> in Kerckhoff 118 by{' '}

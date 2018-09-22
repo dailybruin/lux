@@ -19,21 +19,28 @@ export default class ArticleGrid extends React.Component<ArticleGridProps> {
   }
 
   render() {
-    const articles = this.props.articles.map((article, i) => {
-      // TODO: move the byline split into a data section
-      return <ArticleCard article={article} key={i} />
-    })
+    const articles = this.props.articles.map((article, i) => (
+      <ArticleCard article={article} key={i} />
+    ))
 
     const gridStyles =
       this.props.articles.length > 1
-        ? `
-      display: grid;
-      grid-template-columns: repeat(${this.props.maxColumns}, 1fr);
-      grid-gap: 16px;
-    `
-        : `
-      text-align: center;
-    `
+        ? css`
+            display: grid;
+            grid-template-columns: repeat(${this.props.maxColumns}, 1fr);
+            grid-gap: 16px;
+
+            @media (max-width: 900px) {
+              grid-template-columns: repeat(2, 1fr);
+            }
+
+            @media (max-width: 700px) {
+              grid-template-columns: 1fr;
+            }
+          `
+        : css`
+            text-align: center;
+          `
 
     return (
       <section
@@ -53,13 +60,7 @@ export default class ArticleGrid extends React.Component<ArticleGridProps> {
           </h2>
         )}
         {!!this.props.descriptionText && <p>{this.props.descriptionText}</p>}
-        <div
-          className={css`
-            ${gridStyles};
-          `}
-        >
-          {articles}
-        </div>
+        <div className={gridStyles}>{articles}</div>
       </section>
     )
   }

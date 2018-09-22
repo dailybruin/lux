@@ -1,16 +1,20 @@
-import * as React from 'react';
-import styled from 'react-emotion';
-
-const Hello = styled('span')`
-  &:hover {
-    color: red;
-    cursor: pointer;
-  }
-`;
+import * as React from 'react'
+import { css } from 'react-emotion'
 
 /**
  * Heart.
  */
 export default function Heart(props: {}) {
-  return <Hello>♥</Hello>;
+  return (
+    <span
+      className={css`
+        &:hover {
+          color: red;
+          cursor: default;
+        }
+      `}
+    >
+      ♥
+    </span>
+  )
 }
