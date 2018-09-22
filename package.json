@@ -1,6 +1,6 @@
 {
   "name": "@dailybruin/lux",
-  "version": "0.0.0-development",
+  "version": "1.0.0",
   "author": "Daily Bruin Online <online@dailybruin.com>",
   "description": "The Daily Bruin's component library.",
   "main": "dist/index.js",
@@ -9,6 +9,9 @@
   "files": [
     "dist"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dailybruin/lux.git"
