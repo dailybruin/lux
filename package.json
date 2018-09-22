@@ -15,7 +15,8 @@
   },
   "scripts": {
     "start": "docz dev",
-    "build": "NODE_ENV='production' rollup -c",
+    "build": "rollup -c",
+    "prepublish": "yarn build",
     "watch": "rollup -cw",
     "build:docs": "docz build",
     "dev:chapters": "parcel src/layouts/chapter-based.html --open",
