@@ -9,10 +9,14 @@ const typography = new Typography({
     {
       name: 'Inconsolata',
       styles: ['400'],
+    },
+    {
+      name: 'EB Garamond',
+      styles: ['700'],
     }
   ],
-  headerFontFamily: ['Buenard', 'Helvetica Neue', 'Helvetica', 'sans-serif'],
-  bodyFontFamily: ['Inconsolata', 'Helvetica', 'sans-serif'],
+  headerFontFamily: ['Buenard', 'serif'],
+  bodyFontFamily: ['Inconsolata', 'monospace'],
 })
 
 export default typography

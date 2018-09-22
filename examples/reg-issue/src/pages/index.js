@@ -8,7 +8,7 @@ import {
 } from '../../../../dist'
 import CoverAnimation from '../components/CoverAnimation'
 import * as uniq from 'lodash.uniq';
-import capitalizeSections from '../utils/capitalizeSections';
+import capitalizeSection from '../utils/capitalizeSection';
 
 import 'normalize.css'
 
@@ -33,7 +33,7 @@ export const query = graphql`
 
 export default function IndexPage({ data }) {
   const sections = uniq(
-    data.allGoogleSheetRow.edges.map(edge => capitalizeSections(edge.node.section))
+    data.allGoogleSheetRow.edges.map(edge => capitalizeSection(edge.node.section))
   )
 
   const articleGrids = sections.map((section, i) => {

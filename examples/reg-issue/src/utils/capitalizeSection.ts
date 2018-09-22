@@ -5,14 +5,14 @@
  * @param {string} The string.
  * @returns {string} A capitalized string.
  */
-export default function capitalizeSections(str: string): string {
-    if (str.length === 0) {
+export default function capitalizeSection(section: string): string {
+    if (section.length === 0) {
       return '';
     }
 
-    if (str === 'prime') return 'prime';
+    if (section === 'prime') return 'prime';
   
-    return str.toLowerCase()
+    return section.toLowerCase()
     .split(' ')
     .map((word) => word.charAt(0).toUpperCase() + word.substring(1))
     .join(' ');

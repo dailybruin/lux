@@ -43,7 +43,7 @@ export default class ArticleGrid extends React.Component<ArticleGridProps> {
           <h2
             className={css`
               text-align: center;
-              font: bold 4rem Garamond, Georgia, sans-serif;
+              font: bold 4rem 'EB Garamond', Garamond, Georgia, serif;
             `}
           >
             {this.props.heading}
