@@ -32,11 +32,12 @@ class ArticleCard extends React.Component<ArticleCardProps> {
             className={css`
               margin: 0;
               font-style: ${this.props.article.isColumn ? 'italic' : 'normal'};
+              font-size: 1.6rem;
             `}
           >
             {this.props.article.headline}
           </h2>
-          <Byline authors={this.props.article.byline} />
+          <Byline authors={this.props.article.byline.split(',')} />
           {!!this.props.article.description && (
             <p>{this.props.article.description}</p>
           )}

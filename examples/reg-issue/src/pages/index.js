@@ -7,7 +7,8 @@ import {
   convertEdgesToArticles,
 } from '../../../../dist'
 import CoverAnimation from '../components/CoverAnimation'
-import * as uniq from 'lodash.uniq'
+import * as uniq from 'lodash.uniq';
+import capitalizeSection from '../utils/capitalizeSection';
 import { css } from 'react-emotion'
 
 import 'normalize.css'
@@ -33,13 +34,13 @@ export const query = graphql`
 
 export default function IndexPage({ data }) {
   const sections = uniq(
-    data.allGoogleSheetRow.edges.map(edge => edge.node.section)
+    data.allGoogleSheetRow.edges.map(edge => capitalizeSection(edge.node.section))
   )
 
   const articleGrids = sections.map((section, i) => {
     const articles = convertEdgesToArticles(
       data.allGoogleSheetRow.edges
-    ).filter(article => article.section === section)
+    ).filter(article => article.section === section.toLowerCase())
 
     return <ArticleGrid key={i} heading={section} articles={articles} />
   })
@@ -56,7 +57,7 @@ export default function IndexPage({ data }) {
       <div
         style={{
           margin: '0 auto',
-          maxWidth: 960,
+          maxWidth: 1080,
           padding: '0px 1.0875rem 1.45rem',
           paddingTop: 0,
         }}
@@ -78,7 +79,7 @@ export default function IndexPage({ data }) {
         </p>
         {articleGrids}
       </div>
-      <Footer developers="Nathan Smith" />
+      <Footer developers={['Nathan Smith', 'Dustin Newman']} />
     </>
   )
 }

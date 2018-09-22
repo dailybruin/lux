@@ -3,16 +3,20 @@ import Typography from 'typography'
 const typography = new Typography({
   googleFonts: [
     {
-      name: 'Raleway',
-      styles: ['400', '800'],
+      name: 'Buenard',
+      styles: ['700'],
     },
     {
-      name: 'Source Sans Pro',
-      styles: ['300'],
+      name: 'Inconsolata',
+      styles: ['400'],
     },
+    {
+      name: 'EB Garamond',
+      styles: ['700'],
+    }
   ],
-  headerFontFamily: ['Raleway', 'Helvetica Neue', 'Helvetica', 'sans-serif'],
-  bodyFontFamily: ['Source Sans Pro', 'Helvetica', 'sans-serif'],
+  headerFontFamily: ['Buenard', 'serif'],
+  bodyFontFamily: ['Inconsolata', 'monospace'],
 })
 
 export default typography
