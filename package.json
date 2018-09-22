@@ -1,5 +1,5 @@
 {
-  "name": "lux",
+  "name": "@dailybruin/lux",
   "version": "0.0.0-development",
   "author": "Daily Bruin Online <online@dailybruin.com>",
   "description": "The Daily Bruin's component library.",
@@ -11,7 +11,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/dailybruin/lux.git"
+    "url": "git+https://github.com/dailybruin/lux.git"
   },
   "scripts": {
     "start": "docz dev",
@@ -56,5 +56,14 @@
     "rollup-plugin-typescript2": "0.17.0",
     "semantic-release": "15.9.14",
     "ts-jest": "23.1.4"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/dailybruin/lux/issues"
+  },
+  "homepage": "https://github.com/dailybruin/lux#readme",
+  "directories": {
+    "example": "examples",
+    "test": "tests"
+  },
+  "license": "ISC"
 }
