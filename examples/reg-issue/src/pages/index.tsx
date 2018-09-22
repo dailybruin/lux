@@ -83,7 +83,10 @@ export default function IndexPage({ data }) {
         </p>
         {articleGrids}
       </div>
-      <Footer developers={['Nathan Smith', 'Dustin Newman']} />
+      <Footer
+        developers={['Nathan Smith', 'Dustin Newman']}
+        copyrightYear={2018}
+      />
     </>
   )
 }
