@@ -37,7 +37,7 @@ class ArticleCard extends React.Component<ArticleCardProps> {
           >
             {this.props.article.headline}
           </h2>
-          <Byline authors={this.props.article.byline} />
+          <Byline authors={this.props.article.byline.split(',')} />
           {!!this.props.article.description && (
             <p>{this.props.article.description}</p>
           )}

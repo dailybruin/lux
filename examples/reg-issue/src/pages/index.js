@@ -9,6 +9,7 @@ import {
 import CoverAnimation from '../components/CoverAnimation'
 import * as uniq from 'lodash.uniq';
 import capitalizeSection from '../utils/capitalizeSection';
+import { css } from 'react-emotion'
 
 import 'normalize.css'
 
@@ -44,8 +45,6 @@ export default function IndexPage({ data }) {
     return <ArticleGrid key={i} heading={section} articles={articles} />
   })
 
-
-  
   return (
     <>
       <Head
@@ -63,6 +62,21 @@ export default function IndexPage({ data }) {
           paddingTop: 0,
         }}
       >
+        <p
+          className={css`
+            text-align: center;
+            margin: 1rem 0;
+          `}
+        >
+          The Registration Issue is the Daily Bruin’s first issue of the new
+          school year. These images combine protest and demonstration documented
+          in The Bruin’s film and digital archives to depict expressions of
+          student voices on campus. Students have and continue to protest
+          injustices such as the marginalization of communities or the silencing
+          of student voices since the campus’ inception, and we hope to
+          recognize the ongoing problems that have become ingrained into UCLA’s
+          history as the university nears its centennial year.
+        </p>
         {articleGrids}
       </div>
       <Footer developers="Nathan Smith, Dustin Newman" />

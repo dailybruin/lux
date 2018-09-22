@@ -19,7 +19,7 @@ interface PhotoProps {
   left?: string
   right?: string
   image: any
-  width: number
+  width: string
 }
 
 export default function Photo(props: PhotoProps) {
@@ -33,10 +33,9 @@ export default function Photo(props: PhotoProps) {
         bottom: ${props.bottom ? props.bottom : 'initial'};
         width: ${props.width};
 
-        animation-delay: ${props.timeOffset};
-        animation: ${fadeIn} 1s;
-
-        /* flex-direction: ${props.captionPosition}; */
+        opacity: 0;
+        animation: ${fadeIn} 0.8s ease-in-out forwards;
+        animation-delay: ${props.timeOffset}s;
       `}
     >
       <Img fluid={props.image.node.childImageSharp.fluid} />
