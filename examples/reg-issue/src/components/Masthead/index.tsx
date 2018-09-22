@@ -23,7 +23,7 @@ export default function Masthead(props: MastheadProps) {
         animation: ${fadeIn} 0.5s ease-in-out forwards;
         animation-delay: ${props.timeOffset}s;
         margin-bottom: 3rem;
-        background-color: rgba(0, 0, 0, 0.16);
+        background-color: rgba(0, 0, 0, 0.6);
         display: grid;
       `}
     >
