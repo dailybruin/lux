@@ -1,6 +1,6 @@
 {
   "name": "@dailybruin/lux",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Daily Bruin Online <online@dailybruin.com>",
   "description": "The Daily Bruin's component library.",
   "main": "dist/index.js",
