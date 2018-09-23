@@ -6,7 +6,7 @@ interface HeadProps {
   pageTitle?: string
   description: string
   url: string
-  // image: string
+  image: any // idk what require(image) type is
   twitter: string
 }
 
@@ -19,13 +19,23 @@ export default function Head(props: HeadProps) {
       <title>{title}</title>
       <meta name="description" content={props.description} />
 
-      {/* <link
+      <link
         rel="apple-touch-icon"
         sizes="180x180"
-        href={require('./favicons/apple-touch-icon.png')}
-      /> */}
-      {/* <link rel="icon" type="image/png" sizes="32x32" href={favicon32} />
-      <link rel="icon" type="image/png" sizes="16x16" href={favicon16} /> */}
+        href={require('./images/favicons/apple-touch-icon.png')}
+      />
+      <link
+        rel="icon"
+        type="image/png"
+        sizes="32x32"
+        href={require('./images/favicons/favicon-32x32.png')}
+      />
+      <link
+        rel="icon"
+        type="image/png"
+        sizes="16x16"
+        href={require('./images/favicons/favicon-16x16.png')}
+      />
       {/* <link rel="manifest" href="/site.webmanifest" />
       <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#0080c6" />
       <meta name="msapplication-TileColor" content="#ffffff" />
@@ -38,7 +48,7 @@ export default function Head(props: HeadProps) {
       <meta property="og:type" content="website" />
       <meta property="og:url" content={props.url} />
       <meta property="og:title" content={title} />
-      {/* <meta property="og:image" content="https://example.com/image.jpg" /> */}
+      <meta property="og:image" content={props.image} />
       <meta property="og:description" content={props.description} />
       <meta property="og:site_name" content={title} />
       <meta property="og:locale" content="en_US" />
@@ -49,7 +59,7 @@ export default function Head(props: HeadProps) {
       <meta name="twitter:url" content={props.url} />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={props.description} />
-      {/* <meta name="twitter:image" content="https://example.com/image.jpg" /> */}
+      <meta name="twitter:image" content={props.image} />
 
       <html lang="en" />
     </Helmet>

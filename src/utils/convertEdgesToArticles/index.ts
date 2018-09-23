@@ -4,9 +4,9 @@ export interface Article {
   byline: string
   description?: string
   link: string
-  image: string
-  imageAlt: string
-  imageCredit: string
+  image?: string
+  imageAlt?: string
+  imageCredit?: string
   isColumn: boolean
 }
 

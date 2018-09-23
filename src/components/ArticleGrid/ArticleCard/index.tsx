@@ -19,14 +19,14 @@ class ArticleCard extends React.Component<ArticleCardProps> {
           `}
         >
           <img
-            src={this.props.article.image}
+            src={this.props.article.image || require('./images/bear.jpg')}
             className={css`
               width: 100%;
               height: 250px;
               object-fit: cover;
               margin-bottom: 0.2rem;
             `}
-            alt={this.props.article.imageAlt}
+            alt={this.props.article.imageAlt || 'The UCLA Bruin bear statue.'}
           />
           <h2
             className={css`

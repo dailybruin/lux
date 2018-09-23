@@ -18,7 +18,7 @@
   },
   "scripts": {
     "start": "docz dev",
-    "build": "rollup -c",
+    "build": "rollup -c && cpx 'src/images/*.{png,jpg}' dist/images",
     "prepublish": "yarn build",
     "watch": "rollup -cw",
     "build:docs": "docz build",
@@ -35,6 +35,7 @@
     "@types/react": "16.4.14",
     "@types/react-dom": "16.0.7",
     "@types/react-helmet": "^5.0.7",
+    "cpx": "^1.5.0",
     "docz": "0.11.2",
     "emotion": "^9.2.10",
     "emotion-server": "^9.2.10",
