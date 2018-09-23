@@ -54,7 +54,7 @@ export default function Head(props: HeadProps) {
       <meta property="og:locale" content="en_US" />
 
       {/* Twitter Tags */}
-      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:creator" content={props.twitter} />
       <meta name="twitter:url" content={props.url} />
       <meta name="twitter:title" content={title} />
