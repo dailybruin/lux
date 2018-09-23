@@ -6,6 +6,7 @@ import { Article } from '../../utils/convertEdgesToArticles'
 
 interface ArticleGridProps {
   heading?: string
+  headingStyle?: string
   descriptionText?: string
   articles: Array<Article>
   maxColumns: number
@@ -53,7 +54,7 @@ export default class ArticleGrid extends React.Component<ArticleGridProps> {
           <h2
             className={css`
               text-align: center;
-              font: bold 4rem 'EB Garamond', Garamond, Georgia, serif;
+              ${this.props.headingStyle};
             `}
           >
             {this.props.heading}

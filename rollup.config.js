@@ -21,7 +21,6 @@ export default {
   plugins: [
     typescript({
       typescript: require('typescript'),
-      exclude: [],
     }),
     images(),
   ],
