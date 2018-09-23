@@ -2,6 +2,7 @@ import * as React from 'react'
 import { css } from 'react-emotion'
 import Byline from '../../Byline'
 import { Article } from '../../../utils/convertEdgesToArticles'
+import * as bearImage from './bear.jpg'
 
 interface ArticleCardProps {
   article: Article
@@ -19,7 +20,7 @@ class ArticleCard extends React.Component<ArticleCardProps> {
           `}
         >
           <img
-            src={this.props.article.image || require('./images/bear.jpg')}
+            src={this.props.article.image || bearImage}
             className={css`
               width: 100%;
               height: 250px;
