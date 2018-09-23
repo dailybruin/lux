@@ -55,7 +55,8 @@ export default function Head(props: HeadProps) {
 
       {/* Twitter Tags */}
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:creator" content={props.twitter} />
+      {/* <meta name="twitter:creator" content={props.twitter} /> */}
+      <meta name="twitter:site" content="@dailybruin" />
       <meta name="twitter:url" content={props.url} />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={props.description} />
