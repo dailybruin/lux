@@ -1,5 +1,5 @@
 import { css } from 'react-emotion'
 
-const testStyle = css`
+const globalStyles = css`
 background-color: red;
 `;
