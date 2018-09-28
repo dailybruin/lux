@@ -95,6 +95,7 @@ class Footer extends React.Component<FooterProps> {
       ];
       let renderedLinks = mainSiteFooterLinks.map((link) =>
         <FooterLink
+          key={link.text}
           url={link.url}
           text={link.text}
         />
