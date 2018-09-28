@@ -15,7 +15,7 @@ export default function FooterLink (props: FooterLinkProps) {
         text-decoration: none;
         color: inherit;
 
-        @media (max-width: 600px) {
+        ${MainSiteStyles.mediaMobileBreakpoint} {
           margin: auto;
         }
       `}
