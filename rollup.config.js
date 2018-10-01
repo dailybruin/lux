@@ -1,5 +1,5 @@
 import typescript from 'rollup-plugin-typescript2'
-import images from 'rollup-plugin-image-files'
+import image from 'rollup-plugin-img'
 import pkg from './package.json'
 
 export default {
@@ -22,6 +22,8 @@ export default {
     typescript({
       typescript: require('typescript'),
     }),
-    images(),
+    image({
+      output: 'dist/images',
+    }),
   ],
 }
