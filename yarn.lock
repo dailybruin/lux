@@ -6674,7 +6674,7 @@ gatsby-react-router-scroll@^2.0.0-rc.2:
     scroll-behavior "^0.9.9"
     warning "^3.0.0"
 
-gatsby@^2.0.0-rc.15:
+gatsby@2.0.0-rc.15:
   version "2.0.0-rc.15"
   resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.0.0-rc.15.tgz#994ceabf049e0020fa799928d77658ab95cb0290"
   integrity sha512-BlAdfZLjKHRbl+BVn+GGQ9LO2VWu+Htn2HQypNviRZOmedSJmxi7Me/k7tghTJDGi5c6dhFpNtSS7zZaD9igvQ==
@@ -8534,7 +8534,7 @@ jest-each@^23.5.0:
     chalk "^2.0.1"
     pretty-format "^23.5.0"
 
-jest-emotion@^9.2.7:
+jest-emotion@9.2.7:
   version "9.2.7"
   resolved "https://registry.yarnpkg.com/jest-emotion/-/jest-emotion-9.2.7.tgz#7a854156d1d5ceb95d8f36095a3f81d04109f125"
   integrity sha512-EiYN+kJP/vToVI84DDQoTdkjcztpZICxaST0UOlnnxuFvE/JPr8R3Wo9xcU+3T/r8E3iu8GOCO5NlsZDhz+kqg==
@@ -12765,7 +12765,7 @@ react-sizes@^1.0.4:
     lodash.throttle "^4.1.1"
     prop-types "^15.6.0"
 
-react-testing-library@^5.0.1:
+react-testing-library@5.0.1:
   version "5.0.1"
   resolved "https://registry.yarnpkg.com/react-testing-library/-/react-testing-library-5.0.1.tgz#b7bb205da19333477b6f92631286df98cad398b3"
   integrity sha512-k1Mi30Qox9r3OjhxuU3FR4WPhnovYjXXLs+uRYG15kpmtzbiFcECN+WqP0k+rd2JnQJBqirGm41MinUXNi6QFA==
