@@ -31,6 +31,12 @@ To build for npm:
 yarn build
 ```
 
+To publish:
+
+```
+yarn publish
+```
+
 To build the docs:
 
 ```
