@@ -18,7 +18,7 @@
   },
   "scripts": {
     "start": "docz dev",
-    "build": "rollup -c && cpx 'src/images/**/*.{png,jpg,ico,svg}' dist/images",
+    "build": "rollup -c",
     "prepublish": "yarn build",
     "watch": "rollup -cw",
     "build:docs": "docz build",
