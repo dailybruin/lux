@@ -1,3 +1,5 @@
+/// <reference path="index.d.ts"/>
+
 // Components
 export { default as ArticleGrid } from './components/ArticleGrid'
 export { default as Footer } from './components/Footer'
