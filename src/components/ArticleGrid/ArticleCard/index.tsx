@@ -2,7 +2,7 @@ import * as React from 'react'
 import { css } from 'react-emotion'
 import Byline from '../../Byline'
 import { Article } from '../../../utils/convertEdgesToArticles'
-import * as bearImage from './bear.jpg'
+import bearImage from './bear.jpg'
 
 interface ArticleCardProps {
   article: Article

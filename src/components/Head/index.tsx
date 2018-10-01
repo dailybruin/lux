@@ -1,6 +1,11 @@
 import * as React from 'react'
 import { Helmet } from 'react-helmet'
 
+import appleTouchIcon from './favicons/apple-touch-icon.png'
+import safariPinnedTab from './favicons/safari-pinned-tab.svg'
+import favicon32 from './favicons/favicon-32x32.png'
+import favicon16 from './favicons/favicon-16x16.png'
+
 /**
  * Head Properties
  */
@@ -25,24 +30,10 @@ export default function Head(props: HeadProps) {
     <Helmet>
       <title>{title}</title>
       <meta name="description" content={props.description} />
-      <link
-        rel="apple-touch-icon"
-        sizes="180x180"
-        href={require('./images/favicons/apple-touch-icon.png')}
-      />
-      <link
-        rel="icon"
-        type="image/png"
-        sizes="32x32"
-        href={require('./images/favicons/favicon-32x32.png')}
-      />
-      <link
-        rel="icon"
-        type="image/png"
-        sizes="16x16"
-        href={require('./images/favicons/favicon-16x16.png')}
-      />
-      <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#0080c6" />
+      <link rel="apple-touch-icon" sizes="180x180" href={appleTouchIcon} />
+      <link rel="icon" type="image/png" sizes="32x32" href={favicon32} />
+      <link rel="icon" type="image/png" sizes="16x16" href={favicon16} />
+      <link rel="mask-icon" href={safariPinnedTab} color="#0080c6" />
       <meta name="msapplication-TileColor" content="#ffffff" />
       <meta name="theme-color" content="#ffffff" /> */}
       {/* Canonical URL */}
