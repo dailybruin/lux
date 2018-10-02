@@ -1,5 +1,6 @@
 # Lux
 
+[![npm](https://img.shields.io/npm/v/@dailybruin/lux.svg)](https://www.npmjs.com/package/@dailybruin/lux)
 [![Build Status](https://travis-ci.com/dailybruin/lux.svg?branch=master)](https://travis-ci.com/dailybruin/lux)
 [![dependencies Status](https://david-dm.org/dailybruin/lux/status.svg)](https://david-dm.org/dailybruin/lux)
 [![devDependencies Status](https://david-dm.org/dailybruin/lux/dev-status.svg)](https://david-dm.org/dailybruin/lux?type=dev)
