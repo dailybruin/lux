@@ -58,7 +58,7 @@
     "rollup": "0.66.2",
     "rollup-plugin-typescript2": "0.17.0",
     "semantic-release": "15.9.16",
-    "ts-jest": "23.1.4"
+    "ts-jest": "23.10.3"
   },
   "bugs": {
     "url": "https://github.com/dailybruin/lux/issues"
