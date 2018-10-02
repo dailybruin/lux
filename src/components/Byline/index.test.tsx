@@ -1,17 +1,13 @@
 import * as React from 'react'
 import { render, cleanup } from 'react-testing-library'
-import Footer from '.'
+import Byline from '.'
 
-describe('Footer', () => {
+describe('Byline', () => {
   afterEach(cleanup)
 
   it('Matches its snapshot', () => {
     const { container } = render(
-      <Footer
-        githubName="lux"
-        developers={['Nathan Smith']}
-        copyrightYear={2018}
-      />
+      <Byline authors={['Nathan Smith', 'Michael Zhang']} />
     )
     expect(container.firstChild).toMatchSnapshot()
   })

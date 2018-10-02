@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Byline Matches its snapshot 1`] = `
+.emotion-0 {
+  padding-top: 5px;
+}
+
+<div
+  class="emotion-0"
+>
+  By 
+  NATHAN SMITH and MICHAEL ZHANG
+</div>
+`;
