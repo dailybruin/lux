@@ -1,120 +1,70 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Footer Matches its snapshot 1`] = `
-.emotion-7 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  font-size: 0.85rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  padding: 0.4rem;
-  font-family: Arimo;
-  box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.25);
-  border-top: 5px solid black;
+.emotion-2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin: 1rem 0;
+  padding: 0 0.4rem;
+  text-align: center;
 }
 
 @media (max-width:600px) {
-  .emotion-7 {
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
+  .emotion-2 {
+    font-size: 0.8rem;
   }
-}
-
-.emotion-5 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-}
-
-@media (max-width:600px) {
-  .emotion-5 {
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    text-align: center;
-  }
-}
-
-.emotion-6 {
-  text-align: right;
-  margin-left: auto;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-}
-
-@media (max-width:600px) {
-  .emotion-6 {
-    text-align: center;
-    margin: auto;
-  }
-}
-
-.emotion-0 {
-  margin-right: 15px;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  color: inherit;
 }
 
 @media (max-width:600px) {
   .emotion-0 {
-    margin: auto;
+    display: none;
   }
 }
 
+.emotion-1:hover {
+  color: red;
+  cursor: default;
+}
+
 <footer
-  class="emotion-7"
+  class="emotion-2"
 >
-  <div
-    class="emotion-5"
-  >
-    <a
+  <div>
+    <span>
+      Content copyright © 
+      2018
+       Daily Bruin.
+    </span>
+     
+    <span
       class="emotion-0"
-      href="https://dailybruin.com/about"
     >
-      About
-    </a>
-    <a
-      class="emotion-0"
-      href="https://dailybruin.com/contact"
-    >
-      Contact
-    </a>
-    <a
-      class="emotion-0"
-      href="https://dailybruin.com/advertise"
-    >
-      Advertise
-    </a>
-    <a
-      class="emotion-0"
-      href="https://apply.uclastudentmedia.com"
-    >
-      Work With Us
-    </a>
-    <a
-      class="emotion-0"
-      href="https://dailybruin.com/privacy"
-    >
-      Privacy
-    </a>
+      Site code available on
+       
+      <a
+        href="https://github.com/dailybruin/lux"
+      >
+        GitHub
+      </a>
+      .
+    </span>
   </div>
-  <div
-    class="emotion-6"
-  >
-    Copyright © 
-    2018
-     Daily Bruin
+  <div>
+    Built with Suzy’s 
+    <span
+      class="emotion-1"
+    >
+      ♥
+    </span>
+     in Kerckhoff 118 by
+     
+    Nathan Smith
+    .
   </div>
 </footer>
 `;

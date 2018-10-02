@@ -31,6 +31,7 @@ interface FooterProps {
 class Footer extends React.Component<FooterProps> {
   static defaultProps = {
     license: License.Copyright,
+    footerType: ComponentType.Default
   }
 
   render() {
