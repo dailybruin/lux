@@ -112,9 +112,7 @@ exports[`Footer Matches its snapshot 1`] = `
   <div
     class="emotion-6"
   >
-    Copyright © 
-    2018
-     Daily Bruin
+    Copyright © Daily Bruin
   </div>
 </footer>
 `;
