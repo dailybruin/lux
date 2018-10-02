@@ -20,6 +20,8 @@ export default function MainSiteFooter(props: {}) {
   />
   );
 
+  const currentYear = (new Date()).getFullYear();
+
   return (
     <footer
       className={css`
@@ -58,7 +60,7 @@ export default function MainSiteFooter(props: {}) {
             margin: auto;
           }
         `}>
-          Copyright © Daily Bruin
+          Copyright © {currentYear} Daily Bruin
       </div>
     </footer>
   )
