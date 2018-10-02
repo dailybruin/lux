@@ -54,7 +54,7 @@
     "gatsby": "2.0.0-rc.15",
     "jest": "23.6.0",
     "jest-emotion": "9.2.7",
-    "react-testing-library": "5.0.1",
+    "react-testing-library": "5.1.0",
     "rollup": "0.66.2",
     "rollup-plugin-typescript2": "0.17.0",
     "semantic-release": "15.9.16",
