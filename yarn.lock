@@ -8374,10 +8374,10 @@ jest-each@^23.6.0:
     chalk "^2.0.1"
     pretty-format "^23.6.0"
 
-jest-emotion@9.2.7:
-  version "9.2.7"
-  resolved "https://registry.yarnpkg.com/jest-emotion/-/jest-emotion-9.2.7.tgz#7a854156d1d5ceb95d8f36095a3f81d04109f125"
-  integrity sha512-EiYN+kJP/vToVI84DDQoTdkjcztpZICxaST0UOlnnxuFvE/JPr8R3Wo9xcU+3T/r8E3iu8GOCO5NlsZDhz+kqg==
+jest-emotion@9.2.11:
+  version "9.2.11"
+  resolved "https://registry.yarnpkg.com/jest-emotion/-/jest-emotion-9.2.11.tgz#de1e5974f1a6e636fa87c631dd58f988ed8311f9"
+  integrity sha512-+u7I9lQg14LIW0g4i6D5ez+AUJks1K1P76e38hfbnv0uPph2z5yjN150BSsMQxHuoZZB1fKZmtEdrRPIqlUkGg==
   dependencies:
     "@types/jest" "^23.0.2"
     chalk "^2.4.1"
