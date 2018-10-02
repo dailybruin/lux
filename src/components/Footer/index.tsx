@@ -2,9 +2,8 @@ import * as React from 'react'
 import { css } from 'react-emotion'
 import Heart from './Heart'
 import toSentence from '../../utils/toSentence'
-import LuxComponentType from '../../globals/typeEnums'
-import * as MainSiteStyles from '../../globals/mainsiteGlobalStyles'
-import FooterLink from './FooterLink'
+import ComponentType from '../../globals/typeEnums'
+import MainSiteFooter from './MainSiteFooter'
 
 enum License {
   MIT = 'MIT License',
@@ -25,7 +24,7 @@ interface FooterProps {
   /** The year that the story was published, e.g., 2018. */
   copyrightYear: number
   /** What type of project this footer is being used in. */
-  footerType: LuxComponentType
+  footerType: ComponentType
 }
 
 /** A footer to go at the bottom of every page. */
@@ -35,7 +34,7 @@ class Footer extends React.Component<FooterProps> {
   }
 
   render() {
-    if(this.props.footerType === LuxComponentType.LuxDefault) {
+    if(this.props.footerType === ComponentType.Default) {
       return (
         <footer
           className={css`
@@ -85,62 +84,10 @@ class Footer extends React.Component<FooterProps> {
           </div>
         </footer>
       )
-    } else {
-      const mainSiteFooterLinks = [
-        {text:'About', url:'https://dailybruin.com/about'},
-        {text:'Contact', url:'https://dailybruin.com/contact'},
-        {text:'Advertise', url:'https://dailybruin.com/advertise'},
-        {text:'Work With Us', url:'https://apply.uclastudentmedia.com'},
-        {text:'Privacy', url:'https://dailybruin.com/privacy'}
-      ];
-      let renderedLinks = mainSiteFooterLinks.map((link) =>
-        <FooterLink
-          key={link.text}
-          url={link.url}
-          text={link.text}
-        />
-      );
+    } else /** this.props.footerType === ComponentType.MainSite */{
+      /** This should be updated if more typeEnums are added */
       return(
-        <footer
-          className={css`
-            display: flex;
-            font-size: 0.85rem;
-            flex-direction: row;
-            padding: 0.4rem;
-            font-family: ${MainSiteStyles.headlineFont};
-            box-shadow: ${MainSiteStyles.cardShadow};
-            border-top: 5px solid black;
-
-            ${MainSiteStyles.mediaMobileBreakpoint} {
-                flex-direction: column;
-            }
-          `}>
-          <div
-            className={css`
-            display: flex;
-            flex-direction: row;
-
-            ${MainSiteStyles.mediaMobileBreakpoint} {
-              flex-direction: column;
-              text-align: center;
-            }
-          `}>
-            {renderedLinks}
-          </div>
-          <div
-            className={css`
-              text-align: right;
-              margin-left: auto;
-              flex-grow: 1;
-
-              ${MainSiteStyles.mediaMobileBreakpoint} {
-                text-align: center;
-                margin: auto;
-              }
-            `}>
-              Copyright © {this.props.copyrightYear} Daily Bruin
-          </div>
-        </footer>
+        <MainSiteFooter/>
       )
     }
   }

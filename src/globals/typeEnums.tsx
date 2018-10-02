@@ -1,6 +1,6 @@
-enum LuxComponentType {
-    LuxDefault,
+enum ComponentType {
+    Default,
     MainSite
 }
 
-export default LuxComponentType
+export default ComponentType
