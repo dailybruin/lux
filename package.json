@@ -52,7 +52,7 @@
     "webfontloader": "^1.6.28"
   },
   "devDependencies": {
-    "@types/jest": "23.3.2",
+    "@types/jest": "23.3.3",
     "gatsby": "2.0.18",
     "jest": "23.6.0",
     "jest-emotion": "9.2.11",
