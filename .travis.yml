@@ -1,6 +1,16 @@
 language: node_js
+cache:
+  directories:
+    - ~/.npm
+notifications:
+  email: false
 node_js:
   - 'node'
   - 'lts/*'
-notifications:
-  email: false
+script
+  - yarn test
+after_success:
+  - yarn travis-deploy-once "yarn semantic-release"
+branches:
+  except:
+    - /^v\d+\.\d+\.\d+$/
