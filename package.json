@@ -21,7 +21,7 @@
     "build": "rollup -c",
     "build:docs": "docz build",
     "prepublish": "yarn build",
-    "commit": "yarn git-cz",
+    "commit": "git-cz",
     "dev:chapters": "parcel src/layouts/chapter-based.html --open",
     "dev:grid": "parcel src/layouts/chapter-based.html --open",
     "test": "jest",
@@ -56,6 +56,7 @@
   "devDependencies": {
     "@types/jest": "23.3.2",
     "commitizen": "^3.0.2",
+    "cz-conventional-changelog": "2.1.0",
     "gatsby": "2.0.18",
     "jest": "23.6.0",
     "jest-emotion": "9.2.11",
@@ -63,8 +64,8 @@
     "rollup": "0.66.2",
     "rollup-plugin-typescript2": "0.17.0",
     "semantic-release": "^15.9.16",
-    "ts-jest": "23.10.3",
-    "travis-deploy-once": "^5.0.9"
+    "travis-deploy-once": "^5.0.9",
+    "ts-jest": "23.10.3"
   },
   "bugs": {
     "url": "https://github.com/dailybruin/lux/issues"
@@ -74,5 +75,10 @@
     "example": "examples",
     "test": "tests"
   },
-  "license": "ISC"
+  "license": "ISC",
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
 }
