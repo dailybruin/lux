@@ -8,8 +8,9 @@ node_js:
   - 'node'
   - 'lts/*'
 script
-  - yarn test
+  - yarn test --coverage
 after_success:
+  - bash <(curl -s https://codecov.io/bash)
   - yarn travis-deploy-once "yarn semantic-release"
 branches:
   except:
