@@ -1,0 +1,16 @@
+{
+  // See https://go.microsoft.com/fwlink/?LinkId=827846
+  // for the documentation about the extensions.json format
+  "recommendations": [
+    "EditorConfig.EditorConfig",
+    "jpoissonnier.vscode-styled-components",
+    "esbenp.prettier-vscode",
+    "formulahendry.auto-close-tag",
+    "formulahendry.auto-rename-tag",
+    "coenraads.bracket-pair-colorizer",
+    "joelday.docthis",
+    "codezombiech.gitignore",
+    "silvenon.mdx",
+    "asvetliakov.snapshot-tools"
+  ]
+}
