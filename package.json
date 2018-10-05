@@ -34,6 +34,20 @@
       "path": "./node_modules/cz-conventional-changelog"
     }
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,json,css,md}": [
+      "prettier --write",
+      "git add"
+    ],
+    "*": [
+      "eclint check"
+    ]
+  },
   "scripts": {
     "start": "docz dev",
     "build": "rollup -c",
@@ -76,9 +90,12 @@
     "@types/jest": "23.3.3",
     "commitizen": "^3.0.2",
     "cz-conventional-changelog": "2.1.0",
+    "eclint": "^2.8.0",
     "gatsby": "2.0.18",
+    "husky": "^1.1.1",
     "jest": "23.6.0",
     "jest-emotion": "9.2.11",
+    "lint-staged": "^7.3.0",
     "react-testing-library": "5.2.0",
     "rollup": "0.66.4",
     "rollup-plugin-typescript2": "0.17.1",
