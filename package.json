@@ -3,18 +3,36 @@
   "version": "1.0.4",
   "author": "Daily Bruin Online <online@dailybruin.com>",
   "description": "The Daily Bruin's component library.",
+  "license": "AGPL-3.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dailybruin/lux.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dailybruin/lux/issues"
+  },
+  "homepage": "https://github.com/dailybruin/lux",
+  "keywords": [
+    "design system",
+    "journalism"
+  ],
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "types": "dist/index.d.ts",
   "files": [
     "dist"
   ],
+  "directories": {
+    "example": "examples",
+    "test": "tests"
+  },
   "publishConfig": {
     "access": "public"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/dailybruin/lux.git"
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   },
   "scripts": {
     "start": "docz dev",
@@ -61,14 +79,5 @@
     "rollup-plugin-typescript2": "0.17.0",
     "semantic-release": "15.9.16",
     "ts-jest": "23.10.3"
-  },
-  "bugs": {
-    "url": "https://github.com/dailybruin/lux/issues"
-  },
-  "homepage": "https://github.com/dailybruin/lux#readme",
-  "directories": {
-    "example": "examples",
-    "test": "tests"
-  },
-  "license": "ISC"
+  }
 }
