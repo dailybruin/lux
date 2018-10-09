@@ -2,17 +2,15 @@ import * as React from 'react'
 import { css } from 'react-emotion'
 
 enum ContentType {
-  Text,
-  Photo,
+  Text = 'text',
+  Image = 'image',
 }
 
 interface Text {
-  type: 'text'
   value: string
 }
 
 interface Image {
-  type: 'image'
   url: string
   caption: string
   credit: string
@@ -24,11 +22,31 @@ interface Image {
  */
 interface ArticleProps {
   /** The paragraphs of content for the story. */
-  value: Array<Text>
+  content: Array<any>
   dropcap: boolean
 }
 
 /** A footer to go at the bottom of every page. */
-export default function Footer(props: ArticleProps) {
-  return <article>{}</article>
+export default function Article(props: ArticleProps) {
+  const renderedContent = props.content.map(content => {
+    switch (content.type) {
+      case ContentType.Text:
+        const text = content as Text
+        return <p>{content.value}</p>
+      case ContentType.Image:
+        const image = content as Image
+        return (
+          <figure>
+            <img src={image.url} alt={image.alt} />
+            <figcaption>
+              {image.caption} ({image.credit})
+            </figcaption>
+          </figure>
+        )
+      default:
+        break
+    }
+  })
+
+  return <article>{renderedContent}</article>
 }
