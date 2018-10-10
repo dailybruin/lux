@@ -2,10 +2,12 @@
 
 [![npm](https://img.shields.io/npm/v/@dailybruin/lux.svg)](https://www.npmjs.com/package/@dailybruin/lux)
 [![Build Status](https://travis-ci.com/dailybruin/lux.svg?branch=master)](https://travis-ci.com/dailybruin/lux)
+[![Codecov](https://img.shields.io/codecov/c/github/dailybruin/lux.svg)](https://codecov.io/gh/dailybruin/lux)
 [![dependencies Status](https://david-dm.org/dailybruin/lux/status.svg)](https://david-dm.org/dailybruin/lux)
 [![devDependencies Status](https://david-dm.org/dailybruin/lux/dev-status.svg)](https://david-dm.org/dailybruin/lux?type=dev)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat)](https://github.com/prettier/prettier)
 [![tested with jest](https://img.shields.io/badge/tested_with-jest-99424f.svg?style=flat)](https://github.com/facebook/jest)
+[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 [![license](https://img.shields.io/github/license/daily-bruin/sources.svg)](/LICENSE)
 
 Lux is a design system for the Daily Bruin, written in [TypeScript](https://www.typescriptlang.org) and [React](https://reactjs.org).
