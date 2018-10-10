@@ -40,15 +40,21 @@
     }
   },
   "lint-staged": {
-    "*.{js,jsx,ts,tsx,json,css,md}": [
-      "prettier --write",
-      "git add"
-    ],
-    "*.{ts,tsx}": [
-      "tslint"
-    ],
-    "*": [
-      "eclint check"
+    "linters": {
+      "*.{js,jsx,ts,tsx,json,css,md}": [
+        "prettier --write",
+        "git add"
+      ],
+      "*.{ts,tsx}": [
+        "tslint"
+      ],
+      "*": [
+        "eclint check"
+      ]
+    },
+    "ignore": [
+      "**/dist/*",
+      "*.test.*"
     ]
   },
   "scripts": {
