@@ -1,5 +1,6 @@
 import * as React from 'react'
 import { css } from 'react-emotion'
+import Image, {ImageProps as Image} from './Image'
 
 enum ContentType {
   Text = 'text',
@@ -8,13 +9,6 @@ enum ContentType {
 
 interface Text {
   value: string
-}
-
-interface Image {
-  url: string
-  caption: string
-  credit: string
-  alt: string
 }
 
 /**
@@ -40,14 +34,7 @@ export default class Article extends React.Component<ArticleProps> {
           return <p key={i} dangerouslySetInnerHTML={{__html: text.value}} />
         case ContentType.Image:
           const image = content as Image
-          return (
-            <figure key={i}>
-              <img src={image.url} alt={image.alt} />
-              <figcaption>
-                {image.caption} ({image.credit})
-              </figcaption>
-            </figure>
-          )
+          return <Image {...image} />
         default:
           break
       }
