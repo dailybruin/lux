@@ -1,21 +1,8 @@
----
-name: Article
-route: /article
----
-
-import { Playground, PropsTable } from 'docz'
+import * as React from 'react'
+import { render, cleanup } from 'react-testing-library'
 import Article from '.'
 
-# Article
-
-An article's text and multimedia.
-
-Note that `Article` expects an array of `Content`, which
-
-<PropsTable of={Article} />
-
-<Playground>
-  <Article content={[
+const content = [
   {
     type: 'text',
     value:
@@ -27,5 +14,13 @@ Note that `Article` expects an array of `Content`, which
     caption: "Freshman attacker Ashworth Molthen has registered 21 goals on the season, finding the back of the net in 13 of the 16 games so far this year for UCLA men’s water polo. UCLA is one of two teams remaining in the MPSF conference that remains undefeated.",
     credit: "Amy Dixon/Photo Editor"
   }
-]} />
-</Playground>
+]
+
+describe('Article', () => {
+  afterEach(cleanup)
+
+  it('Matches its snapshot', () => {
+    const { container } = render(<Article content={content} />)
+    expect(container.firstChild).toMatchSnapshot()
+  })
+})

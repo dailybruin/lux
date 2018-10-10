@@ -27,26 +27,32 @@ interface ArticleProps {
 }
 
 /** A footer to go at the bottom of every page. */
-export default function Article(props: ArticleProps) {
-  const renderedContent = props.content.map(content => {
-    switch (content.type) {
-      case ContentType.Text:
-        const text = content as Text
-        return <p>{content.value}</p>
-      case ContentType.Image:
-        const image = content as Image
-        return (
-          <figure>
-            <img src={image.url} alt={image.alt} />
-            <figcaption>
-              {image.caption} ({image.credit})
-            </figcaption>
-          </figure>
-        )
-      default:
-        break
-    }
-  })
+export default class Article extends React.Component<ArticleProps> {
+  static defaultProps = {
+    dropcap: false,
+  }
 
-  return <article>{renderedContent}</article>
+  render() {
+    const renderedContent = this.props.content.map((content: any, i: number) => {
+      switch (content.type) {
+        case ContentType.Text:
+          const text = content as Text
+          return <p key={i} dangerouslySetInnerHTML={{__html: text.value}} />
+        case ContentType.Image:
+          const image = content as Image
+          return (
+            <figure key={i}>
+              <img src={image.url} alt={image.alt} />
+              <figcaption>
+                {image.caption} ({image.credit})
+              </figcaption>
+            </figure>
+          )
+        default:
+          break
+      }
+    })
+
+    return <article>{renderedContent}</article>
+  }
 }
