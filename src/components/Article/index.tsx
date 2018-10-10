@@ -1,6 +1,5 @@
 import * as React from 'react'
-import { css } from 'react-emotion'
-import Image, { ImageProps } from './Image'
+import Image, { ImageProps } from '../Image'
 
 enum ContentType {
   Text = 'text',
