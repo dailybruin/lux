@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-interface ImageProps {
+export interface ImageProps {
   url: string
   caption: string
   credit: string
