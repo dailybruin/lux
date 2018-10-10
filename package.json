@@ -79,7 +79,7 @@
     "emotion-server": "^9.2.12",
     "gatsby-plugin-emotion": "^2.0.5",
     "lodash": "^4.17.11",
-    "parcel-bundler": "1.10.1",
+    "parcel-bundler": "1.10.2",
     "react": "16.5.2",
     "react-dom": "16.5.2",
     "react-emotion": "^9.2.12",
