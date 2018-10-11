@@ -12,6 +12,20 @@
 
 Lux is a design system for the Daily Bruin, written in [TypeScript](https://www.typescriptlang.org) and [React](https://reactjs.org).
 
+## Usage
+
+To use Lux, simply install it with your favorite package manager, e.g.:
+
+```
+yarn add @dailybruin/lux
+```
+
+Import components with the following syntax:
+
+```javascript
+import { Article } from '@dailybruin/lux'
+```
+
 ## Development
 
 To start a dev server for the docs:
