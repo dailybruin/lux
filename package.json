@@ -95,7 +95,7 @@
     "cz-conventional-changelog": "2.1.0",
     "eclint": "2.8.0",
     "gatsby": "2.0.21",
-    "husky": "1.1.1",
+    "husky": "1.1.2",
     "jest": "23.6.0",
     "jest-emotion": "9.2.11",
     "lint-staged": "7.3.0",
