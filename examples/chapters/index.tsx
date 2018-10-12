@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { render } from 'react-dom'
-import Byline from '../src'
+import Byline from '../../src/components/Byline/Byline'
 import Footer from '../src/components/Footer/Footer'
 import Headline from '../src/components/Headline/Headline'
 
