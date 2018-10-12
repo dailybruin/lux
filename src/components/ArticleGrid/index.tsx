@@ -1,25 +1,26 @@
 import * as React from 'react'
-import slugify from 'slugify'
 import { css } from 'react-emotion'
+import slugify from 'slugify'
+import { ArticleData } from '../../utils/convertEdgesToArticles'
 import ArticleCard from './ArticleCard'
-import { Article } from '../../utils/convertEdgesToArticles'
 
 interface ArticleGridProps {
   heading?: string
   headingStyle?: string
   descriptionText?: string
-  articles: Array<Article>
+  articles: ArticleData[]
   maxColumns: number
   minColumns: number
 }
 
 export default class ArticleGrid extends React.Component<ArticleGridProps> {
-  static defaultProps = {
+  /*
+  private static defaultProps = {
     maxColumns: 3,
     minColumns: 1,
   }
-
-  render() {
+  */
+  public render() {
     const articles = this.props.articles.map((article, i) => (
       <ArticleCard article={article} key={i} />
     ))
