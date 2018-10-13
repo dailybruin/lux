@@ -1,15 +1,15 @@
 import * as React from 'react'
 import { css } from 'react-emotion'
+import { ArticleCardData } from '../../../utils/convertEdgesToArticles'
 import Byline from '../../Byline'
-import { Article } from '../../../utils/convertEdgesToArticles'
 import bearImage from './bear.jpg'
 
 interface ArticleCardProps {
-  article: Article
+  article: ArticleCardData
 }
 
 class ArticleCard extends React.Component<ArticleCardProps> {
-  render() {
+  public render() {
     return (
       <article>
         <a

@@ -2,9 +2,9 @@ import * as React from 'react'
 import { Helmet } from 'react-helmet'
 
 import appleTouchIcon from './favicons/apple-touch-icon.png'
-import safariPinnedTab from './favicons/safari-pinned-tab.svg'
-import favicon32 from './favicons/favicon-32x32.png'
 import favicon16 from './favicons/favicon-16x16.png'
+import favicon32 from './favicons/favicon-32x32.png'
+import safariPinnedTab from './favicons/safari-pinned-tab.svg'
 
 /**
  * Head Properties

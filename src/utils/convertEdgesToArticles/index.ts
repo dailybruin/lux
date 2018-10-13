@@ -1,4 +1,4 @@
-export interface Article {
+export interface ArticleCardData {
   section: string
   headline: string
   byline: string
@@ -24,16 +24,16 @@ interface Edge {
 }
 
 export default function convertEdgesToArticles(
-  edges: Array<Edge>
-): Array<Article> {
+  edges: Edge[]
+): ArticleCardData[] {
   return edges
     .map(edge => edge.node)
     .map(
       ({ iscolumn, imagedescription, imagecredits, imageurl, ...props }) => ({
-        isColumn: !!iscolumn,
+        image: imageurl,
         imageAlt: imagedescription,
         imageCredit: imagecredits,
-        image: imageurl,
+        isColumn: !!iscolumn,
         ...props,
       })
     )

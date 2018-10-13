@@ -1,9 +1,8 @@
-import * as React from 'react';
-import { render } from 'react-dom';
-
-import Headline from '../../components/Headline';
-import Byline from '../../components/Byline';
-import Footer from '../../components/Footer';
+import * as React from 'react'
+import { render } from 'react-dom'
+import Byline from '../../src/components/Byline/Byline'
+import Footer from '../src/components/Footer/Footer'
+import Headline from '../src/components/Headline/Headline'
 
 function App() {
   return (
@@ -16,7 +15,7 @@ function App() {
         copyrightYear={2018}
       />
     </>
-  );
+  )
 }
 
-render(<App />, document.getElementById('app'));
+render(<App />, document.getElementById('app'))
