@@ -7,7 +7,7 @@
  * @returns {string} The elements in a human readable string.
  */
 export default function toSentence(
-  arr: Array<string>,
+  arr: string[],
   ampersand: boolean = false
 ): string {
   if (arr.length === 0) {
