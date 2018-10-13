@@ -39,7 +39,7 @@ export default class Article extends React.Component<ArticleProps> {
             )
           case ContentType.Image:
             const image = content as ImageProps
-            return <Image {...image} />
+            return <Image key={i} {...image} />
           default:
             break
         }
