@@ -1,11 +1,11 @@
 import * as React from 'react'
 import { css } from 'react-emotion'
-import { ArticleData } from '../../../utils/convertEdgesToArticles'
+import { ArticleCardData } from '../../../utils/convertEdgesToArticles'
 import Byline from '../../Byline'
 import bearImage from './bear.jpg'
 
 interface ArticleCardProps {
-  article: ArticleData
+  article: ArticleCardData
 }
 
 class ArticleCard extends React.Component<ArticleCardProps> {

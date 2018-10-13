@@ -14,5 +14,5 @@ export { default as styles } from './utils/styles'
 export { default as toSentence } from './utils/toSentence'
 export {
   default as convertEdgesToArticles,
-  ArticleData,
+  ArticleCardData,
 } from './utils/convertEdgesToArticles'
