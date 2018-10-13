@@ -1,6 +1,3 @@
-/* /// <reference path="index.d.ts"/> */
-import './index.d.ts'
-
 // Components
 export { default as ArticleGrid } from './components/ArticleGrid'
 export { default as Article } from './components/Article'
