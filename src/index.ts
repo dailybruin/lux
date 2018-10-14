@@ -8,6 +8,7 @@ export { default as Footer } from './components/Footer'
 export { default as Head } from './components/Head'
 export { default as Headline } from './components/Headline'
 export { default as Image } from './components/Image'
+export { default as Video } from './components/Video'
 
 // Utils
 export { default as styles } from './utils/styles'
