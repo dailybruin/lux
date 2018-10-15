@@ -1,4 +1,5 @@
 import * as React from 'react'
+import { css } from 'react-emotion'
 import Image, { ImageProps } from '../Image'
 
 enum ContentType {
@@ -46,6 +47,25 @@ export default class Article extends React.Component<ArticleProps> {
       }
     )
 
-    return <article>{renderedContent}</article>
+    return (
+      <article
+        className={
+          this.props.dropcap
+            ? css`
+                p:first-child:first-letter {
+                  float: left;
+                  font-size: 5em;
+                  line-height: 60px;
+                  padding-top: 4px;
+                  padding-right: 8px;
+                  padding-left: 3px;
+                }
+              `
+            : undefined
+        }
+      >
+        {renderedContent}
+      </article>
+    )
   }
 }
