@@ -24,6 +24,9 @@ export default {
     }),
     image({
       output: 'dist/images',
+      extensions: /\.(png|jpg|jpeg|gif|svg)$/,
+      exclude: 'node_modules/**',
+      limit: 1,
     }),
   ],
 }
