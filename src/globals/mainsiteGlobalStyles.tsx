@@ -1,12 +1,14 @@
 import { css } from 'react-emotion'
 import * as WebFontLoader from 'webfontloader'
 
-/** Web fonts loaded here */
-WebFontLoader.load({
-  google: {
-    families: ['Arimo:700']
-  }
-});
+/** Web fonts loaded here - only in a browser */
+if (typeof window !== 'undefined') {
+  WebFontLoader.load({
+    google: {
+      families: ['Arimo:700']
+    }
+  });
+}
 
 /** Reusable common CSS attributes */
 export const headlineFont = 'Arimo';
