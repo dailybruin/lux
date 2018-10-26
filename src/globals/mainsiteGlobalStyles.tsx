@@ -1,8 +1,8 @@
 import { css } from 'react-emotion'
-import * as WebFontLoader from 'webfontloader'
 
 /** Web fonts loaded here - only in a browser */
 if (typeof window !== 'undefined') {
+  const WebFontLoader = require('webfontloader');
   WebFontLoader.load({
     google: {
       families: ['Arimo:700']
