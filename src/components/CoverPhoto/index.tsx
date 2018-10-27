@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { css } from 'react-emotion'
 import Byline from '../Byline'
-import WhiteLine from './WhiteLine'
+import Line from './Line'
 
 export enum XPosition {
   Left = 'start',
@@ -61,7 +61,7 @@ export default class CoverPhoto extends React.Component<CoverPhotoProps> {
           >
             {this.props.headline}
           </h1>
-          <WhiteLine />
+          <Line />
           <Byline authors={this.props.authors} />
         </div>
       </div>
