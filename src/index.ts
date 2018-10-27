@@ -5,6 +5,7 @@
 export { default as ArticleGrid } from './components/ArticleGrid'
 export { default as Article } from './components/Article'
 export { default as Byline } from './components/Byline'
+export { default as CoverPhoto } from './components/CoverPhoto'
 export { default as Footer } from './components/Footer'
 export { default as Head } from './components/Head'
 export { default as Headline } from './components/Headline'
