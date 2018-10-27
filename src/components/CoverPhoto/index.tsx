@@ -21,9 +21,14 @@ interface CoverPhotoProps {
   authors: string[]
   xPosition: XPosition
   yPosition: YPosition
+  darken?: number
 }
 
 export default class CoverPhoto extends React.Component<CoverPhotoProps> {
+  public static defaultProps = {
+    darken: 0,
+  }
+
   public render() {
     const textAlign =
       this.props.xPosition === XPosition.Center
@@ -37,7 +42,10 @@ export default class CoverPhoto extends React.Component<CoverPhotoProps> {
         className={css`
         width: 100%;
         height: 100vh;
-        background-image: url("${this.props.imageURL}");
+        background: linear-gradient(
+          rgba(0, 0, 0, ${this.props.darken}),
+          rgba(0, 0, 0, ${this.props.darken})
+        ), url("${this.props.imageURL}");
         display: grid;
         align-items: ${this.props.yPosition};
         justify-content: ${this.props.xPosition};
