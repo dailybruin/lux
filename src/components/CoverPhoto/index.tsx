@@ -46,6 +46,9 @@ export default class CoverPhoto extends React.Component<CoverPhotoProps> {
           rgba(0, 0, 0, ${this.props.darken}),
           rgba(0, 0, 0, ${this.props.darken})
         ), url("${this.props.imageURL}");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
         display: grid;
         align-items: ${this.props.yPosition};
         justify-content: ${this.props.xPosition};
@@ -54,6 +57,7 @@ export default class CoverPhoto extends React.Component<CoverPhotoProps> {
         <div
           className={css`
             margin: 2rem;
+            color: #fff;
             text-align: ${textAlign};
             display: flex;
             flex-direction: column;
