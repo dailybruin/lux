@@ -7,6 +7,11 @@ enum ContentType {
   Image = 'image',
 }
 
+interface Content {
+  type: string
+  [key: string]: string
+}
+
 interface Text {
   value: string
 }
@@ -16,7 +21,7 @@ interface Text {
  */
 interface ArticleProps {
   /** The paragraphs of content for the story. */
-  content: Array<{ type: ContentType }>
+  content: Content[]
   dropcap: boolean
 }
 
