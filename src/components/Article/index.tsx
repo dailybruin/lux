@@ -16,7 +16,7 @@ interface Text {
  */
 interface ArticleProps {
   /** The paragraphs of content for the story. */
-  content: any[]
+  content: Array<{ type: ContentType }>
   dropcap: boolean
 }
 
@@ -49,8 +49,11 @@ export default class Article extends React.Component<ArticleProps> {
 
     return (
       <article
-        className={
-          this.props.dropcap
+        className={css`
+          margin-left: auto;
+          margin-right: auto;
+          max-width: 600px;
+          ${this.props.dropcap
             ? css`
                 p:first-child:first-letter {
                   float: left;
@@ -61,8 +64,8 @@ export default class Article extends React.Component<ArticleProps> {
                   padding-left: 3px;
                 }
               `
-            : undefined
-        }
+            : ''};
+        `}
       >
         {renderedContent}
       </article>
