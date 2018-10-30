@@ -103,7 +103,7 @@
     "commitizen": "3.0.4",
     "cz-conventional-changelog": "2.1.0",
     "eclint": "2.8.1",
-    "gatsby": "2.0.22",
+    "gatsby": "2.0.35",
     "husky": "1.1.2",
     "jest": "23.6.0",
     "jest-emotion": "9.2.11",
