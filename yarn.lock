@@ -6137,7 +6137,7 @@ docz-core@^0.12.5:
     ws "^6.0.0"
     yargs "^12.0.2"
 
-docz-plugin-css@^0.11.0:
+docz-plugin-css@0.11.0:
   version "0.11.0"
   resolved "https://registry.yarnpkg.com/docz-plugin-css/-/docz-plugin-css-0.11.0.tgz#affa823f1fecc4ad1e5d3903edc44244a31ff5fa"
   integrity sha512-rs45vmYDL/eqpvRLCwqYUBh20MsPlO9vS8Jxh5a2YDdxk8kFUwtq2LlR6EmqLnpShcR589SeyEoW9E0WkklysQ==
@@ -6162,7 +6162,7 @@ docz-plugin-css@^0.11.0:
     webpack "^4.17.1"
     webpack-chain "^4.9.0"
 
-docz-plugin-netlify@^1.1.4:
+docz-plugin-netlify@1.1.4:
   version "1.1.4"
   resolved "https://registry.yarnpkg.com/docz-plugin-netlify/-/docz-plugin-netlify-1.1.4.tgz#879f36007f1eeec0b7fc596d2f0e079fd0d6d67c"
   integrity sha512-RbYH/R+uS7IT8DPnOCnHRjsG4DtrR85ZOOOBtZBK/dtSR8FYKEWOF9l1hT0e4MVfAJGViUSb0U6Zm3WOIUTtjA==
