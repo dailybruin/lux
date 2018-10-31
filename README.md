@@ -12,6 +12,8 @@
 
 Lux is a design system for the Daily Bruin, written in [TypeScript](https://www.typescriptlang.org) and [React](https://reactjs.org).
 
+You may also be interested in projects that use Lux, which include our [gatsby starter](https://github.com/dailybruin/gatsby-starter-dailybruin) and [dailybruin.com's frontend](https://github.com/dailybruin/flamingo).
+
 ## Usage
 
 To use Lux, simply install it with your favorite package manager, e.g.:
@@ -25,6 +27,8 @@ Import components with the following syntax:
 ```javascript
 import { Article } from '@dailybruin/lux'
 ```
+
+Note that Lux is published as TypeScript files, and thus is only available to projects that use TypeScript and some kind of build system (e.g., [Webpack](https://webpack.js.org)). If you run into errors setting Lux up with your project, please [file an issue](https://github.com/dailybruin/lux/issues/new).
 
 ## Development
 
@@ -42,13 +46,7 @@ yarn test
 
 ## Deployment
 
-To build for npm:
-
-```
-yarn build
-```
-
-To publish:
+To publish (note you shouldn't have to do this as Lux autopublished via Travis):
 
 ```
 yarn publish
