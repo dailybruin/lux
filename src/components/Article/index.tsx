@@ -9,7 +9,7 @@ enum ContentType {
 
 interface Content {
   type: string
-  [key: string]: string
+  value: string
 }
 
 interface Text {
@@ -44,7 +44,7 @@ export default class Article extends React.Component<ArticleProps> {
               />
             )
           case ContentType.Image:
-            const image = content as ImageProps
+            const image = JSON.parse(content.value) as ImageProps
             return <Image key={i} {...image} />
           default:
             break
