@@ -82,7 +82,7 @@
     "webfontloader": "^1.6.28"
   },
   "devDependencies": {
-    "@types/jest": "23.3.5",
+    "@types/jest": "23.3.9",
     "commitizen": "3.0.4",
     "cz-conventional-changelog": "2.1.0",
     "docz": "0.12.5",
