@@ -1,5 +1,5 @@
 ---
-name: StoryList
+name: Story List
 route: /story-list
 ---
 
@@ -8,10 +8,54 @@ import StoryList from '.'
 
 # Story List
 
-Wut.
+A list of the most popular stories.
 
 <PropsTable of={StoryList} />
 
 <Playground>
-    <StoryList text="POPULAR"/>
+    <StoryList
+      story={[
+        {
+          title: "Avengers: Infinity War",
+          text: "This movie was bonker but #nospoilers because of character limit alright pals",
+          link: "https://www.youtube.com/watch?v=bleoywz0oeg"
+        },
+        {
+          title: "Bruins in the Draft",
+          text: "This movie was bonker but #nospoilers because of character limit alright pals",
+          link: "#"
+        },
+        {
+          title: "#USACVote18Elections",
+          text: "This movie was bonker but #nospoilers because of character limit alright pals",
+          link: "https://usac.ucla.edu/"
+        }
+      ]}
+      image={
+        {
+          src: "https://i.imgur.com/OgQtllf.jpg",
+          alt: "N/A"
+        }
+      }
+    />
+    <StoryList
+      story={[
+        {
+          title: "Most popular story",
+          text: "This movie was bonker but #nospoilers because of character limit alright pals",
+          link: "#"
+        },
+        {
+          title: "Second Most Popular",
+          text: "This movie was bonker but #nospoilers because of character limit alright pals",
+          link: "#"
+        },
+        {
+          title: "Third Most Popular",
+          text: "This movie was bonker but #nospoilers because of character limit alright pals",
+          link: "#"
+        }
+      ]}
+      type="popular"
+    />
 </Playground>
