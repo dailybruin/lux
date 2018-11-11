@@ -11,7 +11,7 @@ const content = [
   {
     type: 'image',
     value: `{
-      "caption": "Freshman attacker Ashworth Molthen has registered 21 goals on the season, finding the back of the net in 13 of the 16 games so far this year for UCLA men’s water polo. UCLA is one of two teams remaining in the MPSF conference that remains undefeated.", "credit": "Amy Dixon/Photo Editor", "type": "image", "url": "https://dailybruin.com/images/2018/10/web.sp_.mwp_.nbk_.ADX_-640x461.jpg"}`,
+      "caption": "Freshman attacker Ashworth Molthen has registered 21 goals on the season, finding the back of the net in 13 of the 16 games so far this year for UCLA men’s water polo. UCLA is one of two teams remaining in the MPSF conference that remains undefeated.", "credit": "Amy Dixon/Photo Editor",  "url": "https://dailybruin.com/images/2018/10/web.sp_.mwp_.nbk_.ADX_-640x461.jpg", "alt": "Ashworth Molthen playing water polo." }`,
   },
 ]
 
