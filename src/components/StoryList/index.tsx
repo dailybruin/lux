@@ -70,22 +70,18 @@ class StoryList extends React.Component<StoryListProps> {
         {!!this.props.image && (
           <a
             className={css`
-              padding: 0rem;
+              display: block;
+              margin: 1rem auto 0rem;
               text-decoration: none;
-              &:hover {
-                opacity: 0.8;
-              }
+              width: 89%;
             `}
             href={!!this.props.story[0].link ? this.props.story[0].link : '#'}
           >
             <img
               className={css`
-                display: block;
-                margin-left: auto;
-                margin-right: auto;
                 object-fit: contain;
-                padding-top: 1rem;
-                width: 89%;
+                vertical-align: top;
+                width: 100%;
                 &:hover {
                   opacity: 0.85;
                 }
