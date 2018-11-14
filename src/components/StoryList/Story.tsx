@@ -28,10 +28,10 @@ export default function Story(props: StoryProps) {
       <h3
         className={css`
           font-family: ${MainSiteStyles.storyListFont}, serif;
-          font-size: 0.875rem;
+          font-size: 0.890625rem;
           font-weight: 700;
           line-height: 1.125rem;
-          margin: 0rem 0rem 0.1875rem;
+          margin: 0rem 0rem 0.125rem;
           overflow-wrap: break-word;
           text-align: left;
         `}
@@ -40,7 +40,7 @@ export default function Story(props: StoryProps) {
           href={props.link}
           className={css`
             color: #000;
-            padding: 0.25rem 0.25rem 0.25rem 0rem;
+            padding: 0.35rem 0.25rem 0.25rem 0rem;
             text-decoration: none;
             &:hover {
               opacity: 0.8;
@@ -54,8 +54,8 @@ export default function Story(props: StoryProps) {
         className={css`
           color: #000;
           font-family: 'PT Serif', serif;
-          font-size: 0.76rem;
-          line-height: 1rem;
+          font-size: 0.8125rem;
+          line-height: 1.09375rem;
           margin: 0rem;
           overflow-wrap: break-word;
         `}
