@@ -6,11 +6,13 @@ export interface ImageProps {
   caption: string
   credit: string
   alt: string
+  style?: string
 }
 
 export default function Image(props: ImageProps) {
+  const style = props.style
   return (
-    <figure>
+    <figure className={style}>
       <img
         className={css`
           width: 100%;

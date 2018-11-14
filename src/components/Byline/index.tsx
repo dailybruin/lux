@@ -8,6 +8,7 @@ import toSentence from '../../utils/toSentence'
 interface BylineProps {
   /** The authors of the story. */
   authors: string | string[]
+  style?: string
 }
 
 /** The byline of the story. */
@@ -17,10 +18,11 @@ export default function Byline(props: BylineProps) {
       ? props.authors.toUpperCase()
       : toSentence(props.authors.map(author => author.toUpperCase()))
 
+  const style = props.style
   return (
     <div
       className={css`
-        padding-top: 5px;
+        ${style} padding-top: 5px;
       `}
     >
       By {authorString}
