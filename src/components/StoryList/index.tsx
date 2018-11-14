@@ -43,7 +43,7 @@ class StoryList extends React.Component<StoryListProps> {
         text={story.text}
         link={story.link}
         color={!!this.props.image ? '#ABABAB' : '#000'}
-        padding={!!this.props.image ? 0.3125 : 0.74}
+        padding={!!this.props.image ? 0.3125 : 0.65}
         key={index}
       />
     ))
@@ -52,10 +52,10 @@ class StoryList extends React.Component<StoryListProps> {
       <div
         className={css`
           background-color: #fff;
+          box-shadow: ${MainSiteStyles.cardShadow};
           justify-content: center;
           margin: 1rem auto;
           max-width: 18.25rem;
-          box-shadow: ${MainSiteStyles.cardShadow};
         `}
       >
         <Header
@@ -93,7 +93,7 @@ class StoryList extends React.Component<StoryListProps> {
         )}
         <div
           className={css`
-            padding: 0.8125rem 1rem ${!!this.props.image ? 0.8125 : 1.25}rem;
+            padding: 0.8125rem 1rem ${!!this.props.image ? 0.8125 : 1}rem;
           `}
         >
           {renderedStories}
