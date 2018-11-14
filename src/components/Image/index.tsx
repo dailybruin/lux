@@ -10,6 +10,9 @@ export interface ImageProps {
 }
 
 export default function Image(props: ImageProps) {
+  if (!props.alt) {
+    throw new Error('Image requires a meaningful `alt` value.')
+  }
   return (
     <figure className={props.style}>
       <img
