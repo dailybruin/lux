@@ -36,7 +36,6 @@ class Footer extends React.Component<FooterProps> {
   }
 
   render() {
-    const style = this.props.style
     if (this.props.footerType === ComponentType.Default) {
       return (
         <footer
@@ -52,7 +51,7 @@ class Footer extends React.Component<FooterProps> {
             @media (max-width: 600px) {
               font-size: 0.8rem;
             }
-            ${style};
+            ${this.props.style};
           `}
         >
           <div>

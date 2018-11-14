@@ -31,7 +31,6 @@ export default class Article extends React.Component<ArticleProps> {
   public static defaultProps = { dropcap: false }
 
   public render() {
-    const style = this.props.style
     const renderedContent = this.props.content.map(
       (content: any, i: number) => {
         switch (content.type) {
@@ -57,7 +56,6 @@ export default class Article extends React.Component<ArticleProps> {
     return (
       <article
         className={css`
-          ${style};
           margin-left: auto;
           margin-right: auto;
           max-width: 600px;
@@ -73,6 +71,7 @@ export default class Article extends React.Component<ArticleProps> {
                 }
               `
             : ''};
+          ${this.props.style};
         `}
       >
         {renderedContent}

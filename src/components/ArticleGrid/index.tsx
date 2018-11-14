@@ -20,7 +20,6 @@ export default class ArticleGrid extends React.Component<ArticleGridProps> {
     minColumns: 1,
   }
   public render() {
-    const style = this.props.style
     const articles = this.props.articles.map((article, i) => (
       <ArticleCard article={article} key={i} />
     ))
@@ -48,7 +47,8 @@ export default class ArticleGrid extends React.Component<ArticleGridProps> {
       <section
         id={!!this.props.heading ? slugify(this.props.heading) : undefined}
         className={css`
-          ${style} margin-top: 20px;
+          margin-top: 20px;
+          ${this.props.style};
         `}
       >
         {!!this.props.heading && (

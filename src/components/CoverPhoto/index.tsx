@@ -31,7 +31,6 @@ export default class CoverPhoto extends React.Component<CoverPhotoProps> {
   }
 
   public render() {
-    const style = this.props.style
     const textAlign =
       this.props.xPosition === XPosition.Center
         ? 'center'
@@ -54,7 +53,7 @@ export default class CoverPhoto extends React.Component<CoverPhotoProps> {
         display: grid;
         align-items: ${this.props.yPosition};
         justify-content: ${this.props.xPosition};
-        ${style}
+        ${this.props.style}
       `}
       >
         <div
