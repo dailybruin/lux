@@ -12,6 +12,5 @@ interface HeadlineProps {
 
 /** The story's headline. */
 export default function Headline(props: HeadlineProps) {
-  const style = props.style
   return <h1 className={props.style}>{props.text}</h1>
 }

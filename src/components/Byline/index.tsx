@@ -18,11 +18,11 @@ export default function Byline(props: BylineProps) {
       ? props.authors.toUpperCase()
       : toSentence(props.authors.map(author => author.toUpperCase()))
 
-  const style = props.style
   return (
     <div
       className={css`
-        ${style} padding-top: 5px;
+        padding-top: 5px;
+        ${props.style};
       `}
     >
       By {authorString}

@@ -10,9 +10,8 @@ export interface ImageProps {
 }
 
 export default function Image(props: ImageProps) {
-  const style = props.style
   return (
-    <figure className={style}>
+    <figure className={props.style}>
       <img
         className={css`
           width: 100%;
