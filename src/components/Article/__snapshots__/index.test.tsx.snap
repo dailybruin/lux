@@ -28,6 +28,7 @@ exports[`Article Matches its snapshot 1`] = `
   </p>
   <figure>
     <img
+      alt="Ashworth Molthen playing water polo."
       class="emotion-0"
       src="https://dailybruin.com/images/2018/10/web.sp_.mwp_.nbk_.ADX_-640x461.jpg"
     />
