@@ -5,5 +5,8 @@
     "tslint-eslint-rules",
     "tslint-config-prettier"
   ],
-  "rules": { "interface-name": [true, "never-prefix"] }
+  "rules": {
+    "interface-name": [true, "never-prefix"],
+    "no-var-requires": false
+  }
 }
