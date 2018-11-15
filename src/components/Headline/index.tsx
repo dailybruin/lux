@@ -7,6 +7,7 @@ import { css } from 'react-emotion'
 interface HeadlineProps {
   /** The headline of the story. */
   text: string
+  /** Custom css for the headline component */
   style?: string
 }
 

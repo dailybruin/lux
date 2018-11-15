@@ -6,6 +6,7 @@ export interface ImageProps {
   caption: string
   credit: string
   alt: string
+  /** Custom css for the image component */
   style?: string
 }
 

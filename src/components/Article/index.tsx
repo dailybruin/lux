@@ -23,6 +23,7 @@ interface ArticleProps {
   /** The paragraphs of content for the story. */
   content: Content[]
   dropcap: boolean
+  /** custom css for the article component */
   style?: string
 }
 

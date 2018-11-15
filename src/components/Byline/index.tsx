@@ -8,6 +8,7 @@ import toSentence from '../../utils/toSentence'
 interface BylineProps {
   /** The authors of the story. */
   authors: string | string[]
+  /** Custom css for the byline */
   style?: string
 }
 

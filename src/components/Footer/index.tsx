@@ -25,6 +25,7 @@ interface FooterProps {
   copyrightYear: number
   /** What type of project this footer is being used in. */
   footerType: ComponentType
+  /** Custom css for the footer component */
   style?: string
 }
 
