@@ -8,6 +8,8 @@ import toSentence from '../../utils/toSentence'
 interface BylineProps {
   /** The authors of the story. */
   authors: string | string[]
+  /** Custom css for the byline */
+  style?: string
 }
 
 /** The byline of the story. */
@@ -21,6 +23,7 @@ export default function Byline(props: BylineProps) {
     <div
       className={css`
         padding-top: 5px;
+        ${props.style};
       `}
     >
       By {authorString}

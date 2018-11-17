@@ -6,15 +6,16 @@ export interface ImageProps {
   caption: string
   credit: string
   alt: string
+  /** Custom css for the image component */
+  style?: string
 }
 
 export default function Image(props: ImageProps) {
   if (!props.alt) {
     throw new Error('Image requires a meaningful `alt` value.')
   }
-
   return (
-    <figure>
+    <figure className={props.style}>
       <img
         className={css`
           width: 100%;

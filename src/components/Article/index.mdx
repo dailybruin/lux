@@ -5,6 +5,7 @@ route: /article
 
 import { Playground, PropsTable } from 'docz'
 import Article from '.'
+import { css } from 'react-emotion'
 
 # Article
 
@@ -16,6 +17,7 @@ Note that `Article` expects an array of `Content`, which
 
 <Playground>
   <Article
+    style={css`color: red;`}
     dropcap={true}
     content={[
       {

@@ -25,17 +25,19 @@ interface FooterProps {
   copyrightYear: number
   /** What type of project this footer is being used in. */
   footerType: ComponentType
+  /** Custom css for the footer component */
+  style?: string
 }
 
 /** A footer to go at the bottom of every page. */
 class Footer extends React.Component<FooterProps> {
   static defaultProps = {
     license: License.Copyright,
-    footerType: ComponentType.Default
+    footerType: ComponentType.Default,
   }
 
   render() {
-    if(this.props.footerType === ComponentType.Default) {
+    if (this.props.footerType === ComponentType.Default) {
       return (
         <footer
           className={css`
@@ -50,6 +52,7 @@ class Footer extends React.Component<FooterProps> {
             @media (max-width: 600px) {
               font-size: 0.8rem;
             }
+            ${this.props.style};
           `}
         >
           <div>
@@ -66,7 +69,9 @@ class Footer extends React.Component<FooterProps> {
               >
                 Site code available on{' '}
                 <a
-                  href={`https://github.com/dailybruin/${this.props.githubName}`}
+                  href={`https://github.com/dailybruin/${
+                    this.props.githubName
+                  }`}
                 >
                   GitHub
                 </a>
@@ -85,11 +90,9 @@ class Footer extends React.Component<FooterProps> {
           </div>
         </footer>
       )
-    } else /** this.props.footerType === ComponentType.MainSite */{
+    } /** this.props.footerType === ComponentType.MainSite */ else {
       /** This should be updated if more typeEnums are added */
-      return(
-        <MainSiteFooter/>
-      )
+      return <MainSiteFooter />
     }
   }
 }

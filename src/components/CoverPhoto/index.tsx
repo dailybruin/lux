@@ -22,6 +22,7 @@ interface CoverPhotoProps {
   xPosition: XPosition
   yPosition: YPosition
   darken?: number
+  style?: string
 }
 
 export default class CoverPhoto extends React.Component<CoverPhotoProps> {
@@ -52,6 +53,7 @@ export default class CoverPhoto extends React.Component<CoverPhotoProps> {
         display: grid;
         align-items: ${this.props.yPosition};
         justify-content: ${this.props.xPosition};
+        ${this.props.style}
       `}
       >
         <div

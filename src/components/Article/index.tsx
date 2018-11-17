@@ -23,6 +23,8 @@ interface ArticleProps {
   /** The paragraphs of content for the story. */
   content: Content[]
   dropcap: boolean
+  /** custom css for the article component */
+  style?: string
 }
 
 /** A footer to go at the bottom of every page. */
@@ -70,6 +72,7 @@ export default class Article extends React.Component<ArticleProps> {
                 }
               `
             : ''};
+          ${this.props.style};
         `}
       >
         {renderedContent}

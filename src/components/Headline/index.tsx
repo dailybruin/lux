@@ -7,9 +7,11 @@ import { css } from 'react-emotion'
 interface HeadlineProps {
   /** The headline of the story. */
   text: string
+  /** Custom css for the headline component */
+  style?: string
 }
 
 /** The story's headline. */
 export default function Headline(props: HeadlineProps) {
-  return <h1>{props.text}</h1>
+  return <h1 className={props.style}>{props.text}</h1>
 }

@@ -5,6 +5,7 @@ route: /headline
 
 import { Playground, PropsTable } from 'docz'
 import Headline from '.'
+import { css } from 'react-emotion'
 
 # Headline
 
@@ -13,5 +14,5 @@ Every story needs a headline.
 <PropsTable of={Headline} />
 
 <Playground>
-  <Headline text="Gene Block Starts Meme Factory"/>
+  <Headline style={css`color: #0B5FFF;`} text="Gene Block Starts Meme Factory"/>
 </Playground>

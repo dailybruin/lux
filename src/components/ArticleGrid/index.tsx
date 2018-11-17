@@ -11,6 +11,7 @@ interface ArticleGridProps {
   articles: ArticleCardData[]
   maxColumns: number
   minColumns: number
+  style?: string
 }
 
 export default class ArticleGrid extends React.Component<ArticleGridProps> {
@@ -47,6 +48,7 @@ export default class ArticleGrid extends React.Component<ArticleGridProps> {
         id={!!this.props.heading ? slugify(this.props.heading) : undefined}
         className={css`
           margin-top: 20px;
+          ${this.props.style};
         `}
       >
         {!!this.props.heading && (

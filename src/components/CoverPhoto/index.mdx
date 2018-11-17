@@ -5,6 +5,7 @@ route: /cover-photo
 
 import { Playground, PropsTable } from 'docz'
 import CoverPhoto from '.'
+import { css } from 'react-emotion'
 
 # Cover Photo
 
@@ -13,7 +14,7 @@ A cover photo.
 <PropsTable of={CoverPhoto} />
 
 <Playground>
-  <CoverPhoto headline="Gene Block starts meme factory" authors="Tanner Walters" imageURL="https://features.dailybruin.com/2017/close-to-home/img/web.enterprise.anonymous.DLee.jpg"
+  <CoverPhoto style={css`border-radius: 10em;`} headline="Gene Block starts meme factory" authors="Tanner Walters" imageURL="https://features.dailybruin.com/2017/close-to-home/img/web.enterprise.anonymous.DLee.jpg"
   xPosition="center"
   yPosition="center"
    />
