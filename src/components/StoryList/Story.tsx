@@ -28,7 +28,7 @@ export default function Story(props: StoryProps) {
       <h3
         className={css`
           font-family: ${MainSiteStyles.storyListFont}, serif;
-          font-size: 0.890625rem;
+          font-size: 0.8125rem;
           font-weight: 700;
           line-height: 1.125rem;
           margin: 0rem 0rem 0.125rem;
@@ -54,7 +54,7 @@ export default function Story(props: StoryProps) {
         className={css`
           color: #000;
           font-family: 'PT Serif', serif;
-          font-size: 0.8125rem;
+          font-size: 0.78125rem;
           line-height: 1.09375rem;
           margin: 0rem;
           overflow-wrap: break-word;

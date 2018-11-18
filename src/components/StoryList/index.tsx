@@ -43,7 +43,7 @@ class StoryList extends React.Component<StoryListProps> {
         text={story.text}
         link={story.link}
         color={!!this.props.image ? '#ABABAB' : '#000'}
-        padding={!!this.props.image ? 0.5 : 0.65}
+        padding={!!this.props.image ? 0.5 : 0.625}
         key={index}
       />
     ))
