@@ -1,0 +1,18 @@
+---
+name: Navbar
+route: /navbar
+---
+
+import { Playground, PropsTable } from 'docz'
+import Navbar from '.'
+import { css } from 'react-emotion'
+
+#Navbar
+
+Web pages have navigation bars sometimes.
+
+<PropsTable of={Navbar} />
+
+<Playground>
+    <Navbar links={[{link: "/navbar/", title:"asdf"}, {link:"asdf", title: "bruh"}]}/>
+</Playground>
