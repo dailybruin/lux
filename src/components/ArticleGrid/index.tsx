@@ -15,7 +15,7 @@ interface ArticleGridProps {
 }
 
 export default class ArticleGrid extends React.Component<ArticleGridProps> {
-  private static defaultProps = {
+  public static defaultProps = {
     maxColumns: 3,
     minColumns: 1,
   }
