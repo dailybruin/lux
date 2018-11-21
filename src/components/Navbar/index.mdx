@@ -14,5 +14,6 @@ Web pages have navigation bars sometimes.
 <PropsTable of={Navbar} />
 
 <Playground>
-    <Navbar links={[{link: "/navbar/", title:"asdf"}, {link:"asdf", title: "bruh"}]}/>
+    <Navbar logo={<img style={{maxWidth: "300px"}} src="https://dailybruin.com/img/db_logo.svg"></img>}
+            links={[<a href="/">Index</a>, <a href="/navbar">Navbar</a>, <a href="/footer">Footer</a>]}/>
 </Playground>
