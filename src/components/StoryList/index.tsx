@@ -25,7 +25,7 @@ enum StoryListType {
 }
 
 interface StoryListProps {
-  /** A list of the most popular stories. The list should contain exactly 3 stories. */
+  /** A list of the most popular stories. */
   story: StoryContent[]
   /** An image relating to the most popular story (i.e. the first in the list). */
   image?: ImageContent
