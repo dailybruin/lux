@@ -6,22 +6,37 @@ interface StoryProps {
   title: string
   text: string
   link: string
-  color: string
-  padding: number
+}
+
+function Link(props: any) {
+  return (
+    <a
+      href={props.link}
+      className={css`
+        color: ${MainSiteStyles.black};
+        text-decoration: none;
+        &:hover {
+          opacity: 0.8;
+        }
+      `}
+    >
+      {props.children}
+    </a>
+  )
 }
 
 export default function Story(props: StoryProps) {
   return (
     <div
       className={css`
-        border-bottom: solid ${props.color} 0.1rem;
-        padding: 0.3125rem 0rem ${props.padding}rem;
+        border-bottom: solid #ababab 0.1rem;
+        padding: 7px 0px 7px;
         &:first-child {
-          padding-top: 0rem;
+          padding-top: 0px;
         }
         &:last-child {
           border-bottom: none;
-          padding-bottom: 0rem;
+          padding-bottom: 0px;
         }
       `}
     >
@@ -31,36 +46,24 @@ export default function Story(props: StoryProps) {
           font-size: 0.8125rem;
           font-weight: 700;
           line-height: 1.125rem;
-          margin: 0rem 0rem 0.125rem;
+          margin: 0px 0px 2px;
           overflow-wrap: break-word;
           text-align: left;
         `}
       >
-        <a
-          href={props.link}
-          className={css`
-            color: #000;
-            padding: 0.35rem 0.25rem 0.25rem 0rem;
-            text-decoration: none;
-            &:hover {
-              opacity: 0.8;
-            }
-          `}
-        >
-          {props.title}
-        </a>
+        <Link link={props.link}>{props.title}</Link>
       </h3>
       <p
         className={css`
-          color: #000;
+          color: ${MainSiteStyles.black};
           font-family: 'PT Serif', serif;
-          font-size: 0.78125rem;
-          line-height: 1.09375rem;
-          margin: 0rem;
+          font-size: 0.78rem;
+          line-height: 1.1rem;
+          margin: 0px;
           overflow-wrap: break-word;
         `}
       >
-        {props.text}
+        <Link link={props.link}>{props.text}</Link>
       </p>
     </div>
   )

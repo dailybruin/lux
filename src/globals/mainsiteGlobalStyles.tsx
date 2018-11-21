@@ -11,9 +11,12 @@ if (typeof window !== 'undefined') {
 }
 
 /** Reusable common CSS attributes */
+export const black = '#000'
+export const white = '#fff'
 export const headlineFont = 'Arimo'
 export const storyListFont = 'Lora'
 export const topBarFont = 'Source Sans Pro'
+export const cardInnerPadding = '12px 16px 16px'
 export const cardShadow = '0px 2px 4px 0px rgba(0,0,0,0.25)'
 
 /** CSS breakpoints */

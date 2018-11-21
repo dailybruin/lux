@@ -1,8 +1,8 @@
 import * as React from 'react'
 import { css } from 'react-emotion'
 import * as MainSiteStyles from '../../globals/mainsiteGlobalStyles'
-import Header from './Header'
 import Story from './Story'
+import TopBar from './TopBar'
 
 /**
  * Story List Properties
@@ -42,8 +42,6 @@ class StoryList extends React.Component<StoryListProps> {
         title={story.title}
         text={story.text}
         link={story.link}
-        color={!!this.props.image ? '#ABABAB' : '#000'}
-        padding={!!this.props.image ? 0.5 : 0.625}
         key={index}
       />
     ))
@@ -51,14 +49,14 @@ class StoryList extends React.Component<StoryListProps> {
     return (
       <div
         className={css`
-          background-color: #fff;
+          background-color: ${MainSiteStyles.white};
           box-shadow: ${MainSiteStyles.cardShadow};
           justify-content: center;
-          margin: 1rem auto;
-          max-width: 18.25rem;
+          margin: 16px auto;
+          max-width: 292px;
         `}
       >
-        <Header
+        <TopBar
           title={
             !!this.props.image
               ? 'IN THE NEWS'
@@ -71,7 +69,7 @@ class StoryList extends React.Component<StoryListProps> {
           <a
             className={css`
               display: block;
-              margin: 1rem auto 0rem;
+              margin: 16px auto 0px;
               text-decoration: none;
               width: 89%;
             `}
@@ -93,7 +91,7 @@ class StoryList extends React.Component<StoryListProps> {
         )}
         <div
           className={css`
-            padding: 0.8125rem 1rem ${!!this.props.image ? 0.8125 : 1}rem;
+            padding: ${MainSiteStyles.cardInnerPadding};
           `}
         >
           {renderedStories}
