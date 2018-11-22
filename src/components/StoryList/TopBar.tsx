@@ -11,7 +11,7 @@ export default function TopBar(props: TopBarProps) {
     <div
       className={css`
         background-color: ${MainSiteStyles.black};
-        padding: 2px 0px 4px 8px;
+        padding: 2px 0px 4px 10px;
       `}
     >
       <h2

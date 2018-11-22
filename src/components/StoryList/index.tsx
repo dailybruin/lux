@@ -69,9 +69,9 @@ class StoryList extends React.Component<StoryListProps> {
           <a
             className={css`
               display: block;
-              margin: 16px auto 0px;
+              margin: 15px auto 0px;
               text-decoration: none;
-              width: 89%;
+              width: 90%;
             `}
             href={!!this.props.story[0].link ? this.props.story[0].link : '#'}
           >
