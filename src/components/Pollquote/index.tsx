@@ -1,27 +1,21 @@
 import * as React from 'react'
 import { css } from 'react-emotion'
 
-interface PollquoteProps {
+interface PullQuoteProps {
   //     /** Text for the poll quote */
   text: string
   //     /** Custom css for poll quote */
   style?: string
 }
 
-export default function Pollquote(props: PollquoteProps) {
-  const pollquoteStyle = css`
+export default function PullQuote(props: PullQuoteProps) {
+  const pullQuoteStyle = css`
     display: flex;
     ${props.style};
   `
   return (
-    <div className={pollquoteStyle}>
-      <svg
-        width="62.16"
-        height="72"
-        viewBox="0 0 44 36"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
+    <div className={pullQuoteStyle}>
+      <svg width="60" height="36">
         <path
           d="M18.1406 2.60938V3.3125C18.1406 3.96875 17.6016 5.11719 16.5234 6.75781C15.4922 8.39844
                      14.6719 9.85156 14.0625 11.1172C13.4531 12.3359 13.1484 13.6953 13.1484 15.1953C13.1016
@@ -37,7 +31,14 @@ export default function Pollquote(props: PollquoteProps) {
           fill="black"
         />
       </svg>
-      <div>{props.text}</div>
+      <div
+        className={css`
+          margin-left: 10px;
+          width: calc(100% - 100px);
+        `}
+      >
+        {props.text}
+      </div>
     </div>
   )
 }

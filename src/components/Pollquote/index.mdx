@@ -1,33 +1,29 @@
 ---
-name: Pollquote
-route: /pollquote
+name: Pull Quote
+route: /pull-quote
 ---
 
 import { Playground, PropsTable } from 'docz'
-import Pollquote from '.'
+import PullQuote from '.'
 import { css } from 'react-emotion'
 
-# Pollquote
+# Pull Quote
 
-<PropsTable of={Pollquote}/>
+<PropsTable of={PullQuote} />
 
 <Playground>
-    <Pollquote style={css`
-                            svg{
-                                width: 300px;
-                                margin-top: 10px;
-                            }
-                            div{
-                                color: #7D899C
-                            }
-                          `}
-                text={`Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Sed suscipit venenatis massa, ac ultricies sem gravida nec.
-                        Phasellus ac ipsum nibh. Morbi at ullamcorper turpis, vitae rhoncus magna.
-                        Donec non pretium velit. Morbi vulputate nulla orci, non vestibulum diam ultrices nec.
-                        estibulum massa tortor, efficitur ac sollicitudin eu, porta ut nisl.
-                        Sed eu porta nibh. Nullam congue, tortor tempor fermentum mollis, quam tellus suscipit metus, sit amet facilisis orci elit nec ipsum.
-                        Maecenas sed mollis diam. Proin laoreet justo sit amet auctor convallis.`
-                        }
-    />
+  <PullQuote
+    style={css`
+      svg {
+        width: 300px;
+        margin-top: 10px;
+      }
+      div {
+        color: #7d899c;
+      }
+    `}
+    text={`Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Sed suscipit venenatis massa, ac ultricies sem gravida nec.
+            Phasellus ac ipsum nibh. Morbi at ullamcorper turpis, vitae rhoncus magna.`}
+  />
 </Playground>
