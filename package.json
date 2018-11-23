@@ -90,7 +90,7 @@
     "docz-plugin-css": "0.11.0",
     "docz-plugin-netlify": "1.1.4",
     "eclint": "2.8.1",
-    "gatsby": "2.0.43",
+    "gatsby": "2.0.55",
     "husky": "1.2.0",
     "jest": "23.6.0",
     "jest-emotion": "9.2.11",
