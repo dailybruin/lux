@@ -80,13 +80,7 @@ export default class CoverPhoto extends React.Component<CoverPhotoProps> {
           </h1>
           <Line />
           <Byline authors={this.props.authors} />
-          <p
-            className={css`
-              text-align: left;
-            `}
-          >
-            {this.props.explainer}
-          </p>
+          <p>{this.props.explainer}</p>
         </div>
       </div>
     )
