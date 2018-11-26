@@ -7,14 +7,14 @@ import { Playground, PropsTable } from 'docz'
 import Navbar from '.'
 import { css } from 'react-emotion'
 
-#Navbar
+# Navbar
 
 Web pages have navigation bars sometimes.
 
 <PropsTable of={Navbar} />
 
 <Playground>
-    <Navbar sticky={true} logo={<img style={{maxWidth: "300px"}} src="https://dailybruin.com/img/db_logo.svg"></img>}
+    <Navbar sticky={true} showLogo={true} title={"Fake Title"}
             links={[<a href="/">Index</a>, <a href="/navbar">Navbar</a>, <a href="/footer">Footer</a>]}/>
             <div>
 

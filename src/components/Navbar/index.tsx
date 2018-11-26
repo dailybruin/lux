@@ -8,10 +8,11 @@ interface NavbarProps {
   /** custom style applied to individual links */
   linkStyle?: string
   /** Logo can be text or an image */
-  logo: string | HTMLImageElement
+  showLogo: boolean
+  title: string
   /** Logo link */
   logoURL: string
-  // /** Pins navbar (or not) */
+  /** Pins navbar (or not) */
   sticky?: boolean
   /** custom style applied to the navbar */
   style?: string
@@ -40,9 +41,6 @@ class Navbar extends React.Component<NavbarProps> {
       ${this.props.sticky ? sticky : ''};
     `
     const linkStyle = css`
-      padding-right: 3vw;
-      color: #65696c;
-      font-family: Helvetica, sans-serif;
       font-weight: 500;
       font-size: 1.2vw;
       a {
@@ -86,7 +84,15 @@ class Navbar extends React.Component<NavbarProps> {
 
     return (
       <div className={navbarStyle}>
-        <div className={logoStyle}>{logo}</div>
+        <div className={logoStyle}>
+          {this.props.showLogo && (
+            <img
+              style={{ width: '300px' }}
+              src="https://dailybruin.com/img/db_logo.svg"
+            />
+          )}
+          {this.props.title}
+        </div>
         <div className={linksStyle}>{links}</div>
       </div>
     )
