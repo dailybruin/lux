@@ -5,6 +5,7 @@ import Image, { ImageProps } from '../Image'
 enum ContentType {
   Text = 'text',
   Image = 'image',
+  Break = 'break',
 }
 
 interface Content {
@@ -48,6 +49,8 @@ export default class Article extends React.Component<ArticleProps> {
           case ContentType.Image:
             const image = JSON.parse(content.value) as ImageProps
             return <Image key={i} {...image} />
+          case ContentType.Break:
+            return <br />
           default:
             break
         }
