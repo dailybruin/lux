@@ -23,6 +23,7 @@ interface CoverPhotoProps {
   yPosition: YPosition
   darken?: number
   style?: string
+  explainer?: string
 }
 
 export default class CoverPhoto extends React.Component<CoverPhotoProps> {
@@ -58,6 +59,7 @@ export default class CoverPhoto extends React.Component<CoverPhotoProps> {
       >
         <div
           className={css`
+            max-width: 460px;
             margin: 2rem;
             color: #fff;
             text-align: ${textAlign};
@@ -72,13 +74,13 @@ export default class CoverPhoto extends React.Component<CoverPhotoProps> {
             className={css`
               margin: 0 0 0.8rem;
               font-size: 3rem;
-              max-width: 460px;
             `}
           >
             {this.props.headline}
           </h1>
           <Line />
           <Byline authors={this.props.authors} />
+          {!!this.props.explainer && <p>{this.props.explainer}</p>}
         </div>
       </div>
     )
