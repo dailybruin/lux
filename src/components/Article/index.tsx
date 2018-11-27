@@ -24,7 +24,7 @@ interface ArticleProps {
   /** The paragraphs of content for the story. */
   content: Content[]
   /** An object of {value: ReactNode} mappings to map custom content types to articles. */
-  customTypeComponentMapping?: { [key: string]: (props: any) => JSX.Element }
+  customTypeComponentMapping?: { [key: string]: React.ComponentType<any> }
   /** Whether to add a dropcap on the first paragraph. */
   dropcap: boolean
   /** custom css for the article component */
