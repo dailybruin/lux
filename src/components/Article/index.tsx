@@ -23,6 +23,9 @@ interface Text {
 interface ArticleProps {
   /** The paragraphs of content for the story. */
   content: Content[]
+  /**  */
+  customTypeComponentMapping: { [key: string]: React.ReactNode }
+  /** Whether to add a dropcap on the first paragraph. */
   dropcap: boolean
   /** custom css for the article component */
   style?: string
@@ -52,6 +55,18 @@ export default class Article extends React.Component<ArticleProps> {
           case ContentType.Line:
             return <hr />
           default:
+            if (
+              this.props.customTypeComponentMapping &&
+              Object.keys(this.props.customTypeComponentMapping).includes(
+                content.type
+              )
+            ) {
+              const Component: any = this.props.customTypeComponentMapping[
+                content.type
+              ]
+              const data = JSON.parse(content.value)
+              return <Component {...data} />
+            }
             break
         }
       }
