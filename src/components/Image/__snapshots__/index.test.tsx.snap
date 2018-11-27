@@ -3,6 +3,7 @@
 exports[`Image Matches its snapshot 1`] = `
 .emotion-0 {
   width: 100%;
+  margin-bottom: 0;
 }
 
 <figure>
