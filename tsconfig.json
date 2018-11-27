@@ -4,6 +4,7 @@
     "declarationDir": "./dist",
     "module": "es6",
     "target": "es6",
+    "lib": ["es2018", "dom"],
     "baseUrl": "src",
     "noImplicitAny": true,
     "moduleResolution": "node",

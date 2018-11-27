@@ -5,7 +5,6 @@ route: /article-grid
 
 import { Playground, PropsTable } from 'docz'
 import ArticleGrid from '.'
-import { css } from 'react-emotion'
 
 # ArticleGrid
 
@@ -14,8 +13,5 @@ A grid of articles for displaying on grid layout flatpages.
 <PropsTable of={ArticleGrid} />
 
 <Playground>
-  <ArticleGrid style={css`
-    color: blue;
-  `}
-  heading="News" articles={[]} />
+  <ArticleGrid heading="News" articles={[]} />
 </Playground>

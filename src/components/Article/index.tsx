@@ -5,6 +5,7 @@ import Image, { ImageProps } from '../Image'
 enum ContentType {
   Text = 'text',
   Image = 'image',
+  Line = 'line',
 }
 
 interface Content {
@@ -22,6 +23,9 @@ interface Text {
 interface ArticleProps {
   /** The paragraphs of content for the story. */
   content: Content[]
+  /** An object of {value: ReactNode} mappings to map custom content types to articles. */
+  customTypeComponentMapping?: { [key: string]: React.ComponentType<any> }
+  /** Whether to add a dropcap on the first paragraph. */
   dropcap: boolean
   /** custom css for the article component */
   style?: string
@@ -48,7 +52,21 @@ export default class Article extends React.Component<ArticleProps> {
           case ContentType.Image:
             const image = JSON.parse(content.value) as ImageProps
             return <Image key={i} {...image} />
+          case ContentType.Line:
+            return <hr />
           default:
+            if (
+              this.props.customTypeComponentMapping &&
+              Object.keys(this.props.customTypeComponentMapping).includes(
+                content.type
+              )
+            ) {
+              const Component = this.props.customTypeComponentMapping[
+                content.type
+              ]
+              const data = JSON.parse(content.value)
+              return <Component key={i} {...data} />
+            }
             break
         }
       }
