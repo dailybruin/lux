@@ -1,7 +1,7 @@
 import { css } from 'react-emotion'
 
 /** Web fonts loaded here - only in a browser */
-if (typeof window !== 'undefined') {
+if (window) {
   // tslint:disable-next-line:no-var-requires
   const WebFontLoader = require('webfontloader')
   WebFontLoader.load({
