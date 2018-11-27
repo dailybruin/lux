@@ -50,7 +50,7 @@ export default class Article extends React.Component<ArticleProps> {
             const image = JSON.parse(content.value) as ImageProps
             return <Image key={i} {...image} />
           case ContentType.Break:
-            return <br />
+            return <hr />
           default:
             break
         }
