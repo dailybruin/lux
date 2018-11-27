@@ -1,5 +1,7 @@
 import * as React from 'react'
 import { css } from 'react-emotion'
+import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import logoSrc from './db-logo.png'
 
 interface NavbarProps {
@@ -24,6 +26,14 @@ class Navbar extends React.Component<NavbarProps> {
     sticky: false,
   }
 
+  public state = {
+    open: false,
+  }
+
+  public handleClick = () => {
+    this.setState({ open: !this.state.open })
+  }
+
   public render() {
     const sticky = css`
       position: sticky;
@@ -41,10 +51,13 @@ class Navbar extends React.Component<NavbarProps> {
       ${this.props.sticky ? sticky : ''};
     `
     const linkStyle = css`
-      padding-right: 3vw;
+      @media (min-width: 940px) {
+        padding-right: 3rem;
+        align-self: center;
+      }
       color: #65696c;
       font-weight: 500;
-      font-size: 1.2vw;
+      font-size: 1rem;
       a {
         color: inherit; /* blue colors for links too */
         text-decoration: inherit; /* no underline */
@@ -52,9 +65,15 @@ class Navbar extends React.Component<NavbarProps> {
         font-weight: inherit;
         font-size: inherit;
       }
-      align-self: center;
       ${this.props.linkStyle};
     `
+    const linksMobileStyle = css`
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: flex-end;
+    `
+
     const logoStyle = css`
       a {
         color: inherit; /* blue colors for links too */
@@ -75,6 +94,9 @@ class Navbar extends React.Component<NavbarProps> {
     const linksStyle = css`
       display: flex;
       justify-content: space-between;
+      @media screen and (max-width: 940px) {
+        display: none;
+      }
     `
 
     const logo = (
@@ -100,6 +122,32 @@ class Navbar extends React.Component<NavbarProps> {
           <h2>{this.props.title}</h2>
         </div>
         <div className={linksStyle}>{links}</div>
+        <details
+          className={css`
+            width: 100%;
+            justify-self: end;
+            text-align: right;
+            font-size: 2rem;
+            @media (min-width: 940px) {
+              display: none;
+            }
+          `}
+        >
+          <summary
+            className={css`
+              font-size: 1rem;
+              ::-webkit-details-marker {
+                display: none;
+              }
+            `}
+          >
+            <div onClick={this.handleClick}>
+              {' '}
+              <FontAwesomeIcon icon={this.state.open ? faTimes : faBars} />{' '}
+            </div>
+          </summary>
+          <div className={linksMobileStyle}>{links}</div>
+        </details>
       </div>
     )
   }
