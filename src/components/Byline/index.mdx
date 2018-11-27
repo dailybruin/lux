@@ -5,7 +5,6 @@ route: /byline
 
 import { Playground, PropsTable } from 'docz'
 import Byline from '.'
-import { css } from 'react-emotion'
 
 # Byline
 
@@ -14,9 +13,6 @@ Every story needs an author and a byline.
 <PropsTable of={Byline} />
 
 <Playground>
-  <Byline style={css`
-    font-weight: bold
-    `}
-  authors="Tanner Walters" />
-  <Byline authors={["Tanner Walters", "Mackenzie Possee", "Jacob Preal"]} />
+  <Byline authors="Tanner Walters" />
+  <Byline authors={['Tanner Walters', 'Mackenzie Possee', 'Jacob Preal']} />
 </Playground>
