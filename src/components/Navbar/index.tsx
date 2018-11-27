@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { css } from 'react-emotion'
-import Image, { ImageProps } from '../Image'
+import logoSrc from './db-logo.png'
 
 interface NavbarProps {
   /** Array of JSX elements */
@@ -41,6 +41,8 @@ class Navbar extends React.Component<NavbarProps> {
       ${this.props.sticky ? sticky : ''};
     `
     const linkStyle = css`
+      padding-right: 3vw;
+      color: #65696c;
       font-weight: 500;
       font-size: 1.2vw;
       a {
@@ -50,27 +52,36 @@ class Navbar extends React.Component<NavbarProps> {
         font-weight: inherit;
         font-size: inherit;
       }
-      a:hover {
-        color: #3180c0;
-      }
       align-self: center;
       ${this.props.linkStyle};
     `
     const logoStyle = css`
+      a {
+        color: inherit; /* blue colors for links too */
+        text-decoration: inherit; /* no underline */
+        font-family: inherit;
+        font-weight: inherit;
+        font-size: inherit;
+      }
       img {
-        max-width: 15vw;
         overflow: hidden;
         vertical-align: bottom;
-        margin: 0;
+        margin-right: 20px;
+        width: 50px;
       }
+      display: flex;
+      align-items: center;
     `
     const linksStyle = css`
       display: flex;
       justify-content: space-between;
-      margin-right: 5vw;
     `
 
-    const logo = <a href={this.props.logoURL}>{this.props.logo}</a>
+    const logo = (
+      <a href={this.props.logoURL}>
+        {this.props.showLogo && <img src={logoSrc} />}
+      </a>
+    )
 
     const links = this.props.links
       ? this.props.links.map((link, i) => {
@@ -85,13 +96,8 @@ class Navbar extends React.Component<NavbarProps> {
     return (
       <div className={navbarStyle}>
         <div className={logoStyle}>
-          {this.props.showLogo && (
-            <img
-              style={{ width: '300px' }}
-              src="https://dailybruin.com/img/db_logo.svg"
-            />
-          )}
-          {this.props.title}
+          {this.props.showLogo && logo}
+          <h2>{this.props.title}</h2>
         </div>
         <div className={linksStyle}>{links}</div>
       </div>
