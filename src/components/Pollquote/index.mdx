@@ -1,0 +1,36 @@
+---
+name: Pull Quote
+route: /pull-quote
+---
+
+import { Playground, PropsTable } from 'docz'
+import PullQuote from '.'
+import { css } from 'react-emotion'
+
+# Pull Quote
+
+<PropsTable of={PullQuote} />
+
+<Playground>
+  <PullQuote
+    style={css`
+      h1{
+        font-size: 4rem;
+        position: absolute;
+        left: 0;
+      }
+      div {
+        color: #7d899c;
+      }
+    `}
+    text={`Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Sed suscipit venenatis massa, ac ultricies sem gravida nec.
+            Phasellus ac ipsum nibh. Morbi at ullamcorper turpis, vitae rhoncus magna.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Sed suscipit venenatis massa, ac ultricies sem gravida nec
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Sed suscipit venenatis massa, ac ultricies sem gravida nec
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Sed suscipit venenatis massa, ac ultricies sem gravida nec`}
+  />
+</Playground>
