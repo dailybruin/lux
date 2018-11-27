@@ -1,8 +1,7 @@
-import { css } from 'react-emotion'
-import WebFontLoader from 'webfontloader'
-
 /** Web fonts loaded here - only in a browser */
 if (typeof window !== 'undefined') {
+  // tslint:disable-next-line:no-var-requires
+  const WebFontLoader = require('webfontloader')
   WebFontLoader.load({
     google: {
       families: ['Arimo:700', 'Lora:700', 'Source Sans Pro:900'],
