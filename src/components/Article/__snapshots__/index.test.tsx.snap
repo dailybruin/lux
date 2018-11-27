@@ -40,5 +40,8 @@ exports[`Article Matches its snapshot 1`] = `
       )
     </figcaption>
   </figure>
+  <h2>
+    Custom Header!
+  </h2>
 </article>
 `;
