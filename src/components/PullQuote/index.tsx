@@ -2,7 +2,7 @@ import * as React from 'react'
 import { css } from 'react-emotion'
 
 interface PullQuoteProps {
-  //     /** Text for the poll quote */
+  /** Text for the poll quote */
   text: string
   /** Custom css for poll quote */
   style?: string
