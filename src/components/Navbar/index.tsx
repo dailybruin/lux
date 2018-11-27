@@ -1,7 +1,7 @@
-import * as React from 'react'
-import { css } from 'react-emotion'
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import * as React from 'react'
+import { css } from 'react-emotion'
 import logoSrc from './db-logo.png'
 
 interface NavbarProps {
