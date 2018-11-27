@@ -1601,15 +1601,6 @@
     hoist-non-react-statics "^2.5.5"
     prop-types "^15.6.1"
 
-"@mdx-js/tag@^0.15.6":
-  version "0.15.6"
-  resolved "https://registry.yarnpkg.com/@mdx-js/tag/-/tag-0.15.6.tgz#1a0aa575d5c9ac2b082631ca3e733034272114c1"
-  integrity sha512-u1H93/n7t2XE69fWiKIQIcnSHIHV9LgOew09rrzu+ceF+TK8jMacE2FxW09lQDUyL/Rat3fJDS4dQdTY8g/ZdQ==
-  dependencies:
-    create-react-context "^0.2.2"
-    hoist-non-react-statics "^2.5.5"
-    prop-types "^15.6.1"
-
 "@mdx-js/tag@^0.16.1":
   version "0.16.1"
   resolved "https://registry.yarnpkg.com/@mdx-js/tag/-/tag-0.16.1.tgz#d4a58971832e0a514594ae36839a5a0e7d0e1880"
@@ -6621,7 +6612,7 @@ docz-core@^0.11.0:
     ws "^6.0.0"
     yargs "^12.0.1"
 
-docz-core@^0.12.13, docz-core@^0.12.9:
+docz-core@^0.12.13:
   version "0.12.13"
   resolved "https://registry.yarnpkg.com/docz-core/-/docz-core-0.12.13.tgz#a0e2b648f2af6e8a2af5bb16a56764292d2ec924"
   integrity sha512-ltRMyy3WVkBo9nSCQ5EMxD1S02CzpsqGH4ekMVeNNuqzXVDl6udftlXWQUCOW+Thwmy9aUOKmg/jIHbLHZVP1A==
@@ -6726,7 +6717,7 @@ docz-plugin-netlify@1.1.4:
   dependencies:
     docz-core "^0.10.3"
 
-docz-theme-default@^0.12.13, docz-theme-default@^0.12.9:
+docz-theme-default@^0.12.13:
   version "0.12.13"
   resolved "https://registry.yarnpkg.com/docz-theme-default/-/docz-theme-default-0.12.13.tgz#9ddc72494d8bb2f49eaf5d123d29ba599ee42449"
   integrity sha512-SDIimK80o7gts3bYYN0buTuCoKaMVfn2rp17gI4/4dwzFg2zwXNuXRp70fPrAwgkdKbdK6ckj1oohZ+/BskKzw==
@@ -6784,32 +6775,7 @@ docz-utils@^0.12.13:
     unist-util-is "^2.1.2"
     unist-util-visit "^1.4.0"
 
-docz@0.12.9:
-  version "0.12.9"
-  resolved "https://registry.yarnpkg.com/docz/-/docz-0.12.9.tgz#752755e4794344bd7801f2368f6d36950f35ffd7"
-  integrity sha512-GAEoFt2DOfuIQymVOioEgjr9Kr2q/l7k5uYyHb+uvat4cKCeCs1iKOtikQeLe/J9om2SkbkD/SMgozpXSFN5GQ==
-  dependencies:
-    "@mdx-js/tag" "^0.15.6"
-    "@sindresorhus/slugify" "^0.6.0"
-    array-sort "^1.0.0"
-    capitalize "^2.0.0"
-    create-react-context "^0.2.3"
-    deepmerge "^2.2.1"
-    docz-core "^0.12.9"
-    docz-theme-default "^0.12.9"
-    lodash "^4.17.11"
-    prop-types "^15.6.2"
-    react "^16.6.0"
-    react-copy-write "^0.8.0"
-    react-dom "^16.6.0"
-    react-imported-component "^5.1.2"
-    react-router "^4.3.1"
-    react-router-dom "^4.3.1"
-    react-router-hash-link "^1.2.0"
-    ulid "^2.3.0"
-    yargs "^12.0.2"
-
-docz@^0.12.13:
+docz@0.12.13, docz@^0.12.13:
   version "0.12.13"
   resolved "https://registry.yarnpkg.com/docz/-/docz-0.12.13.tgz#6edd9bf2356fba267968bdd38539979986bf0422"
   integrity sha512-oXANdeTtt1YGkfDHDFKNF3JDg31Fb6Y3O+/nYawKMhiQ9ma5PbbJgor9s9m/2bi+JcpEm3yeQX5zyxxTuA3LjQ==
@@ -7937,7 +7903,7 @@ fb-watchman@^2.0.0:
   dependencies:
     bser "^2.0.0"
 
-fbjs@^0.8.0, fbjs@^0.8.14, fbjs@^0.8.16:
+fbjs@^0.8.0, fbjs@^0.8.14:
   version "0.8.17"
   resolved "https://registry.yarnpkg.com/fbjs/-/fbjs-0.8.17.tgz#c4d598ead6949112653d6588b01a5cdcd9f90fdd"
   integrity sha1-xNWY6taUkRJlPWWIsBpc3Nn5D90=
@@ -9693,11 +9659,6 @@ immer@1.7.2:
   version "1.7.2"
   resolved "https://registry.yarnpkg.com/immer/-/immer-1.7.2.tgz#a51e9723c50b27e132f6566facbec1c85fc69547"
   integrity sha512-4Urocwu9+XLDJw4Tc6ZCg7APVjjLInCFvO4TwGsAYV5zT6YYSor14dsZR0+0tHlDIN92cFUOq+i7fC00G5vTxA==
-
-immer@^1.2.1:
-  version "1.8.0"
-  resolved "https://registry.yarnpkg.com/immer/-/immer-1.8.0.tgz#afa8393996a1f3f5255019e7d10c29d42dd95225"
-  integrity sha512-zOox8DNAunPeQgKwbAiwEUAHhZXtMPZo7VZ7m7h9cpQL1I35bAeaxMfwYyLEIt6RZUelFfsOBfG1GJu/iQNgxw==
 
 immutable@~3.7.6:
   version "3.7.6"
@@ -11554,6 +11515,7 @@ listr-silent-renderer@^1.1.1:
 
 listr-update-renderer@^0.4.0:
   version "0.4.0"
+  uid "06073fa93166277607a7814f4e1f83960081414c"
   resolved "https://github.com/okonet/listr-update-renderer/tarball/upgrade-log-update#06073fa93166277607a7814f4e1f83960081414c"
   integrity sha1-NE2YDaLKLosUW6MFkI8yrj9MyKc=
   dependencies:
@@ -15003,16 +14965,6 @@ react-codemirror2@^5.1.0:
   resolved "https://registry.yarnpkg.com/react-codemirror2/-/react-codemirror2-5.1.0.tgz#62de4460178adea40eb52eabf7491669bf3794b8"
   integrity sha512-Cksbgbviuf2mJfMyrKmcu7ycK6zX/ukuQO8dvRZdFWqATf5joalhjFc6etnBdGCcPA2LbhIwz+OPnQxLN/j1Fw==
 
-react-copy-write@^0.8.0:
-  version "0.8.0"
-  resolved "https://registry.yarnpkg.com/react-copy-write/-/react-copy-write-0.8.0.tgz#a54fb2bd52f26b8cedaf8783ef3f7297fdd9723f"
-  integrity sha512-Zfly2tqinwfcS39v5o1S+Ur9SL3fjCFlTl6JqHATzDV1Ig8aIs5c1RxTyUqf+klH/12mn/TFsMLpvLKPR4TqaA==
-  dependencies:
-    create-react-context "^0.2.2"
-    fbjs "^0.8.16"
-    immer "^1.2.1"
-    invariant "^2.2.4"
-
 react-dev-utils@^4.2.1:
   version "4.2.2"
   resolved "https://registry.yarnpkg.com/react-dev-utils/-/react-dev-utils-4.2.2.tgz#e8f2ffdbf27bfb13ee88ac18e20c83163aac0659"
@@ -15126,7 +15078,7 @@ react-docgen@^3.0.0-rc.1:
     node-dir "^0.1.10"
     recast "^0.15.0"
 
-react-dom@16.6.3, react-dom@^16.6.0, react-dom@^16.6.3:
+react-dom@16.6.3, react-dom@^16.6.3:
   version "16.6.3"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-16.6.3.tgz#8fa7ba6883c85211b8da2d0efeffc9d3825cccc0"
   integrity sha512-8ugJWRCWLGXy+7PmNh8WJz3g1TaTUt1XyoIcFN+x0Zbkoz+KKdUyx1AQLYJdbFXjuF41Nmjn5+j//rxvhFjgSQ==
@@ -15210,7 +15162,7 @@ react-hot-loader@4.3.6, react-hot-loader@^4.1.0:
     react-lifecycles-compat "^3.0.4"
     shallowequal "^1.0.2"
 
-react-imported-component@^5.1.2, react-imported-component@^5.2.3:
+react-imported-component@^5.2.3:
   version "5.2.3"
   resolved "https://registry.yarnpkg.com/react-imported-component/-/react-imported-component-5.2.3.tgz#7771b72d2814c5ba2839489e2cdc5d033637c045"
   integrity sha512-3hZV8JM0fkqpUfMi3vrnBtrrWm+3N584qG3momk//kzy+VpRMIGDtkf1CRSzdfuSSwEjcTg6ulRpQKDMZE+48A==
@@ -15273,7 +15225,7 @@ react-router-dom@^4.3.1:
     react-router "^4.3.1"
     warning "^4.0.1"
 
-react-router-hash-link@^1.2.0, react-router-hash-link@^1.2.1:
+react-router-hash-link@^1.2.1:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/react-router-hash-link/-/react-router-hash-link-1.2.1.tgz#da3b6384e5bff90e9b2172d2e689a994646f2f45"
   integrity sha512-ddkCtmk/JwMmuU087TGShQHYyNjsJ+/9CTyuVdvvKf6ACgqk2Ma9ndX2xogo7WWmyq9AjuziBm5bmJ12zBxtsQ==
@@ -15316,7 +15268,7 @@ react-testing-library@5.3.0:
   dependencies:
     dom-testing-library "^3.12.0"
 
-react@16.6.3, react@^16.6.0, react@^16.6.3:
+react@16.6.3, react@^16.6.3:
   version "16.6.3"
   resolved "https://registry.yarnpkg.com/react/-/react-16.6.3.tgz#25d77c91911d6bbdd23db41e70fb094cc1e0871c"
   integrity sha512-zCvmH2vbEolgKxtqXL2wmGCUxUyNheYn/C+PD1YAjfxHC54+MhdruyhO7QieQrYsYeTxrn93PM2y0jRH1zEExw==
