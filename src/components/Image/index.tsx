@@ -19,7 +19,7 @@ export default function Image(props: ImageProps) {
       <img
         className={css`
           width: 100%;
-          margin: 0;
+          margin-bottom: 0;
         `}
         src={props.url}
         alt={props.alt}
