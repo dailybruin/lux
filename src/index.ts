@@ -15,6 +15,7 @@ export { default as Head } from './components/Head'
 export { default as Headline } from './components/Headline'
 export { default as Image } from './components/Image'
 export { default as Pullquote } from './components/Pullquote'
+export { default as StoryList } from './components/StoryList'
 export { default as Video } from './components/Video'
 
 // Utils
