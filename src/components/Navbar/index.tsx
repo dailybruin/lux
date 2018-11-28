@@ -5,18 +5,19 @@ import { css } from 'react-emotion'
 import logoSrc from './db-logo.png'
 
 interface NavbarProps {
-  /** Array of JSX elements */
-  links?: JSX.Element[]
-  /** custom style applied to individual links */
+  /** Array of React elements. */
+  links?: React.ReactNode[]
+  /** custom style applied to individual links. */
   linkStyle?: string
-  /** Logo can be text or an image */
+  /** Logo can be text or an image. */
   showLogo: boolean
+  /** Site title. */
   title: string
-  /** Logo link */
+  /** Logo link. */
   logoURL: string
-  /** Pins navbar (or not) */
+  /** Pins navbar (or not). */
   sticky?: boolean
-  /** custom style applied to the navbar */
+  /** custom style applied to the navbar. */
   style?: string
 }
 
