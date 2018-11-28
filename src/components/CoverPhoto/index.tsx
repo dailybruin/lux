@@ -54,6 +54,7 @@ export default class CoverPhoto extends React.Component<CoverPhotoProps> {
         display: grid;
         align-items: ${this.props.yPosition};
         justify-content: ${this.props.xPosition};
+        margin-bottom: 46px;
         ${this.props.style}
       `}
       >
