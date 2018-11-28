@@ -64,6 +64,9 @@
     "travis-deploy-once": "travis-deploy-once"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.8",
+    "@fortawesome/free-solid-svg-icons": "^5.5.0",
+    "@fortawesome/react-fontawesome": "^0.1.3",
     "emotion": "^9.2.12",
     "emotion-server": "^9.2.12",
     "gatsby-plugin-emotion": "^2.0.6",
