@@ -77,7 +77,8 @@ export default class Article extends React.Component<ArticleProps> {
         className={css`
           margin-left: auto;
           margin-right: auto;
-          max-width: 600px;
+          max-width: 620px;
+          padding: 1rem;
           ${this.props.dropcap
             ? css`
                 p:first-child:first-letter {

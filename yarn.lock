@@ -6802,7 +6802,7 @@ docz-utils@^0.12.13:
     unist-util-is "^2.1.2"
     unist-util-visit "^1.4.0"
 
-docz@0.12.13, docz@^0.12.13:
+docz@^0.12.13:
   version "0.12.13"
   resolved "https://registry.yarnpkg.com/docz/-/docz-0.12.13.tgz#6edd9bf2356fba267968bdd38539979986bf0422"
   integrity sha512-oXANdeTtt1YGkfDHDFKNF3JDg31Fb6Y3O+/nYawKMhiQ9ma5PbbJgor9s9m/2bi+JcpEm3yeQX5zyxxTuA3LjQ==
