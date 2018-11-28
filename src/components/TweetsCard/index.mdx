@@ -1,0 +1,17 @@
+---
+name: Tweets Card
+route: /tweets-card
+---
+
+import { Playground, PropsTable } from 'docz'
+import TweetsCard, { Sections } from '.'
+
+# TweetsCard
+
+A card for displaying recent columnist tweets from a Twitter list.
+
+<PropsTable of={TweetsCard} />
+
+<Playground>
+  <TweetsCard section={Sections.Bloop}/>
+</Playground>
