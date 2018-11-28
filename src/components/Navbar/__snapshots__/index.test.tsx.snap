@@ -1,0 +1,235 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navbar Matches its snapshot 1`] = `
+.emotion-11 {
+  box-shadow: 0 2px 2px -2px rgba(0,0,0,0.15);
+  padding: 10px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: 100%;
+  background-color: white;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+.emotion-1 {
+  color: #65696c;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+@media (min-width:940px) {
+  .emotion-1 {
+    padding-right: 3rem;
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    align-self: center;
+  }
+}
+
+.emotion-1 a {
+  color: inherit;
+  -webkit-text-decoration: inherit;
+  text-decoration: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+.emotion-9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
+}
+
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-0 a {
+  color: inherit;
+  -webkit-text-decoration: inherit;
+  text-decoration: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+.emotion-0 img {
+  overflow: hidden;
+  vertical-align: bottom;
+  margin-right: 20px;
+  width: 50px;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+@media screen and (max-width:940px) {
+  .emotion-4 {
+    display: none;
+  }
+}
+
+.emotion-10 {
+  width: 100%;
+  justify-self: end;
+  text-align: right;
+  font-size: 2rem;
+}
+
+@media (min-width:940px) {
+  .emotion-10 {
+    display: none;
+  }
+}
+
+.emotion-5 {
+  font-size: 1rem;
+}
+
+.emotion-5::-webkit-details-marker {
+  display: none;
+}
+
+<div
+  class="emotion-11"
+>
+  <div
+    class="emotion-0"
+  >
+    <a
+      href="/"
+    >
+      <img
+        src="db-logo.png"
+      />
+    </a>
+    <h2>
+      Fake Title
+    </h2>
+  </div>
+  <div
+    class="emotion-4"
+  >
+    <div
+      class="emotion-1"
+    >
+      <a
+        href="/"
+      >
+        Index
+      </a>
+    </div>
+    <div
+      class="emotion-1"
+    >
+      <a
+        href="/page-two"
+      >
+        Page Two
+      </a>
+    </div>
+    <div
+      class="emotion-1"
+    >
+      <a
+        href="/page-three"
+      >
+        Page Three
+      </a>
+    </div>
+  </div>
+  <details
+    class="emotion-10"
+  >
+    <summary
+      class="emotion-5"
+    >
+      <div>
+         
+        <svg
+          aria-hidden="true"
+          class="svg-inline--fa fa-bars fa-w-14 "
+          data-icon="bars"
+          data-prefix="fas"
+          role="img"
+          viewBox="0 0 448 512"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"
+            fill="currentColor"
+          />
+        </svg>
+         
+      </div>
+    </summary>
+    <div
+      class="emotion-9"
+    >
+      <div
+        class="emotion-1"
+      >
+        <a
+          href="/"
+        >
+          Index
+        </a>
+      </div>
+      <div
+        class="emotion-1"
+      >
+        <a
+          href="/page-two"
+        >
+          Page Two
+        </a>
+      </div>
+      <div
+        class="emotion-1"
+      >
+        <a
+          href="/page-three"
+        >
+          Page Three
+        </a>
+      </div>
+    </div>
+  </details>
+</div>
+`;
