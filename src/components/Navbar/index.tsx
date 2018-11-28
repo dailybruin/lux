@@ -46,25 +46,15 @@ class Navbar extends React.Component<NavbarProps> {
       padding: 10px;
       display: flex;
       justify-content: space-between;
-      width: 100%;
+      width: auto;
       background-color: white;
-      ${this.props.style};
       ${this.props.sticky ? sticky : ''};
+      ${this.props.style};
     `
     const linkStyle = css`
       @media (min-width: 940px) {
         padding-right: 3rem;
         align-self: center;
-      }
-      color: #65696c;
-      font-weight: 500;
-      font-size: 1rem;
-      a {
-        color: inherit; /* blue colors for links too */
-        text-decoration: inherit; /* no underline */
-        font-family: inherit;
-        font-weight: inherit;
-        font-size: inherit;
       }
       ${this.props.linkStyle};
     `
