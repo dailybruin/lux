@@ -18,6 +18,7 @@ export enum YPosition {
 interface CoverPhotoProps {
   headline: string
   imageURL: string
+  imageCredit: string
   authors: string[]
   xPosition: XPosition
   yPosition: YPosition
@@ -85,6 +86,15 @@ export default class CoverPhoto extends React.Component<CoverPhotoProps> {
           <Byline authors={this.props.authors} />
           {!!this.props.explainer && <p>{this.props.explainer}</p>}
         </div>
+        <span
+          className={css`
+            position: absolute;
+            bottom: 1rem;
+            right: 1rem;
+          `}
+        >
+          {this.props.imageCredit}
+        </span>
       </div>
     )
   }
