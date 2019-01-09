@@ -11,9 +11,13 @@ script:
   - yarn test --coverage
 after_success:
   - bash <(curl -s https://codecov.io/bash)
-  - yarn travis-deploy-once "yarn semantic-release"
 branches:
   only:
   - master
-
+jobs:
+  include:
+    - stage: release
+      node_js: lts/*
+      script:
+        - yarn semantic-release
 
