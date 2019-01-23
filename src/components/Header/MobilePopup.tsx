@@ -37,7 +37,6 @@ class MobilePopup extends React.Component<any, any> {
           width: 100%;
           justify-self: end;
           text-align: right;
-          font-size: 2rem;
           @media (min-width: 940px) {
             display: none;
           }
