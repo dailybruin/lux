@@ -11,12 +11,6 @@ class Graph extends React.Component {
     this.wrap = this.wrap.bind(this);
   }
 
-  /*public increaseHeight = () => {
-    this.setState({h: this.state.h+20});
-    console.log(this.state.h);
-    this.props.handler();
-  }*/
-
   public wrap(text, width) {
     let maxLines = 1;
     text.each(function() {
@@ -45,6 +39,10 @@ class Graph extends React.Component {
         word = words.pop();
       }
     });
+    const newHeightValue = (maxLines-2) * 35;
+    if(this.state.h !== 200 + newHeightValue) {
+        this.setState({h: this.state.h+newHeightValue});
+    }
   }
 
   public componentDidMount() {
@@ -53,7 +51,6 @@ class Graph extends React.Component {
 
   public componentDidUpdate() {
     this.draw();
-    this.setState({h: this.state.h+200});
   }
 
   public draw = () => {
@@ -78,7 +75,7 @@ class Graph extends React.Component {
 
     const y = d3
       .scaleBand()
-      .rangeRound([this.state.h, 0])
+      .rangeRound([height, 0])
       .padding(5)
       .domain(data.map(d => d.choice));
 
@@ -98,6 +95,7 @@ class Graph extends React.Component {
       .attr("font-family", "PT Serif")
       .attr("font-size", "10px")
       .attr("font-weight", "bold")
+      .attr("transform", "translate(0, "+((this.state.h-200)/10)+")")
       .selectAll("path")
 
     g
@@ -127,7 +125,7 @@ class Graph extends React.Component {
           className={css`
             font-family: ${MainSiteStyles.storyListFont}, serif;
             font-size: 10px;
-            margin: -20px 0px 0px 155px;
+            margin: -20px 0px 10px 155px;
           `}
         >
           *{this.props.legend}
@@ -135,7 +133,7 @@ class Graph extends React.Component {
         <svg
           className={css`
             display: inline-block;
-            height: "${this.state.h}px";
+            height: ${this.state.h}px;
           `}
           ref={e => (this.svg = e)}
         />
