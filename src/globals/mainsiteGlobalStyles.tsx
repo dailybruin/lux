@@ -4,7 +4,13 @@ if (typeof window !== 'undefined') {
   const WebFontLoader = require('webfontloader')
   WebFontLoader.load({
     google: {
-      families: ['Arimo:700', 'Lora:700', 'Source Sans Pro:900'],
+      families: [
+        'Arimo:700',
+        'Lora:700',
+        'Lora:400',
+        'PT Serif:400',
+        'Source Sans Pro:900',
+      ],
     },
   })
 }
@@ -14,6 +20,8 @@ export const black = '#000'
 export const white = '#fff'
 export const headlineFont = 'Arimo'
 export const storyListFont = 'Lora'
+export const bodyFont = 'PT Serif'
+export const regularFont = 400
 export const topBarFont = 'Source Sans Pro'
 export const cardInnerPadding = '11px 14px 15px'
 export const cardShadow = '0px 2px 4px 0px rgba(0,0,0,0.25)'
