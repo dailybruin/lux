@@ -6,6 +6,7 @@ if (typeof window !== 'undefined') {
     google: {
       families: [
         'Arimo:700',
+        'Arimo:400',
         'Lora:700',
         'Lora:400',
         'PT Serif:400',
