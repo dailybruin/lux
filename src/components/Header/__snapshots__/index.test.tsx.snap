@@ -1,0 +1,148 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navbar Matches its snapshot 1`] = `
+.emotion-6 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  padding: 1.1rem 1.2rem;
+  background-color: white;
+  box-shadow: 0 2px 2px -2px rgba(0,0,0,0.15);
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+.emotion-1 {
+  justify-self: start;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: inherit;
+}
+
+.emotion-0 {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+@media (max-width:940px) {
+  .emotion-2 {
+    display: none;
+  }
+}
+
+.emotion-5 {
+  width: 100%;
+  justify-self: end;
+  text-align: right;
+}
+
+@media (min-width:940px) {
+  .emotion-5 {
+    display: none;
+  }
+}
+
+.emotion-3 {
+  font-size: 1rem;
+}
+
+.emotion-3::-webkit-details-marker {
+  display: none;
+}
+
+.emotion-4 {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+<header
+  class="emotion-6"
+>
+  <a
+    class="emotion-1"
+    href="/"
+  >
+    <span
+      class="emotion-0"
+    >
+      Fake Title
+    </span>
+  </a>
+  <nav
+    class="emotion-2"
+  >
+    <a
+      href="/"
+    >
+      Index
+    </a>
+    <a
+      href="/page-two"
+    >
+      Page Two
+    </a>
+    <a
+      href="/page-three"
+    >
+      Page Three
+    </a>
+  </nav>
+  <details
+    class="emotion-5"
+  >
+    <summary
+      class="emotion-3"
+    >
+      <svg
+        aria-hidden="true"
+        class="svg-inline--fa fa-bars fa-w-14 "
+        data-icon="bars"
+        data-prefix="fas"
+        role="img"
+        viewBox="0 0 448 512"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"
+          fill="currentColor"
+        />
+      </svg>
+    </summary>
+    <nav
+      class="emotion-4"
+    >
+      <a
+        href="/"
+      >
+        Index
+      </a>
+      <a
+        href="/page-two"
+      >
+        Page Two
+      </a>
+      <a
+        href="/page-three"
+      >
+        Page Three
+      </a>
+    </nav>
+  </details>
+</header>
+`;

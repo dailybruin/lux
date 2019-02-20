@@ -46,7 +46,7 @@ yarn test
 
 ## Deployment
 
-Lux is autopublished to [npm](https://www.npmjs.com) by [Travis](https://travis-ci.com) with [semantic-release](https://github.com/semantic-release/semantic-release) and [travis-deploy-once](https://github.com/semantic-release/travis-deploy-once). Tokens were set up with [semantic-release-cli](https://github.com/semantic-release/cli) (`semantic-release-cli setup`), using [Nathan](https://github.com/nathunsmitty)'s npm and GitHub credentials.
+Lux is autopublished to [npm](https://www.npmjs.com) by [Travis](https://travis-ci.com) with [semantic-release](https://github.com/semantic-release/semantic-release) and travis build stages. Tokens were set up with [semantic-release-cli](https://github.com/semantic-release/cli) (`semantic-release-cli setup`), using [Nathan](https://github.com/nathunsmitty)'s npm and GitHub credentials.
 
 ```
 yarn publish
