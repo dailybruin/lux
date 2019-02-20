@@ -76,7 +76,7 @@ class Graph extends React.Component {
     const y = d3
       .scaleBand()
       .rangeRound([height, 0])
-      .padding(5)
+      .padding(1)
       .domain(data.map(d => d.choice));
 
     g
