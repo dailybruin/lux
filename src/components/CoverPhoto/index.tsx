@@ -18,15 +18,20 @@ export enum YPosition {
 interface CoverPhotoProps {
   headline: string
   imageURL: string
+  imageCredit: string
   authors: string[]
   xPosition: XPosition
   yPosition: YPosition
   darken?: number
+  style?: string
+  explainer?: string
+  textColor: string
 }
 
 export default class CoverPhoto extends React.Component<CoverPhotoProps> {
   public static defaultProps = {
     darken: 0,
+    textColor: '#fff',
   }
 
   public render() {
@@ -34,8 +39,8 @@ export default class CoverPhoto extends React.Component<CoverPhotoProps> {
       this.props.xPosition === XPosition.Center
         ? 'center'
         : this.props.xPosition === XPosition.Left
-          ? 'left'
-          : 'right'
+        ? 'left'
+        : 'right'
 
     return (
       <div
@@ -50,14 +55,17 @@ export default class CoverPhoto extends React.Component<CoverPhotoProps> {
         background-size: cover;
         background-position: center;
         display: grid;
+        color: ${this.props.textColor};
         align-items: ${this.props.yPosition};
         justify-content: ${this.props.xPosition};
+        margin-bottom: 46px;
+        ${this.props.style}
       `}
       >
         <div
           className={css`
+            max-width: 460px;
             margin: 2rem;
-            color: #fff;
             text-align: ${textAlign};
             display: flex;
             flex-direction: column;
@@ -70,14 +78,23 @@ export default class CoverPhoto extends React.Component<CoverPhotoProps> {
             className={css`
               margin: 0 0 0.8rem;
               font-size: 3rem;
-              max-width: 460px;
             `}
           >
             {this.props.headline}
           </h1>
-          <Line />
+          <Line color={this.props.textColor} />
           <Byline authors={this.props.authors} />
+          {!!this.props.explainer && <p>{this.props.explainer}</p>}
         </div>
+        <span
+          className={css`
+            position: absolute;
+            bottom: 1rem;
+            right: 1rem;
+          `}
+        >
+          {this.props.imageCredit}
+        </span>
       </div>
     )
   }

@@ -1,0 +1,41 @@
+---
+name: ArticleCard
+route: /article-card
+---
+
+import { Playground, PropsTable } from 'docz'
+import ArticleCard from '.'
+
+# ArticleCard
+
+A proper card layout for newspaper content
+
+<PropsTable of={ArticleCard} />
+
+<Playground>
+  <ArticleCard
+    type = 'tall'
+    imageurl = 'http://dailybruin.com/images/2018/12/web.sp_.mwp_.ncaa_.ADX_6-640x420.jpg'
+    title = 'Skirball fire burns down Rieber Terrace, Rendezvous untouched'
+    content = 'During the past few weeks, Mark Zuckerberg, among other tech moguls, has been under intense scrutiny from Congress for the role social media played during the 2016 presidential election.'
+    photographer = 'Amy Dixon/Assistant photo editor'
+  />
+
+  <ArticleCard
+    type = 'long'
+    imageurl = 'http://dailybruin.com/images/2018/12/web.sp_.mwp_.ncaa_.ADX_6-640x420.jpg'
+    title = 'Joe Bruin implicated in Russian hacking case'
+    content = 'During the past few weeks, Mark Zuckerberg, among other tech moguls, has been under intense scrutiny from Congress for the role social media played during the 2016 presidential election.'
+    photographer = 'Amy Dixon/Assistant photo editor'
+  />
+
+  <ArticleCard
+    type = 'longest'
+    imageurl = 'http://dailybruin.com/images/2018/12/web.sp_.mwp_.ncaa_.ADX_6-640x420.jpg'
+    title = 'Vote to subdivide WWNC, create new Westwood council receives majority'
+    content = 'The undergraduate student government juidicial board has decided to review a petition filed by the election board chair against the Undergraduate Students Association Council. Jack Price, the USAC election board chair, filed a petition claiming the council violated Article III Section B.2 of the USAC constitution, which states that all elected USAC officers shall be installed'
+    photographer = 'Amy Dixon/Assistant photo editor'
+    editor = 'Andrew Chang'
+  />
+
+</Playground>
