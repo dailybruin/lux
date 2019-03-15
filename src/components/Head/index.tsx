@@ -35,7 +35,7 @@ export default function Head(props: HeadProps) {
       <link rel="icon" type="image/png" sizes="16x16" href={favicon16} />
       <link rel="mask-icon" href={safariPinnedTab} color="#0080c6" />
       <meta name="msapplication-TileColor" content="#ffffff" />
-      <meta name="theme-color" content="#ffffff" /> */}
+      <meta name="theme-color" content="#ffffff" />
       {/* Canonical URL */}
       <link rel="canonical" href={props.url} />
       {/* Facebook Tags
