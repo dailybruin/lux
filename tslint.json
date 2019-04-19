@@ -7,6 +7,7 @@
   ],
   "rules": {
     "interface-name": [true, "never-prefix"],
+    "no-var-requires": false,
     "ordered-imports": false
   }
 }

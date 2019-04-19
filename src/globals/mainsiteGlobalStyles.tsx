@@ -17,6 +17,8 @@ if (typeof window !== 'undefined') {
 }
 
 /** Reusable common CSS attributes */
+export const gray = 'rgb(197, 197, 197)'
+export const lightGray = 'rgb(242, 242, 242)'
 export const black = '#000'
 export const white = '#fff'
 export const headlineFont = 'Arimo'

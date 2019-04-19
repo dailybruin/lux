@@ -15,12 +15,12 @@ class Choice extends React.Component<ChoiceProps> {
   }
 
   constructor(props) {
-    super(props);
+    super(props)
   }
 
   public handleClick = () => {
-    this.setState({ votes: this.state.votes+1 });
-    this.props.handler();
+    this.setState({ votes: this.state.votes + 1 })
+    this.props.handler()
   }
 
   public render() {
@@ -46,7 +46,7 @@ class Choice extends React.Component<ChoiceProps> {
             margin: 0px 0px 3px;
           `}
         >
-          <a onClick = {this.handleClick}>
+          <a onClick={this.handleClick}>
             <FontAwesomeIcon
               icon={faCheckCircle}
               className={css`

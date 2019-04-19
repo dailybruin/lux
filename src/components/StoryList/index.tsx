@@ -61,8 +61,8 @@ class StoryList extends React.Component<StoryListProps> {
             !!this.props.image
               ? 'IN THE NEWS'
               : this.props.type === StoryListType.Popular
-                ? 'POPULAR'
-                : 'IN THE PRINT'
+              ? 'POPULAR'
+              : 'IN THE PRINT'
           }
         />
         {!!this.props.image && (

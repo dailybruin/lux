@@ -24,14 +24,14 @@ class Poll extends React.Component<PollProps> {
   }
 
   constructor(props) {
-    super(props);
-    this.handler = this.handler.bind(this);
+    super(props)
+    this.handler = this.handler.bind(this)
   }
 
   public handler() {
     this.setState({
-      hasVoted: true
-    });
+      hasVoted: true,
+    })
   }
 
   public render() {
@@ -74,18 +74,16 @@ class Poll extends React.Component<PollProps> {
             {'POLL'}
           </h2>
         </div>
-        <Question
-          text={this.props.question}
-        />
+        <Question text={this.props.question} />
         <div
           className={css`
             padding: ${MainSiteStyles.cardInnerPadding};
           `}
         >
           {!this.state.hasVoted && renderedChoices}
-          {this.state.hasVoted &&
+          {this.state.hasVoted && (
             <Graph data={this.props.poll} legend={this.props.legend} />
-          }
+          )}
         </div>
       </div>
     )
