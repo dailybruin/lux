@@ -82,7 +82,7 @@ export default class AuthorCard extends React.Component<AuthorCardProps> {
               className={css`
                 border-radius: 50%;
                 margin: auto;
-                padding: 20px;
+                padding-top: 20px;
                 width: 100%;
                 height: auto;
               `}
