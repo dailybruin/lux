@@ -128,6 +128,7 @@ class HeaderBar extends React.Component<
           padding: 10px 15px 10px 15px;
           box-shadow: ${MainSiteStyles.cardShadow};
           font-family: ${MainSiteStyles.headlineFont};
+          font-weight: ${MainSiteStyles.boldFont};
           color: '#000';
         `}
       >

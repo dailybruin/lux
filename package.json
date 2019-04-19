@@ -67,6 +67,7 @@
     "@fortawesome/fontawesome-svg-core": "^1.2.8",
     "@fortawesome/free-solid-svg-icons": "^5.5.0",
     "@fortawesome/react-fontawesome": "^0.1.3",
+    "@hbetts/parse-repository-url": "2.1.2",
     "d3": "^5.9.1",
     "emotion": "^9.2.12",
     "emotion-server": "^9.2.12",
