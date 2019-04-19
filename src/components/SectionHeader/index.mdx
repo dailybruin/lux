@@ -1,0 +1,31 @@
+---
+name: Section Header
+route: /section-header
+---
+
+import { Playground, PropsTable } from 'docz'
+import SectionHeader from '.'
+
+# Section Header
+
+A header to describe the current section the viewer is in
+
+Note that `SectionHeader` expects an array of `SectionLink` objects which include `title` and `link` values.
+
+<PropsTable of={SectionHeader} />
+
+<Playground>
+  <SectionHeader
+    title={'NEWS'}
+    sectionList={[
+      { title: 'NEWS', link: '' },
+      { title: 'SPORTS', link: '' },
+      { title: 'ARTS', link: '' },
+      { title: 'OPINION', link: '' },
+      { title: 'PHOTO', link: '' },
+      { title: 'VIDEO', link: '' },
+      { title: 'ILLUSTRATIONS', link: '' },
+      { title: 'GRAPHICS', link: '' },
+    ]}
+  />
+</Playground>

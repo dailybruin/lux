@@ -4,7 +4,12 @@ if (typeof window !== 'undefined') {
   const WebFontLoader = require('webfontloader')
   WebFontLoader.load({
     google: {
-      families: ['Arimo:700', 'Lora:700', 'Source Sans Pro:900'],
+      families: [
+        'Arimo:700',
+        'Lora:700',
+        'Source Sans Pro:900',
+        'Archivo Black',
+      ],
     },
   })
 }
@@ -20,3 +25,4 @@ export const cardShadow = '0px 2px 4px 0px rgba(0,0,0,0.25)'
 
 /** CSS breakpoints */
 export const mediaMobileBreakpoint = '@media (max-width: 600px)'
+export const secheadMobileBreakpoint = '@sechead (max-width: 600px)'
