@@ -27,7 +27,7 @@ export const bodyFont = 'PT Serif'
 export const regularFont = 400
 export const topBarFont = 'Source Sans Pro'
 export const cardInnerPadding = '11px 14px 15px'
-export const cardShadow = '0px 2px 4px 0px rgba(0,0,0,0.25)'
+export const cardShadow = '0px 2px 4px 0px rgba(0,0,0,0.2)'
 
 /** CSS breakpoints */
 export const mediaMobileBreakpoint = '@media (max-width: 600px)'
