@@ -26,6 +26,7 @@ export default function MainSiteFooter(props: {}) {
         flex-direction: row;
         padding: 0.4rem;
         font-family: ${MainSiteStyles.headlineFont};
+        font-weight: ${MainSiteStyles.boldFont};
         box-shadow: ${MainSiteStyles.cardShadow};
         border-top: 5px solid black;
 
