@@ -6,6 +6,7 @@ if (typeof window !== 'undefined') {
     google: {
       families: [
         'Arimo:700',
+        'Archivo Black',
         'Arimo:400',
         'Lora:700',
         'Lora:400',
@@ -32,3 +33,4 @@ export const cardShadow = '0px 2px 4px 0px rgba(0,0,0,0.2)'
 
 /** CSS breakpoints */
 export const mediaMobileBreakpoint = '@media (max-width: 600px)'
+export const secheadMobileBreakpoint = '@sechead (max-width: 600px)'
