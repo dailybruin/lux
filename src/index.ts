@@ -2,8 +2,9 @@
 /// <reference path="index.d.ts"/>
 
 // Components
-export { default as ArticleGrid } from './components/ArticleGrid'
+// export { default as ArticleGrid } from './components/ArticleGrid'
 export { default as Article } from './components/Article'
+export { default as ArticleCard } from './components/ArticleCard'
 export { default as Byline } from './components/Byline'
 export {
   default as CoverPhoto,

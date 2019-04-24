@@ -39,8 +39,8 @@ export default class CoverPhoto extends React.Component<CoverPhotoProps> {
       this.props.xPosition === XPosition.Center
         ? 'center'
         : this.props.xPosition === XPosition.Left
-          ? 'left'
-          : 'right'
+        ? 'left'
+        : 'right'
 
     return (
       <div
