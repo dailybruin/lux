@@ -10,22 +10,22 @@ import SectionHeader from '.'
 
 A header to describe the current section the viewer is in
 
-Note that `SectionHeader` expects an array of `SectionLink` objects which include `title` and `link` values.
+Note that `SectionHeader` expects an array of `SectionLink` objects which include `name` and `link` values.
 
 <PropsTable of={SectionHeader} />
 
 <Playground>
   <SectionHeader
-    title={'NEWS'}
+    name={'NEWS'}
     sectionList={[
-      { title: 'NEWS', link: '' },
-      { title: 'SPORTS', link: '' },
-      { title: 'ARTS', link: '' },
-      { title: 'OPINION', link: '' },
-      { title: 'PHOTO', link: '' },
-      { title: 'VIDEO', link: '' },
-      { title: 'ILLUSTRATIONS', link: '' },
-      { title: 'GRAPHICS', link: '' },
+      { name: 'NEWS', link: '' },
+      { name: 'SPORTS', link: '' },
+      { name: 'ARTS', link: '' },
+      { name: 'OPINION', link: '' },
+      { name: 'PHOTO', link: '' },
+      { name: 'VIDEO', link: '' },
+      { name: 'ILLUSTRATIONS', link: '' },
+      { name: 'GRAPHICS', link: '' },
     ]}
   />
 </Playground>

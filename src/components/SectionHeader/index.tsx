@@ -5,12 +5,12 @@ import SectionTabs from './SectionTabs'
 import ExpandingMenu from './ExpandingMenu'
 
 interface SectionLink {
-  title: string
+  name: string
   link: string
 }
 
 interface SectionHeaderProps {
-  title: string
+  name: string
   sectionList: SectionLink[]
 }
 
@@ -67,7 +67,7 @@ export default class SectionHeader extends React.Component<SectionHeaderProps> {
             color: #000000;
           `}
         >
-          {this.props.title}
+          {this.props.name}
         </div>
         <SectionTabs sectionList={this.props.sectionList} />
         <ExpandingMenu sectionList={this.props.sectionList} />
