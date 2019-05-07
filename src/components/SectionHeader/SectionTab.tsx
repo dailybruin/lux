@@ -38,7 +38,6 @@ export default class SectionTab extends React.Component<SectionTabProps> {
             font-weight: 900;
             line-height: normal;
             font-size: 18px;
-
             text-transform: uppercase;
           `}
           style={{ textDecoration: this.state.underlined }}

@@ -23,11 +23,8 @@ export default class SectionTabs extends React.Component {
           padding: 0;
           line-height: normal;
           font-size: 18px;
-
           background: #000000;
-
           list-style-type: none;
-
           @media (max-width: 600px) {
             display: none;
           }

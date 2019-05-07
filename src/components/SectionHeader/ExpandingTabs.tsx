@@ -32,9 +32,7 @@ export default class ExpandingTabs extends React.Component<ExpandingTabsProps> {
           height: auto;
           margin: 0;
           padding: 0;
-
           background: #000000;
-
           list-style-type: none;
           @media (min-width: 600px) {
             display: none;

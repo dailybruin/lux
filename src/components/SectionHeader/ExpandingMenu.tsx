@@ -40,7 +40,6 @@ export default class ExpandingMenu extends React.Component {
             background-color: #000000;
             height: 38px;
             width: 100%;
-
             padding: 7px;
 
             font-family: Source Sans Pro;
