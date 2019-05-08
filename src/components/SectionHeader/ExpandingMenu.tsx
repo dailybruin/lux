@@ -14,7 +14,7 @@ export default class ExpandingMenu extends React.Component {
   public expandMenu() {
     const header = document.getElementById('SectionHeaderBlock')
     const tabs = document.getElementById('SectionHeaderExpandingTabs')
-    const height = tabs.clientHeight + 99
+    const height = tabs.clientHeight + 100
     this.state.menuExpanded
       ? (header.style.height = '100px')
       : (header.style.height = height + 'px')
@@ -40,8 +40,7 @@ export default class ExpandingMenu extends React.Component {
             background-color: #000000;
             height: 38px;
             width: 100%;
-
-            padding: 7px 0px;
+            padding: 7px;
 
             font-family: Source Sans Pro;
             font-style: normal;
@@ -57,8 +56,8 @@ export default class ExpandingMenu extends React.Component {
           onClick={this.expandMenu}
         >
           Sections ▾
-          <ExpandingTabs sectionList={this.props.sectionList} />
         </div>
+        <ExpandingTabs sectionList={this.props.sectionList} />
       </div>
     )
   }

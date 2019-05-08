@@ -18,39 +18,39 @@ export default class ExpandingTab extends React.Component<ExpandingTabProps> {
   }
   public render() {
     return (
-      <a
-        href={this.props.section.link}
+      <li
         className={css`
           text-decoration: none;
-          color: #ffffff;
+          height: 38px;
+          margin: 0;
+          padding: 7px 20px;
+          width: 100%;
+          box-sizing: border-box;
+          display: block;
+          vertical-align: middle;
+          position: relative;
+          line-height: normal;
         `}
-        style={{ textDecoration: this.state.underlined }}
       >
-        <li
+        <a
+          href={this.props.section.link}
           className={css`
-            display: inline-flex;
-            padding: 7px 20px;
-            margin: 0;
-
-            width: 100%;
-
+            display: block;
             font-family: Source Sans Pro;
             font-style: normal;
             font-weight: 900;
-            line-height: normal;
             font-size: 18px;
-
             text-transform: uppercase;
-
+            text-align: left;
             color: #ffffff;
-            justify-content: left;
           `}
+          style={{ textDecoration: this.state.underlined }}
           onMouseEnter={this.underlineHovered}
           onMouseLeave={this.underlineClear}
         >
-          {this.props.section.title}
-        </li>
-      </a>
+          {this.props.section.name}
+        </a>
+      </li>
     )
   }
 }

@@ -19,38 +19,34 @@ export default class SectionTab extends React.Component<SectionTabProps> {
   public render() {
     const { underlineState = 'underline' } = this.state.underlined
     return (
-      <a
-        href={this.props.section.link}
+      <li
         className={css`
+          box-sizing: border-box;
           text-decoration: none;
-          color: #ffffff;
+          height: 38px;
+          display: inline-block;
+          padding: 7px 10px;
+          background-color: #000000;
         `}
-        style={{ textDecoration: this.state.underlined }}
       >
-        <li
+        <a
+          href={this.props.section.link}
           className={css`
-            display: inline-flex;
-            background-color: #000000;
-            height: 38px;
-
-            padding: 7px 10px;
-            margin: auto;
-
+            color: #ffffff;
             font-family: Source Sans Pro;
             font-style: normal;
             font-weight: 900;
             line-height: normal;
             font-size: 18px;
-
             text-transform: uppercase;
-            color: #ffffff;
           `}
+          style={{ textDecoration: this.state.underlined }}
           onMouseEnter={this.underlineHovered}
           onMouseLeave={this.underlineClear}
         >
-          {this.props.section.title}
-        </li>
-      </a>
+          {this.props.section.name}
+        </a>
+      </li>
     )
   }
 }
