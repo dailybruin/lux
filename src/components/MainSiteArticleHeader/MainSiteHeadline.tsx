@@ -10,6 +10,7 @@ import {
   bodyFont,
   topBarFont,
   dailyBruinBlue,
+  smallInfoFontSize,
 } from '../../globals/mainsiteGlobalStyles'
 
 export default function MainSiteHeadline(props: MainSiteArticleHeaderProps) {
@@ -21,6 +22,7 @@ export default function MainSiteHeadline(props: MainSiteArticleHeaderProps) {
           color: ${dailyBruinBlue};
           font-weight: ${boldFont};
           text-transform: uppercase;
+          font-size: ${smallInfoFontSize};
         `}
       >
         {props.articleCategory}

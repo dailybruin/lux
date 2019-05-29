@@ -16,7 +16,7 @@ export interface BylineInfo {
   /** Link to their profile image URL - optional */
   authorPhotoURL?: string
   /** URL to their profile page on the main site */
-  authorProfileLink: string
+  authorProfileURL: string
 }
 
 export interface MainSiteArticleHeaderProps {
