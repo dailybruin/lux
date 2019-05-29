@@ -5,6 +5,7 @@ route: /main-site-article-header
 
 import { Playground, PropsTable } from 'docz'
 import MainSiteArticleHeader from '.'
+import { css } from 'react-emotion'
 
 # Main Site Article Header
 
@@ -15,15 +16,23 @@ TODO: add that image
 <PropsTable of={MainSiteArticleHeader} />
 
 <Playground>
-    <MainSiteArticleHeader
-        headlineText='Gene Block gets a raise, angering hundreds of students'
-        articleCategory='Main site development'
-        bylineInfo={[
-            {
-                authorName: 'Joe Bruin',
-                authorProfileLink: 'https://google.com',
-                authorPhotoURL: 'http://s3.amazonaws.com/37assets/svn/765-default-avatar.png'
-            },
-        ]}
-     />
+        <MainSiteArticleHeader
+            headlineText='Gene Block gets a raise, angering hundreds of students'
+            articleCategory='Main site development'
+            categoryURL='https://dailybruin.com/news'
+            date='2019-05-15T02:29:44'
+            featuredPhotoURL='https://dailybruin.com/images/2018/06/web.sp_.kellihayes.KH_.1-640x426.jpg'
+            featuredPhotoCaption='This is a caption with a sentence. Look its another sentence'
+            featuredPhotoCredit={{
+                imageCredit: 'Joe Bruin',
+                imagePosition: 'Daily Bruin senior staff'
+            }}
+            bylineInfo={[
+                {
+                    authorName: 'Joe Bruin',
+                    authorProfileLink: 'https://google.com',
+                    authorPhotoURL: 'http://s3.amazonaws.com/37assets/svn/765-default-avatar.png'
+                },
+            ]}
+        />
 </Playground>

@@ -25,7 +25,15 @@ export default function MainSiteHeadline(props: MainSiteArticleHeaderProps) {
           font-size: ${smallInfoFontSize};
         `}
       >
-        {props.articleCategory}
+        <a
+          className={css`
+            text-decoration: none;
+            color: inherit;
+          `}
+          href={props.categoryURL}
+        >
+          {props.articleCategory}
+        </a>
       </div>
       <div
         className={css`

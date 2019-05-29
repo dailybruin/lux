@@ -3,6 +3,19 @@ import { css } from 'react-emotion'
 import MainSiteByline from './MainSiteByline'
 import MainSiteHeadline from './MainSiteHeadline'
 
+import {
+  headlineFont,
+  headlineFontSize,
+  boldFont,
+  regularFont,
+  bodyFont,
+  topBarFont,
+  dailyBruinBlue,
+  subInfoFontSize,
+  smallInfoFontSize,
+  darkGray,
+} from '../../globals/mainsiteGlobalStyles'
+
 export enum MainSiteArticleHeaderLayoutType {
   Standard,
   VerticalPhoto,
@@ -19,6 +32,13 @@ export interface BylineInfo {
   authorProfileURL: string
 }
 
+export interface CreditInfo {
+  /** staff name */
+  imageCredit: string
+  /** staff position */
+  imagePosition: string
+}
+
 export interface MainSiteArticleHeaderProps {
   /** text of the headline */
   headlineText: string
@@ -28,8 +48,10 @@ export interface MainSiteArticleHeaderProps {
   categoryURL: string
   /** URL of the main photo that should be displayed */
   featuredPhotoURL?: string
-  /** category that the article is a part of */
-  categoryName: string
+  /** caption for the featured photo */
+  featuredPhotoCaption?: string
+  /** credit info for the photo */
+  featuredPhotoCredit?: CreditInfo
   /** info that should be displayed in the byline box */
   bylineInfo: BylineInfo[]
   /** date that the article was published */
@@ -40,9 +62,48 @@ class MainSiteArticleHeader extends React.Component<
   MainSiteArticleHeaderProps
 > {
   public render() {
+    let featuredPhoto
+    // check to see if there's a featured photo for this story
+    if (this.props.featuredPhotoURL) {
+      featuredPhoto = (
+        <div
+          className={css`
+            margin-top: 15px;
+            width: 100%;
+          `}
+        >
+          <img
+            className={css`
+              margin-left: auto;
+              margin-right: auto;
+              width: 100%;
+              max-width: 100%;
+            `}
+            src={this.props.featuredPhotoURL}
+          />
+          <div
+            className={css`
+              font-size: ${smallInfoFontSize};
+              font-family: ${bodyFont};
+              line-height: normal;
+            `}
+          >
+            {this.props.featuredPhotoCaption}
+            <br />
+            {this.props.featuredPhotoCredit.imageCredit}/
+            {this.props.featuredPhotoCredit.imagePosition}
+          </div>
+        </div>
+      )
+    }
     return (
-      <div>
+      <div
+        className={css`
+          max-width: 650px;
+        `}
+      >
         <MainSiteHeadline {...this.props} />
+        {featuredPhoto}
         <MainSiteByline {...this.props} />
       </div>
     )

@@ -17,6 +17,12 @@ import {
 } from '../../globals/mainsiteGlobalStyles'
 
 export default function MainSiteByline(props: MainSiteArticleHeaderProps) {
+  const rawDate = new Date(props.date)
+  const renderedDate = rawDate.toLocaleDateString('default', {
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric',
+  })
   // first check if there's only one author with a profile photo
   if (props.bylineInfo.length === 1) {
     const photoURL = props.bylineInfo[0].authorPhotoURL
@@ -61,7 +67,7 @@ export default function MainSiteByline(props: MainSiteArticleHeaderProps) {
               color: ${darkGray};
             `}
           >
-            Date
+            {renderedDate}
           </div>
         </div>
       </div>
