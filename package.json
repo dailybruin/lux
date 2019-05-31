@@ -76,7 +76,7 @@
     "plyr": "^3.4.7",
     "react": "16.8.6",
     "react-dom": "16.8.6",
-    "react-emotion": "^9.2.12",
+    "react-emotion": "^10.0.0",
     "react-helmet": "^5.2.0",
     "react-plyr": "^2.1.1",
     "slugify": "^1.3.3",
