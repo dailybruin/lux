@@ -114,6 +114,7 @@ exports[`Navbar Matches its snapshot 1`] = `
         class="svg-inline--fa fa-bars fa-w-14 "
         data-icon="bars"
         data-prefix="fas"
+        focusable="false"
         role="img"
         viewBox="0 0 448 512"
         xmlns="http://www.w3.org/2000/svg"
