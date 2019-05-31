@@ -6,4 +6,8 @@ export default {
   codeSandbox: false,
   typescript: true,
   plugins: [doczPluginNetlify(), css()],
+  filterComponents: files =>
+    files.filter(filepath =>
+      /src\/components\/.*\/*\.(js|jsx|ts|tsx)$/.test(filepath)
+    ),
 }
