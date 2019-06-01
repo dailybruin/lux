@@ -2,12 +2,7 @@ import * as React from 'react'
 import { css } from 'react-emotion'
 import MainSiteByline from './MainSiteByline'
 import MainSiteHeadline from './MainSiteHeadline'
-
-import {
-  bodyFont,
-  dailyBruinBlue,
-  smallInfoFontSize,
-} from '../../globals/mainsiteGlobalStyles'
+import MainSiteImage from '../MainSiteImage'
 
 export enum MainSiteArticleHeaderLayoutType {
   Standard,
@@ -57,52 +52,6 @@ class MainSiteArticleHeader extends React.Component<
   MainSiteArticleHeaderProps
 > {
   public render() {
-    let featuredPhoto
-    // check to see if there's a featured photo for this story
-    if (this.props.featuredPhotoURL) {
-      featuredPhoto = (
-        <div
-          className={css`
-            margin-top: 15px;
-            width: 100%;
-          `}
-        >
-          <img
-            className={css`
-              margin-left: auto;
-              margin-right: auto;
-              width: 100%;
-              max-width: 100%;
-            `}
-            src={this.props.featuredPhotoURL}
-          />
-          <div
-            className={css`
-              font-size: ${smallInfoFontSize};
-              font-family: ${bodyFont};
-              line-height: normal;
-              text-decoration: none;
-            `}
-          >
-            {this.props.featuredPhotoCaption}{' '}
-            <a
-              href={this.props.featuredPhotoCredit.imageCreditProfileURL}
-              className={css`
-                text-decoration: none;
-                color: ${dailyBruinBlue};
-
-                :hover {
-                  opacity: 0.75;
-                }
-              `}
-            >
-              ({this.props.featuredPhotoCredit.imageCredit}/
-              {this.props.featuredPhotoCredit.imagePosition})
-            </a>
-          </div>
-        </div>
-      )
-    }
     return (
       <div
         className={css`
@@ -110,7 +59,18 @@ class MainSiteArticleHeader extends React.Component<
         `}
       >
         <MainSiteHeadline {...this.props} />
-        {featuredPhoto}
+        {this.props.featuredPhotoURL && (
+          <MainSiteImage
+            imageURL={this.props.featuredPhotoURL}
+            imageCaption={this.props.featuredPhotoCaption}
+            imageCredit={this.props.featuredPhotoCredit.imageCredit}
+            imageStaffPosition={this.props.featuredPhotoCredit.imagePosition}
+            imageCreditProfileURL={
+              this.props.featuredPhotoCredit.imageCreditProfileURL
+            }
+            altText={this.props.featuredPhotoCaption}
+          />
+        )}
         <MainSiteByline {...this.props} />
       </div>
     )

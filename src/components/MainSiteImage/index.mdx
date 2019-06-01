@@ -1,0 +1,23 @@
+---
+name: Main Site Image
+route: /main-site-image
+---
+
+import { Playground, Props } from 'docz'
+import MainSiteImage from '.'
+
+# Main Site Images
+
+Images used on the Main Site. These take in an optional width function - by default they'll fill 100% of the container.
+
+<Props of={MainSiteImage} />
+
+<Playground>
+    <MainSiteImage
+        imageURL="https://dailybruin.com/images/2018/06/web.sp_.kellihayes.KH_.1-640x426.jpg"
+        imageCaption='Anna Tsai, a first-year physics student, designed "The Garden of Eden" for the 18th Fashion and Student Trends runway show, which took place Thursday night in Pauley Pavilion.'
+        imageCredit='Joe Bruin'
+        imageStaffPosition='Daily Bruin senior staff'
+        imageCreditProfileURL='https://google.com'
+    />
+</Playground>
