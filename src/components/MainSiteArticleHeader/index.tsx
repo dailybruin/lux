@@ -4,16 +4,9 @@ import MainSiteByline from './MainSiteByline'
 import MainSiteHeadline from './MainSiteHeadline'
 
 import {
-  headlineFont,
-  headlineFontSize,
-  boldFont,
-  regularFont,
   bodyFont,
-  topBarFont,
   dailyBruinBlue,
-  subInfoFontSize,
   smallInfoFontSize,
-  darkGray,
 } from '../../globals/mainsiteGlobalStyles'
 
 export enum MainSiteArticleHeaderLayoutType {
@@ -37,6 +30,8 @@ export interface CreditInfo {
   imageCredit: string
   /** staff position */
   imagePosition: string
+  /** profile link */
+  imageCreditProfileURL: string
 }
 
 export interface MainSiteArticleHeaderProps {
@@ -86,12 +81,24 @@ class MainSiteArticleHeader extends React.Component<
               font-size: ${smallInfoFontSize};
               font-family: ${bodyFont};
               line-height: normal;
+              text-decoration: none;
             `}
           >
-            {this.props.featuredPhotoCaption}
-            <br />
-            {this.props.featuredPhotoCredit.imageCredit}/
-            {this.props.featuredPhotoCredit.imagePosition}
+            {this.props.featuredPhotoCaption}{' '}
+            <a
+              href={this.props.featuredPhotoCredit.imageCreditProfileURL}
+              className={css`
+                text-decoration: none;
+                color: ${dailyBruinBlue};
+
+                :hover {
+                  opacity: 0.75;
+                }
+              `}
+            >
+              ({this.props.featuredPhotoCredit.imageCredit}/
+              {this.props.featuredPhotoCredit.imagePosition})
+            </a>
           </div>
         </div>
       )

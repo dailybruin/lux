@@ -1,15 +1,11 @@
 // support for multiple authors
 import * as React from 'react'
 import { css } from 'react-emotion'
-import { MainSiteArticleHeaderProps } from './index'
+import { MainSiteArticleHeaderProps, BylineInfo } from './index'
 import dbLogo from './db-logo.png'
 import {
   headlineFont,
-  headlineFontSize,
   boldFont,
-  regularFont,
-  bodyFont,
-  topBarFont,
   dailyBruinBlue,
   subInfoFontSize,
   smallInfoFontSize,
@@ -58,7 +54,20 @@ export default function MainSiteByline(props: MainSiteArticleHeaderProps) {
               line-height: normal;
             `}
           >
-            By {props.bylineInfo[0].authorName}
+            By{' '}
+            <a
+              href={props.bylineInfo[0].authorProfileURL}
+              className={css`
+                text-decoration: none;
+                color: ${dailyBruinBlue};
+
+                :hover {
+                  opacity: 0.75;
+                }
+              `}
+            >
+              {props.bylineInfo[0].authorName}
+            </a>
           </div>
           <div
             className={css`
@@ -73,6 +82,51 @@ export default function MainSiteByline(props: MainSiteArticleHeaderProps) {
       </div>
     )
   } else {
-    return <div>Tere is more than one author</div>
+    const renderedByline = props.bylineInfo.map(
+      (element: BylineInfo, index: number) => {
+        let delimiter = index ? ', ' : ''
+        if (index === props.bylineInfo.length - 1) {
+          delimiter = ' and '
+        }
+        return (
+          <span key={index}>
+            {delimiter}
+            <a
+              href={element.authorProfileURL}
+              className={css`
+                text-decoration: none;
+                color: ${dailyBruinBlue};
+
+                :hover {
+                  opacity: 0.75;
+                }
+              `}
+            >
+              {element.authorName}
+            </a>
+          </span>
+        )
+      }
+    )
+    return (
+      <div
+        className={css`
+          font-family: ${headlineFont};
+          font-weight: ${boldFont};
+          margin-top: 10px;
+        `}
+      >
+        By {renderedByline}
+        <div
+          className={css`
+            font-size: ${smallInfoFontSize};
+            line-height: normal;
+            color: ${darkGray};
+          `}
+        >
+          {renderedDate}
+        </div>
+      </div>
+    )
   }
 }

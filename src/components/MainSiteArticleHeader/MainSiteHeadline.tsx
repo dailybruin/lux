@@ -6,8 +6,6 @@ import {
   headlineFont,
   headlineFontSize,
   boldFont,
-  regularFont,
-  bodyFont,
   topBarFont,
   dailyBruinBlue,
   smallInfoFontSize,
@@ -29,6 +27,10 @@ export default function MainSiteHeadline(props: MainSiteArticleHeaderProps) {
           className={css`
             text-decoration: none;
             color: inherit;
+
+            :hover {
+              opacity: 0.75;
+            }
           `}
           href={props.categoryURL}
         >
