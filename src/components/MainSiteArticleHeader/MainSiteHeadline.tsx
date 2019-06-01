@@ -1,6 +1,7 @@
 import * as React from 'react'
 import { css } from 'react-emotion'
 import { MainSiteArticleHeaderProps } from './index'
+import MainSiteLink from '../MainSiteLink'
 
 import {
   headlineFont,
@@ -23,19 +24,9 @@ export default function MainSiteHeadline(props: MainSiteArticleHeaderProps) {
           font-size: ${smallInfoFontSize};
         `}
       >
-        <a
-          className={css`
-            text-decoration: none;
-            color: inherit;
-
-            :hover {
-              opacity: 0.75;
-            }
-          `}
-          href={props.categoryURL}
-        >
+        <MainSiteLink href={props.categoryURL}>
           {props.articleCategory}
-        </a>
+        </MainSiteLink>
       </div>
       <div
         className={css`
