@@ -1,0 +1,72 @@
+---
+name: Main Site Article Header
+route: /main-site-article-header
+---
+
+import { Playground, Props } from 'docz'
+import MainSiteArticleHeader from '.'
+import { css } from 'react-emotion'
+
+# Main Site Article Header
+
+This header goes at the top of all main site articles. Below you'll find a diagram that relates enum to the appearance of the layout.
+
+TODO: add that image
+
+<Props of={MainSiteArticleHeader} />
+
+## One author
+
+<Playground>
+        <MainSiteArticleHeader
+            headlineText='Newly opened Baja California Tacos brings Ensenada-inspired cuisine to Westwood'
+            articleCategory='Main site development'
+            categoryURL='https://dailybruin.com/news'
+            date='2019-05-15T02:29:44'
+            featuredPhotoURL='https://dailybruin.com/images/2018/06/web.sp_.kellihayes.KH_.1-640x426.jpg'
+            featuredPhotoCaption='Anna Tsai, a first-year physics student, designed "The Garden of Eden" for the 18th Fashion and Student Trends runway show, which took place Thursday night in Pauley Pavilion.'
+            featuredPhotoCredit={{
+                imageCredit: 'Joe Bruin',
+                imagePosition: 'Daily Bruin senior staff',
+                imageCreditProfileURL: 'https://dailybruin.com'
+            }}
+            bylineInfo={[
+                {
+                    authorName: 'Joe Bruin',
+                    authorProfileURL: 'https://google.com',
+                    authorPhotoURL: 'http://s3.amazonaws.com/37assets/svn/765-default-avatar.png'
+                },
+            ]}
+        />
+</Playground>
+
+
+## Multiple authors
+
+<Playground>
+        <MainSiteArticleHeader
+            headlineText='Newly opened Baja California Tacos brings Ensenada-inspired cuisine to Westwood'
+            articleCategory='Main site development'
+            categoryURL='https://dailybruin.com/news'
+            date='2019-05-15T02:29:44'
+            featuredPhotoURL='https://dailybruin.com/images/2018/06/web.sp_.kellihayes.KH_.1-640x426.jpg'
+            featuredPhotoCaption='Anna Tsai, a first-year physics student, designed "The Garden of Eden" for the 18th Fashion and Student Trends runway show, which took place Thursday night in Pauley Pavilion.'
+            featuredPhotoCredit={{
+                imageCredit: 'Joe Bruin',
+                imagePosition: 'Daily Bruin senior staff',
+                imageCreditProfileURL: 'https://dailybruin.com'
+            }}
+            bylineInfo={[
+                {
+                    authorName: 'Joe Bruin',
+                    authorProfileURL: 'https://google.com',
+                    authorPhotoURL: 'http://s3.amazonaws.com/37assets/svn/765-default-avatar.png'
+                },
+                {
+                    authorName: 'Joe Bruin',
+                    authorProfileURL: 'https://google.com',
+                    authorPhotoURL: 'http://s3.amazonaws.com/37assets/svn/765-default-avatar.png'
+                },
+            ]}
+        />
+</Playground>
