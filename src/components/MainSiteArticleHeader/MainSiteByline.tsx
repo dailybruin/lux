@@ -66,14 +66,12 @@ export default function MainSiteByline(props: MainSiteArticleHeaderProps) {
       `}
     >
       {props.bylineInfo.length === 1 && (
-        <a ref={props.featuredPhotoCredit.imageCreditProfileURL}>
-          <img
-            className={css`
-              margin-right: 10px;
-            `}
-            src={photoURL}
-          />
-        </a>
+        <img
+          className={css`
+            margin-right: 10px;
+          `}
+          src={photoURL}
+        />
       )}
       <div
         className={css`
