@@ -8,7 +8,7 @@ import {
   bodyFont,
 } from '../../globals/mainsiteGlobalStyles'
 
-interface LongProps {
+interface HorzProps {
   displayType: string
   category: string
   headline: string
@@ -19,19 +19,52 @@ interface LongProps {
   editor: string
 }
 
-export default function Long(props: LongProps) {
+export default function Horz(props: HorzProps) {
   return (
     <div
       className={css`
         display: flex;
         box-shadow: ${cardShadow};
-        height: 100%;
       `}
     >
       <div
         className={css`
           padding: 10px;
-          flex: 3;
+          flex-shrink: 0;
+          flex-grow: 2;
+        `}
+      >
+        <div
+          className={css`
+            height: calc(100% - 8px);
+            min-height: 200px;
+            background: url(${props.imageurl});
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+          `}
+        />
+        <h4
+          className={css`
+            display: block;
+            margin: 2px 0 0;
+
+            font-family: Arimo;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 8px;
+            text-align: right;
+
+            color: #000000;
+          `}
+        >
+          {props.photographer}
+        </h4>
+      </div>
+      <div
+        className={css`
+          padding: 10px;
+          width: 40%;
         `}
       >
         <h2
@@ -63,27 +96,7 @@ export default function Long(props: LongProps) {
         >
           {props.headline}
         </h1>
-        <h3
-          className={css`
-            margin: 0;
 
-            font-family: Arimo;
-            font-style: normal;
-            font-weight: bold;
-            font-size: 11px;
-
-            color: #000000;
-          `}
-        >
-          By {props.author} | {props.editor}
-        </h3>
-      </div>
-      <div
-        className={css`
-          padding: 20px 30px 20px 10px;
-          flex: 4;
-        `}
-      >
         <p
           className={css`
             margin: 0 0 5px;
@@ -98,22 +111,6 @@ export default function Long(props: LongProps) {
         >
           {props.content}
         </p>
-      </div>
-      <div
-        className={css`
-          flex: 4;
-        `}
-      >
-        <div
-          className={css`
-            height: 100%;
-            min-width: 200px;
-            background: url(${props.imageurl});
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-          `}
-        />
       </div>
     </div>
   )

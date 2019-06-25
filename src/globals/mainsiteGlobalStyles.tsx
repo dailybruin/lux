@@ -11,6 +11,7 @@ if (typeof window !== 'undefined') {
         'Lora:700',
         'Lora:400',
         'PT Serif:400',
+        'Source Sans Pro:700',
         'Source Sans Pro:900',
       ],
     },
