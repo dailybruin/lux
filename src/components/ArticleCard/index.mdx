@@ -1,12 +1,12 @@
 ---
-name: ArticleCard
+name: Article Card
 route: /article-card
 ---
 
 import { Playground, Props } from 'docz'
 import ArticleCard from '.'
 
-# ArticleCard
+# Article Card
 
 A proper card layout for newspaper content
 
@@ -14,28 +14,15 @@ A proper card layout for newspaper content
 
 <Playground>
   <ArticleCard
-    type = 'tall'
-    imageurl = 'http://dailybruin.com/images/2018/12/web.sp_.mwp_.ncaa_.ADX_6-640x420.jpg'
-    title = 'Skirball fire burns down Rieber Terrace, Rendezvous untouched'
-    content = 'During the past few weeks, Mark Zuckerberg, among other tech moguls, has been under intense scrutiny from Congress for the role social media played during the 2016 presidential election.'
-    photographer = 'Amy Dixon/Assistant photo editor'
-  />
-
-  <ArticleCard
-    type = 'long'
-    imageurl = 'http://dailybruin.com/images/2018/12/web.sp_.mwp_.ncaa_.ADX_6-640x420.jpg'
-    title = 'Joe Bruin implicated in Russian hacking case'
-    content = 'During the past few weeks, Mark Zuckerberg, among other tech moguls, has been under intense scrutiny from Congress for the role social media played during the 2016 presidential election.'
-    photographer = 'Amy Dixon/Assistant photo editor'
-  />
-
-  <ArticleCard
-    type = 'longest'
-    imageurl = 'http://dailybruin.com/images/2018/12/web.sp_.mwp_.ncaa_.ADX_6-640x420.jpg'
-    title = 'Vote to subdivide WWNC, create new Westwood council receives majority'
-    content = 'The undergraduate student government juidicial board has decided to review a petition filed by the election board chair against the Undergraduate Students Association Council. Jack Price, the USAC election board chair, filed a petition claiming the council violated Article III Section B.2 of the USAC constitution, which states that all elected USAC officers shall be installed'
-    photographer = 'Amy Dixon/Assistant photo editor'
-    editor = 'Andrew Chang'
+  displayType = 'vert'
+  category = 'news'
+  headline = 'Gene Block starts meme factory'
+  imageurl = 'https://dailybruin.com/images/2019/05/web.ae_.fastfashion.LMan_-640x423.jpg'
+  photographer = 'Amy Dixon/Assistant photo editor'
+  content = 'This is some text we got going on here that’s really fun but let’s not burn down UCLA too quicky alright friends? This is some text we got going on here that’s really fun but let’s not burn down UCLA too quicky alright friends?'
+  author = 'Andrew Warner'
+  editor = 'Daily Bruin staff'
+  link = './#'
   />
 
 </Playground>

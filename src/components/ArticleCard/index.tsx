@@ -1,48 +1,61 @@
 import * as React from 'react'
-import Tall from './Tall'
+import { render } from 'react-dom'
+
+import Vert from './Vert'
+import Horz from './Horz'
 import Long from './Long'
-import XL from './XL'
+import Full from './Full'
+import Mini from './Mini'
 
 enum ContentType {
-  Tall = 'tall',
+  Vert = 'vert',
+  Horz = 'horz',
   Long = 'long',
-  XL = 'longest',
+  Full = 'full',
+  Mini = 'mini',
 }
 
 interface ArticleCardProps {
-  type: string
-  title: string
-  content: string
+  displayType: string
+  category: string
+  headline: string
   imageurl: string
   photographer: string
+  content: string
   editor: string
+  link: string
 }
 
 export default class ArticleCard extends React.Component<ArticleCardProps> {
-  public static defaultProps = {
-    imageurl: 'http://dailybruin.com/images/2017/03/db-logo.png',
+  constructor(props) {
+    super(props)
   }
 
   public render() {
-    switch (this.props.type) {
-      case ContentType.Tall:
-        return (
-          <div>
-            <Tall {...this.props} />
-          </div>
-        )
-      case ContentType.Long:
-        return (
-          <div>
-            <Long {...this.props} />
-          </div>
-        )
-      case ContentType.XL:
-        return (
-          <div>
-            <XL {...this.props} />
-          </div>
-        )
+    let card
+    switch (this.props.displayType) {
+      case 'vert':
+        card = <Vert {...this.props} />
+        break
+      case 'horz':
+        card = <Horz {...this.props} />
+        break
+      case 'long':
+        card = <Long {...this.props} />
+        break
+      case 'full':
+        card = <Full {...this.props} />
+        break
+      case 'mini':
+        card = <Mini {...this.props} />
+        break
+      default:
+        card = <Horz {...this.props} />
     }
+    return (
+      <a href={this.props.link} style={{ textDecoration: 'none' }}>
+        {card}
+      </a>
+    )
   }
 }
