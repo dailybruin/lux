@@ -90,9 +90,8 @@ export default function Vert(props: VertProps) {
 
           color: #000000;
         `}
-      >
-        {props.content}
-      </p>
+        dangerouslySetInnerHTML={{ __html: props.content }}
+      />
     </div>
   )
 }

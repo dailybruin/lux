@@ -50,7 +50,7 @@ class Poll extends React.Component<PollProps> {
           background-color: ${MainSiteStyles.white};
           box-shadow: ${MainSiteStyles.cardShadow};
           justify-content: center;
-          margin: 16px auto;
+          margin: auto;
           max-width: 292px;
         `}
       >

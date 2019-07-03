@@ -36,6 +36,7 @@ export default class MultimediaScroller extends React.Component<
           background: #474747;
           box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
           color: #ffffff;
+          box-sizing: border-box;
         `}
       >
         <h3

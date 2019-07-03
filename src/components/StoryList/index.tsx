@@ -52,7 +52,7 @@ class StoryList extends React.Component<StoryListProps> {
           background-color: ${MainSiteStyles.white};
           box-shadow: ${MainSiteStyles.cardShadow};
           justify-content: center;
-          margin: 16px auto;
+          margin: auto;
           max-width: 292px;
         `}
       >

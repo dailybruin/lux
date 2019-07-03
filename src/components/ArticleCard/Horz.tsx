@@ -108,9 +108,8 @@ export default function Horz(props: HorzProps) {
 
             color: #000000;
           `}
-        >
-          {props.content}
-        </p>
+          dangerouslySetInnerHTML={{ __html: props.content }}
+        />
       </div>
     </div>
   )

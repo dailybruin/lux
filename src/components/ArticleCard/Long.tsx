@@ -95,9 +95,8 @@ export default function Long(props: LongProps) {
 
             color: #000000;
           `}
-        >
-          {props.content}
-        </p>
+          dangerouslySetInnerHTML={{ __html: props.content }}
+        />
       </div>
       <div
         className={css`

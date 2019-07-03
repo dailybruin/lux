@@ -89,9 +89,8 @@ export default function Main(props: MainProps) {
 
           color: #000000;
         `}
-      >
-        {props.content}
-      </p>
+        dangerouslySetInnerHTML={{ __html: props.content }}
+      />
       <h3
         className={css`
           margin: 0;
