@@ -10,13 +10,13 @@ import {
 
 interface MiniProps {
   displayType: string
-  category: string
   headline: string
+  excerpt: string
+  url: string
+  date: string
+  authors: Link[]
+  category: Link
   imageurl: string
-  photographer: string
-  content: string
-  author: string
-  editor: string
 }
 
 export default function Mini(props: MiniProps) {
@@ -43,21 +43,34 @@ export default function Mini(props: MiniProps) {
           display: block;
         `}
       >
-        <h2
-          className={css`
-            display: block;
-            margin: 0;
-            font-family: Source Sans Pro;
-            font-style: normal;
-            font-weight: bold;
-            font-size: 14px;
-            text-transform: uppercase;
+        <span>
+          <a
+            href={props.category.url}
+            className={css`
+              text-decoration: none;
+              color: #0080c6;
 
-            color: #0080c6;
-          `}
-        >
-          {props.category}
-        </h2>
+              &:hover {
+                text-decoration: underline;
+              }
+            `}
+          >
+            <h2
+              className={css`
+                margin: 0;
+                font-family: Source Sans Pro;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 14px;
+                text-transform: uppercase;
+                display: inline;
+              `}
+            >
+              {props.category.name}
+            </h2>
+          </a>
+          &nbsp;| {props.date}
+        </span>
         <h1
           className={css`
             display: block;
@@ -71,9 +84,8 @@ export default function Mini(props: MiniProps) {
 
             color: #000000;
           `}
-        >
-          {props.headline}
-        </h1>
+          dangerouslySetInnerHTML={{ __html: props.headline }}
+        />
       </div>
     </div>
   )
