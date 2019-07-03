@@ -145,7 +145,6 @@ export default function Vert(props: VertProps) {
       >
         By {authors}
       </h3>
-      >>>>>>> Stashed changes
     </div>
   )
 }
