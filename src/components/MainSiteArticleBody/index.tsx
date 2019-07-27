@@ -5,7 +5,11 @@ import reactStringReplace from 'react-string-replace'
 import { renderToStaticMarkup } from 'react-dom/server'
 import MainSiteLink from '../MainSiteLink'
 import MainSiteImage, { MainSiteImageProps } from '../MainSiteImage'
-import { bodyTextSize, bodyFont } from '../../globals/mainsiteGlobalStyles'
+import {
+  bodyTextSize,
+  bodyFont,
+  bodyTextCSS,
+} from '../../globals/mainsiteGlobalStyles'
 
 enum ContentType {
   Text = 'text',
@@ -39,6 +43,13 @@ interface MainSiteText {
   value: string
 }
 
+const bodySizeCSS = css`
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 620px;
+  padding: 1rem;
+`
+
 class MainSiteArticleBody extends React.Component<MainSiteArticleBodyProps> {
   public render() {
     /** Check and render legacy content */
@@ -46,12 +57,8 @@ class MainSiteArticleBody extends React.Component<MainSiteArticleBodyProps> {
       return (
         <article
           className={css`
-            margin-left: auto;
-            margin-right: auto;
-            max-width: 620px;
-            padding: 1rem;
-            font-size: ${bodyTextSize};
-            font-family: ${bodyFont};
+            ${bodySizeCSS};
+            ${bodyTextCSS};
           `}
           dangerouslySetInnerHTML={{
             __html: this.props.legacyContent,
@@ -70,8 +77,7 @@ class MainSiteArticleBody extends React.Component<MainSiteArticleBodyProps> {
                 <p
                   key={i}
                   className={css`
-                    font-size: ${bodyTextSize};
-                    font-family: ${bodyFont};
+                    ${bodyTextCSS};
                   `}
                 >
                   {text.value}
@@ -121,8 +127,7 @@ class MainSiteArticleBody extends React.Component<MainSiteArticleBodyProps> {
                 <p
                   key={i}
                   className={css`
-                    font-size: ${bodyTextSize};
-                    font-family: ${bodyFont};
+                    ${bodyTextCSS};
                   `}
                   dangerouslySetInnerHTML={{
                     __html: finalRender,
@@ -144,10 +149,7 @@ class MainSiteArticleBody extends React.Component<MainSiteArticleBodyProps> {
     return (
       <article
         className={css`
-          margin-left: auto;
-          margin-right: auto;
-          max-width: 620px;
-          padding: 1rem;
+          ${bodySizeCSS};
         `}
       >
         {renderedContent}

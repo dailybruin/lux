@@ -1,3 +1,5 @@
+import { css } from 'react-emotion'
+
 /** Web fonts loaded here - only in a browser */
 if (typeof window !== 'undefined') {
   // tslint:disable-next-line:no-var-requires
@@ -51,3 +53,9 @@ export const bodyLineHeight = '1.45em'
 /** CSS breakpoints */
 export const mediaMobileBreakpoint = '@media (max-width: 600px)'
 export const secheadMobileBreakpoint = '@sechead (max-width: 600px)'
+
+/** Combined themes */
+export const bodyTextCSS = css`
+  font-size: ${bodyTextSize};
+  font-family: ${bodyFont};
+`
