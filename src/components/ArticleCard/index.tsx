@@ -15,9 +15,13 @@ enum ContentType {
   Mini = 'mini',
 }
 
+interface Link {
+  name: string
+  url: string
+}
+
 interface ArticleCardProps {
   displayType: string
-  category: string
   headline: string
   excerpt: string
   url: string
@@ -25,10 +29,6 @@ interface ArticleCardProps {
   authors: Link[]
   category: Link
   imageurl: string
-  photographer: string
-  content: string
-  editor: string
-  link: string
 }
 
 export default class ArticleCard extends React.Component<ArticleCardProps> {
@@ -58,7 +58,10 @@ export default class ArticleCard extends React.Component<ArticleCardProps> {
         card = <Horz {...this.props} />
     }
     return (
-      <a href={this.props.link} style={{ textDecoration: 'none' }}>
+      <a
+        href={this.props.url}
+        style={{ textDecoration: 'none', color: '#000' }}
+      >
         {card}
       </a>
     )

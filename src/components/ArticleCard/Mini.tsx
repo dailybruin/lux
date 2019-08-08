@@ -11,7 +11,6 @@ import { date2string } from './utilities.js'
 
 interface MiniProps {
   displayType: string
-  category: string
   headline: string
   excerpt: string
   url: string
@@ -19,10 +18,6 @@ interface MiniProps {
   authors: Link[]
   category: Link
   imageurl: string
-  photographer: string
-  content: string
-  author: string
-  editor: string
 }
 
 export default function Mini(props: MiniProps) {
@@ -97,9 +92,8 @@ export default function Mini(props: MiniProps) {
 
             color: #000000;
           `}
-        >
-          {props.headline}
-        </h1>
+          dangerouslySetInnerHTML={{ __html: props.headline }}
+        />
       </div>
     </div>
   )

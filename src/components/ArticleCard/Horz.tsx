@@ -11,7 +11,6 @@ import { date2string } from './utilities.js'
 
 interface HorzProps {
   displayType: string
-  category: string
   headline: string
   excerpt: string
   url: string
@@ -19,13 +18,32 @@ interface HorzProps {
   authors: Link[]
   category: Link
   imageurl: string
-  photographer: string
-  content: string
-  author: string
-  editor: string
 }
 
 export default function Horz(props: HorzProps) {
+  //  collect authors
+  const authors = []
+  if (props.authors.length === 0) {
+    authors[0] = <span>Daily Bruin Staff</span>
+  } else {
+    for (const author of props.authors) {
+      authors.push(
+        <a
+          href={author.url}
+          className={css`
+            text-decoration: none;
+            color: #0080c6;
+
+            &:hover {
+              text-decoration: underline;
+            }
+          `}
+        >
+          {author.name}
+        </a>
+      )
+    }
+  }
   return (
     <div
       className={css`
@@ -120,10 +138,8 @@ export default function Horz(props: HorzProps) {
 
             color: #000000;
           `}
-        >
-          {props.headline}
-        </h1>
-
+          dangerouslySetInnerHTML={{ __html: props.headline }}
+        />
         <p
           className={css`
             margin: 0 0 5px;
@@ -134,10 +150,27 @@ export default function Horz(props: HorzProps) {
             font-size: 11px;
 
             color: #000000;
+
+            p {
+              margin: 0;
+            }
+          `}
+          dangerouslySetInnerHTML={{ __html: props.excerpt }}
+        />
+        <h3
+          className={css`
+            margin: 0;
+
+            font-family: Arimo;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 11px;
+
+            color: #000000;
           `}
         >
-          {props.content}
-        </p>
+          By {authors}
+        </h3>
       </div>
     </div>
   )
