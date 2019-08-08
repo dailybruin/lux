@@ -58,14 +58,7 @@ export default function Long(props: LongProps) {
           flex: 3;
         `}
       >
-        <span
-          className={css`
-            margin: 0;
-            font-family: Source Sans Pro, sans-serif;
-            font-style: normal;
-            font-size: 14px;
-          `}
-        >
+        <span>
           <a
             href={props.category.url}
             className={css`
@@ -91,7 +84,19 @@ export default function Long(props: LongProps) {
               {props.category.name}
             </h2>
           </a>
-          &nbsp;| {date2string(props.date)}
+          &nbsp;|&nbsp;
+          <span
+            className={css`
+              margin: 0;
+              font-family: Source Sans Pro, sans-serif;
+              font-style: normal;
+              font-weight: 400;
+              font-size: 11px;
+              line-height: 14px;
+            `}
+          >
+            {date2string(props.date)}
+          </span>
         </span>
         <h1
           className={css`

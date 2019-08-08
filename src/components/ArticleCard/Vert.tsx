@@ -73,16 +73,7 @@ export default function Vert(props: VertProps) {
       >
         {props.photographer}
       </h4>
-      <span
-        className={css`
-          margin: 0;
-          font-family: Source Sans Pro, sans-serif;
-          font-style: normal;
-          font-weight: bold;
-          font-size: 14px;
-          text-transform: uppercase;
-        `}
-      >
+      <span>
         <a
           href={props.category.url}
           className={css`
@@ -97,7 +88,7 @@ export default function Vert(props: VertProps) {
           <h2
             className={css`
               margin: 0;
-              font-family: Source Sans Pro, sans-serif;
+              font-family: Source Sans Pro;
               font-style: normal;
               font-weight: bold;
               font-size: 14px;
@@ -108,7 +99,19 @@ export default function Vert(props: VertProps) {
             {props.category.name}
           </h2>
         </a>
-        &nbsp;| {date2string(props.date)}
+        &nbsp;|&nbsp;
+        <span
+          className={css`
+            margin: 0;
+            font-family: Source Sans Pro, sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 11px;
+            line-height: 14px;
+          `}
+        >
+          {date2string(props.date)}
+        </span>
       </span>
       <h1
         className={css`

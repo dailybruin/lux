@@ -78,7 +78,19 @@ export default function Full(props: FullProps) {
             {props.category.name}
           </h2>
         </a>
-        &nbsp;| {date2string(props.date)}
+        &nbsp;|&nbsp;
+        <span
+          className={css`
+            margin: 0;
+            font-family: Source Sans Pro, sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 11px;
+            line-height: 14px;
+          `}
+        >
+          {date2string(props.date)}
+        </span>
       </span>
       <h1
         className={css`
