@@ -25,7 +25,7 @@ interface ArticleCardProps {
   headline: string
   excerpt: string
   url: string
-  date: string
+  date: Date
   authors: Link[]
   category: Link
   imageurl: string
