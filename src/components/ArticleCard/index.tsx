@@ -19,6 +19,11 @@ interface ArticleCardProps {
   displayType: string
   category: string
   headline: string
+  excerpt: string
+  url: string
+  date: Date
+  authors: Link[]
+  category: Link
   imageurl: string
   photographer: string
   content: string
