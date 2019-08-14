@@ -4,18 +4,18 @@ import { css } from 'react-emotion'
 import SectionTabs from './SectionTabs'
 import ExpandingMenu from './ExpandingMenu'
 
-interface SectionLink {
+interface Link {
   name: string
   link: string
 }
 
 interface SectionHeaderProps {
   name: string
-  sectionList: SectionLink[]
+  sectionList: Link[]
 }
 
 interface ExpandingTabsProps {
-  sectionList: SectionLink[]
+  sectionList: Link[]
 }
 
 interface SectionTabProps {
@@ -57,9 +57,9 @@ export default class SectionHeader extends React.Component<SectionHeaderProps> {
             line-height: 62px;
             height: 55px;
 
-            font-family: Archivo Black, Arial, sans-serif;
+            font-family: Archivo Black, sans-serif;
             font-style: normal;
-            font-weight: normal;
+            font-weight: 900;
             line-height: normal;
             font-size: 48px;
             text-transform: uppercase;

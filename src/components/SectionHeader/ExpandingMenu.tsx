@@ -52,6 +52,10 @@ export default class ExpandingMenu extends React.Component {
             color: #ffffff;
 
             cursor: pointer;
+
+            @media (min-width: 600px) {
+              color: #000000;
+            }
           `}
           onClick={this.expandMenu}
         >

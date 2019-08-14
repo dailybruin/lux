@@ -4,18 +4,8 @@ import { css } from 'react-emotion'
 export default class ExpandingTab extends React.Component<ExpandingTabProps> {
   constructor(props: ExpandingTabProps) {
     super(props)
-    this.state = {
-      underlined: 'none',
-    }
-    this.underlineHovered = this.underlineHovered.bind(this)
-    this.underlineClear = this.underlineClear.bind(this)
   }
-  public underlineHovered() {
-    this.setState({ underlined: 'underline' })
-  }
-  public underlineClear() {
-    this.setState({ underlined: 'none' })
-  }
+
   public render() {
     return (
       <li
@@ -33,7 +23,7 @@ export default class ExpandingTab extends React.Component<ExpandingTabProps> {
         `}
       >
         <a
-          href={this.props.section.link}
+          href={this.props.section.url}
           className={css`
             display: block;
             font-family: Source Sans Pro;
@@ -43,10 +33,11 @@ export default class ExpandingTab extends React.Component<ExpandingTabProps> {
             text-transform: uppercase;
             text-align: left;
             color: #ffffff;
+            text-decoration: none;
+            &:hover {
+              text-decoration: underline;
+            }
           `}
-          style={{ textDecoration: this.state.underlined }}
-          onMouseEnter={this.underlineHovered}
-          onMouseLeave={this.underlineClear}
         >
           {this.props.section.name}
         </a>

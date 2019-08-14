@@ -7,16 +7,6 @@ export default class ExpandingTabs extends React.Component<ExpandingTabsProps> {
   constructor(props: ExpandingTabsProps) {
     super(props)
   }
-  public underlineHovered(idTitle: string) {
-    document.getElementById(
-      'SectionHeaderExpandingTab' + idTitle
-    ).style.textDecoration = 'underline'
-  }
-  public underlineClear(idTitle: string) {
-    document.getElementById(
-      'SectionHeaderExpandingTab' + idTitle
-    ).style.textDecoration = 'none'
-  }
   public render() {
     const sections = this.props.sectionList
     const sectionTabList = []

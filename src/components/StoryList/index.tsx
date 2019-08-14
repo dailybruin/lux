@@ -30,7 +30,8 @@ interface StoryListProps {
   /** An image relating to the most popular story (i.e. the first in the list). */
   image?: ImageContent
   /** Determines the title of the black top-bar (see example below). Defaults to popular stories. */
-  type: StoryListType
+  // type: StoryListType
+  type: string
 }
 
 class StoryList extends React.Component<StoryListProps> {
@@ -58,11 +59,12 @@ class StoryList extends React.Component<StoryListProps> {
       >
         <TopBar
           title={
-            !!this.props.image
+            /* !!this.props.image
               ? 'IN THE NEWS'
               : this.props.type === StoryListType.Popular
               ? 'POPULAR'
-              : 'IN THE PRINT'
+              : 'IN THE PRINT' */
+            this.props.type
           }
         />
         {!!this.props.image && (
