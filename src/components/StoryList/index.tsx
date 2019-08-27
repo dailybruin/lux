@@ -54,7 +54,6 @@ class StoryList extends React.Component<StoryListProps> {
           box-shadow: ${MainSiteStyles.cardShadow};
           justify-content: center;
           margin: auto;
-          max-width: 292px;
         `}
       >
         <TopBar
