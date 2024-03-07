@@ -78,7 +78,6 @@
     "react-dom": "16.8.6",
     "react-emotion": "^9.2.12",
     "react-helmet": "^5.2.0",
-    "react-player": "2.14.1",
     "react-plyr": "^2.1.1",
     "react-string-replace": "0.4.4",
     "slugify": "^1.3.3",

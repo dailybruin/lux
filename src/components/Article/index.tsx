@@ -1,12 +1,10 @@
 import * as React from 'react'
 import { css } from 'react-emotion'
 import Image, { ImageProps } from '../Image'
-import Video, { VideoProps } from '../Video'
 
 enum ContentType {
   Text = 'text',
   Image = 'image',
-  Video = 'video',
   Line = 'line',
 }
 
@@ -54,9 +52,6 @@ export default class Article extends React.Component<ArticleProps> {
           case ContentType.Image:
             const image = JSON.parse(content.value) as ImageProps
             return <Image key={i} {...image} />
-          case ContentType.Video:
-            const video = JSON.parse(content.value) as VideoProps
-            return <Video key={i} {...video} />
           case ContentType.Line:
             return <hr />
           default:
